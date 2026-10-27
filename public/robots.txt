@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://buildsafe.com.bd/sitemap.xml
