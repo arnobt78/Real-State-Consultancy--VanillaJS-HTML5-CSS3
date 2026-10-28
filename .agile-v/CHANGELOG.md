@@ -49,3 +49,10 @@
 - Set the slogan to “Partner with build safe to turn your vision into reality”, with vision and reality marked.
 - Removed Contact from the Pages column. Left it in the header and in Information.
 - Pointed link previews at `meta-logo.jpg`. Kept the site logo as `logo.png` and the home photo as `hero.jpg`.
+
+## 2026-10-29 — FAQ list and contact copy
+
+- Replaced the six short FAQ items with 15 questions drawn from the existing pages.
+- Removed the wide gap by listing the questions as articles instead of padded sections.
+- Set the slogan to “Partner with BUILD SAFE to turn your vision into reality”, in one color, and centered those footer lines on a phone.
+- Matched the contact email to the phone number and added the same copy button. Moved the copy notice to the bottom right.
