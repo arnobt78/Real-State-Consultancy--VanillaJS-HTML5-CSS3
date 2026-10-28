@@ -4,7 +4,7 @@
 
 Project Name: Build Safe Engineering
 Description: Bilingual Bangla/English brochure for Build Safe Engineering & Consultancy. Static pages in `public/`, WhatsApp enquiry handoff.
-Current Status: The public site is built locally on `feat/public-seo`. It is not the live Cloudflare site.
+Current Status: The public site is on `main`. Saved English is applied before first paint. It is not the live Cloudflare site.
 Current Agile V Cycle: C1
 Current Gate: `GATE-0001` was superseded by later direction to build `public/`. See `.agile-v/STATE.md`.
 
@@ -41,7 +41,7 @@ Preserve:
 
 ## Rendering
 
-This is not a server-rendered application. Each HTML file is a page. `public/js/site.js` handles language, the menu, old home hashes, the enquiry preview, and copy-to-clipboard.
+This is not a server-rendered application. Each HTML file is a page. A short script in the page head sets `data-lang` to `en` only when `bs-lang` is already `en`, so the first paint matches the saved language. `public/js/site.js` handles language changes, the menu, old home hashes, the enquiry preview, and copy-to-clipboard. The contact service menu is two selects, one Bangla and one English, so that label does not wait on the bottom script.
 
 Do not split the pages into a component framework. Do not add a copy-to-dist build. Serve `public/` directly.
 
@@ -132,4 +132,4 @@ Always continue from
 
 unless instructed otherwise.
 
-Current stop: local site is on `feat/public-seo`. The empty GitHub remote is `https://github.com/arnobt78/Real-State-Consultancy--VanillaJS-HTML5-CSS3.git`. Do not push this work straight to `main`.
+Current stop: the language-flash fix is committed on `fix/language-flash` and merged to `main` through a pull request. Do not push implementation straight to `main`. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.

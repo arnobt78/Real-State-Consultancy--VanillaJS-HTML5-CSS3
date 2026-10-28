@@ -2,6 +2,14 @@
 <!-- Route: /faq/. Bangla and English are both in this file. The script shows one language at a time. -->
 <html lang="bn">
   <head>
+    <script>
+      try {
+        if (localStorage.getItem("bs-lang") === "en") {
+          document.documentElement.lang = "en";
+          document.documentElement.setAttribute("data-lang", "en");
+        }
+      } catch (e) {}
+    </script>
     <meta charset="utf-8" />
     <meta
       name="viewport"

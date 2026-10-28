@@ -42,3 +42,11 @@ Append-only. Do not rewrite earlier entries.
 - Decision: The brochure is the nine static pages under `public/`, with shared CSS and JavaScript, self-hosted fonts, sitemap, robots, the Dilara Tower address, and Facebook, LinkedIn, and YouTube icon links. No framework, backend, database, or build step. `docs/VERCEL-PLAIN-JS-DEPLOY.md` is not the deploy method.
 - Rationale: The human directed this structure after the C1 planning notes. Those notes still describe a single `index.html`, which is no longer the site.
 - Linked: `GATE-0001`
+
+## DEC-0006 — Language is chosen before first paint
+
+- Date: 2026-10-28
+- Agent: Cursor
+- Decision: Each page sets `data-lang` in the head when `bs-lang` is `en`. Header labels keep one width. The contact service control is two selects, one per language. The bottom script no longer rewrites option text.
+- Rationale: The bottom script ran after first paint, so English visitors briefly saw Bangla, and the navbar shifted.
+- Linked: `DEC-0005`

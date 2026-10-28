@@ -2,6 +2,14 @@
 <!-- Route: /contact/. Bangla and English are both in this file. The script shows one language at a time. -->
 <html lang="bn">
   <head>
+    <script>
+      try {
+        if (localStorage.getItem("bs-lang") === "en") {
+          document.documentElement.lang = "en";
+          document.documentElement.setAttribute("data-lang", "en");
+        }
+      } catch (e) {}
+    </script>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -253,73 +261,30 @@
                   />
                 </div>
                 <div class="f">
-                  <label for="f-svc"
+                  <label id="svc-l" for="f-svc"
                     ><span lang="bn">কোন সেবা প্রয়োজন</span
                     ><span lang="en">Service needed</span></label
-                  ><select id="f-svc" name="svc">
-                    <option
-                      value="1"
-                      data-bn="ডিজাইন ও কারিগরি সহায়তা"
-                      data-en="Design &amp; Technical Support"
-                    >
-                      ডিজাইন ও কারিগরি সহায়তা
-                    </option>
-                    <option
-                      value="2"
-                      data-bn="ইন্টেরিয়র ডিজাইন"
-                      data-en="Interior Design"
-                    >
-                      ইন্টেরিয়র ডিজাইন
-                    </option>
-                    <option
-                      value="3"
-                      data-bn="কংক্রিট মিক্স ডিজাইন"
-                      data-en="Concrete Mix Design"
-                    >
-                      কংক্রিট মিক্স ডিজাইন
-                    </option>
-                    <option
-                      value="4"
-                      data-bn="কংক্রিট টেস্টিং সেবা"
-                      data-en="Concrete Testing"
-                    >
-                      কংক্রিট টেস্টিং সেবা
-                    </option>
-                    <option
-                      value="5"
-                      data-bn="ভবনের নিরাপত্তা মূল্যায়ন (DEA)"
-                      data-en="Detailed Engineering Assessment"
-                    >
-                      ভবনের নিরাপত্তা মূল্যায়ন (DEA)
-                    </option>
-                    <option
-                      value="6"
-                      data-bn="ফায়ার সেফটি ও HVAC"
-                      data-en="Fire Safety &amp; HVAC"
-                    >
-                      ফায়ার সেফটি ও HVAC
-                    </option>
-                    <option
-                      value="7"
-                      data-bn="সোলার সিস্টেম"
-                      data-en="Solar Systems"
-                    >
-                      সোলার সিস্টেম
-                    </option>
-                    <option
-                      value="8"
-                      data-bn="নির্মাণসামগ্রী বাছাইয়ে পরামর্শ"
-                      data-en="Material Selection Advice"
-                    >
-                      নির্মাণসামগ্রী বাছাইয়ে পরামর্শ
-                    </option>
-                    <option
-                      value="0"
-                      data-bn="অন্যান্য / নিশ্চিত নই"
-                      data-en="Other / not sure"
-                    >
-                      অন্যান্য / নিশ্চিত নই
-                    </option>
+                  ><select id="f-svc" name="svc" lang="bn" aria-labelledby="svc-l">
+                    <option value="1">ডিজাইন ও কারিগরি সহায়তা</option>
+                    <option value="2">ইন্টেরিয়র ডিজাইন</option>
+                    <option value="3">কংক্রিট মিক্স ডিজাইন</option>
+                    <option value="4">কংক্রিট টেস্টিং সেবা</option>
+                    <option value="5">ভবনের নিরাপত্তা মূল্যায়ন (DEA)</option>
+                    <option value="6">ফায়ার সেফটি ও HVAC</option>
+                    <option value="7">সোলার সিস্টেম</option>
+                    <option value="8">নির্মাণসামগ্রী বাছাইয়ে পরামর্শ</option>
+                    <option value="0">অন্যান্য / নিশ্চিত নই</option>
+                  </select
+                  ><select id="f-svc-en" name="svc" lang="en" aria-labelledby="svc-l">
+                    <option value="1">Design &amp; Technical Support</option>
+                    <option value="2">Interior Design</option>
+                    <option value="3">Concrete Mix Design</option>
+                    <option value="4">Concrete Testing</option>
+                    <option value="5">Detailed Engineering Assessment</option>
+                    <option value="6">Fire Safety &amp; HVAC</option>
+                    <option value="7">Solar Systems</option>
+                    <option value="8">Material Selection Advice</option>
+                    <option value="0">Other / not sure</option>
                   </select>
                 </div>
                 <div class="f f-full">
