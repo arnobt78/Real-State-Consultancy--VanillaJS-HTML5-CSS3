@@ -104,3 +104,14 @@ Local browser checks on a static server rooted at `public/`:
 - The contact email matched the phone number at 19px and weight 600, kept `mailto:contact.buildsafe@gmail.com`, and copied that address. The notice sat 16px from the right edge.
 - No unexpected failed requests. The only known 404s remain the absent optional files `public/img/projects/p1.jpg` through `p6.jpg`.
 - No typecheck, lint, unit test, or build script exists, so none was run.
+
+## 2026-10-29 — FAQ in the header and Pages
+
+Local browser checks on a static server rooted at `public/`:
+
+- All nine routes, in Bangla and English, showed Home, About, Services, Projects, FAQ, Contact in the header and in Pages. Footer headings were Pages and Office. There was no Information column.
+- At 1280px the footer was three columns. At 760px and at 390px the brand, Pages, and Office each filled the row.
+- At 390px the open phone menu listed those six links top to bottom. `/faq/` marked FAQ in the header and on the Pages link. `/contact/` marked Contact the same way. Legal pages did not mark a header link.
+- Facebook, LinkedIn, and YouTube stayed inside the office column.
+- The only 404 responses were the absent optional files `public/img/projects/p1.jpg` through `p6.jpg`. No page errors.
+- No typecheck, lint, unit test, or build script exists, so none was run. An independent file check matched the same header, Pages list, `aria-current` placement, and three-column footer.

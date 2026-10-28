@@ -56,3 +56,9 @@
 - Removed the wide gap by listing the questions as articles instead of padded sections.
 - Set the slogan to “Partner with BUILD SAFE to turn your vision into reality”, in one color, and centered those footer lines on a phone.
 - Matched the contact email to the phone number and added the same copy button. Moved the copy notice to the bottom right.
+
+## 2026-10-29 — FAQ in the header and Pages
+
+- Removed the Information column and listed FAQ and Contact in Pages, after Projects.
+- Added FAQ immediately before Contact in the header. The phone menu uses that same list.
+- Stacked the brand, Pages, and Office on full rows at 760px and below. Left the social icons under the office lines.
