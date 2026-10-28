@@ -82,3 +82,11 @@ Append-only. Do not rewrite earlier entries.
 - Decision: Information lists FAQ and Contact. Terms, Privacy, and Cookies stay as pages and in the sitemap, and they are not footer links. The third column is Office and lists the phone, `contact.buildsafe@gmail.com`, and the address. The contact page has an email card. The slogan marks “vision” and “reality” in `#E39272` at weight 600. Footer Pages omits Contact. Link previews and the structured-data image use `public/img/meta-logo.jpg`. The structured-data logo, the header image, the favicon, and `icon-180.png` stay as they were. The home photo stays `hero.jpg`.
 - Rationale: The footer should show how to reach the office. The square logo is the picture chat apps show, and the page itself still uses the existing logo and the office photograph.
 - Linked: `DEC-0008`
+
+## DEC-0011 — FAQ list and contact copy
+
+- Date: 2026-10-29
+- Agent: Cursor
+- Decision: The FAQ page lists 15 bilingual questions taken from the home, about, services, and contact pages. The visible heading is “বাড়ি নির্মাণের আগে যে প্রশ্ন আসে” / “Frequently asked questions”. The intro uses the existing home and about lines. Each item is an article with about 20px of padding, not a padded `section`. The slogan is “Partner with BUILD SAFE to turn your vision into reality”, in one color. On a phone the two footer lines are centered. The contact email matches the phone number, keeps `mailto:contact.buildsafe@gmail.com`, and has the same copy button. The copy notice sits at the bottom right.
+- Rationale: The old FAQ items were short and sat inside the 72px section padding. The email looked like a brown link, and the copied notice sat in the middle.
+- Linked: `DEC-0010`

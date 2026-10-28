@@ -3,12 +3,12 @@
 ## Resume point
 
 Cycle: `C1`
-Phase: Saved English is applied before first paint. Header links size to the visible language. The footer Office column lists the phone, email, and address. Information lists FAQ and Contact. Link previews use `meta-logo.jpg`, and the site logo stays `logo.png`. That work is on `main` as `1b74ba1` from pull request 5. Vercel Production follows `main`. A push on `fix/footer-information` stays a Vercel Preview until it is merged. Cloudflare is still the older live site and is managed separately.
+Phase: Saved English is applied before first paint. Header links size to the visible language. The footer Office column lists the phone, email, and address. The FAQ page lists 15 questions in a compact list. The slogan is “Partner with BUILD SAFE to turn your vision into reality”. That work is committed on `fix/footer-information` and is not yet on `main`. Vercel Production follows `main`. A push on `fix/footer-information` stays a Vercel Preview until it is merged. Cloudflare is still the older live site and is managed separately.
 Branch: `fix/footer-information` is the only feature branch. Do not open another branch. Older branches were removed after their pull requests merged.
 Remote: `https://github.com/arnobt78/Real-State-Consultancy--VanillaJS-HTML5-CSS3.git`
 Gate: `GATE-0001` was superseded. Do not wait on token `C1-HG1-7f3a`. Do not revert `public/` because that token is missing.
 
-Next exact action: none. Pull request 5 is merged. Vercel Production deploys `main`. Do not push new implementation straight to `main`. Do not open another branch. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy uses output directory `public` with no build command.
+Next exact action: wait for approval to push `fix/footer-information` and open one pull request into `main`. Do not push straight to `main`. Do not open another branch. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy uses output directory `public` with no build command.
 
 ## What the project is
 
@@ -31,7 +31,7 @@ Public contact data in the pages (intentional, not a secret):
 ## Architecture (current)
 
 - Publish root is `public/`. Nine HTML pages share `public/css/site.css` and `public/js/site.js`.
-- Bangla is the default. English is in the same file and is shown when `data-lang` is `en`. The choice is stored as `bs-lang`. A head script sets that attribute before first paint when the saved value is `en`. Header links follow the visible words, in the order Home, About, Services, Projects, Contact. Footer Pages omits Contact. Information lists FAQ and Contact. The Office column lists the phone, `contact.buildsafe@gmail.com`, and the Dilara Tower address. On a phone, Pages and Information sit side by side and Office stays full width. The footer address matches the other footer lines. The slogan marks “vision” and “reality” in `#E39272` at weight 600. Link previews use `public/img/meta-logo.jpg`. The structured-data logo and the header image stay `logo.png`. The home photo stays `hero.jpg`. Terms, Privacy, and Cookies stay public and in the sitemap, and they are not in the footer. The contact service menu is two selects so its label is already in the saved language.
+- Bangla is the default. English is in the same file and is shown when `data-lang` is `en`. The choice is stored as `bs-lang`. A head script sets that attribute before first paint when the saved value is `en`. Header links follow the visible words, in the order Home, About, Services, Projects, Contact. Footer Pages omits Contact. Information lists FAQ and Contact. The Office column lists the phone, `contact.buildsafe@gmail.com`, and the Dilara Tower address. On a phone, Pages and Information sit side by side and Office stays full width. The footer address matches the other footer lines. On a phone, the copyright line and the slogan are centered. The slogan is “Partner with BUILD SAFE to turn your vision into reality”, in the same color as the rest of the line. The contact email matches the phone number and has a copy button. The copy notice sits at the bottom right. The FAQ page has 15 bilingual questions drawn from the existing pages, with about 20px of padding per item. Link previews use `public/img/meta-logo.jpg`. The structured-data logo and the header image stay `logo.png`. The home photo stays `hero.jpg`. Terms, Privacy, and Cookies stay public and in the sitemap, and they are not in the footer. The contact service menu is two selects so its label is already in the saved language.
 - The contact form validates a name and a Bangladesh mobile number, then prepares a WhatsApp link. It does not post to a server.
 - Project cards show a photo only when `public/img/projects/p1.jpg` through `p6.jpg` exist.
 - Dark colors follow the system. Fonts are files in `public/fonts/`.
@@ -52,8 +52,9 @@ Public contact data in the pages (intentional, not a secret):
 
 - Footer Pages lists Home, About, Services, and Projects. Information lists FAQ and Contact.
 - The third footer column is Office: phone, `contact.buildsafe@gmail.com`, and the address. The contact page has a matching email card. Structured data includes that email.
-- The footer slogan is “Partner with build safe to turn your vision into reality”, with vision and reality marked.
-- Share tags and the structured-data image use `meta-logo.jpg`. The structured-data logo and the header stay `logo.png`. The home photo stays `hero.jpg`.
+- The slogan is “Partner with BUILD SAFE to turn your vision into reality”, in one color. On a phone those two footer lines are centered.
+- The contact email matches the phone number and can be copied. The copy notice sits at the bottom right.
+- The FAQ page lists 15 questions from the existing pages. The old short-answers line is gone.
 
 ## Active requirement IDs
 
@@ -69,22 +70,22 @@ Proposed, blocked on `GATE-0001`:
 
 - the nine pages in `public/`
 - `public/css/site.css`
-- `public/img/meta-logo.jpg`
+- `public/js/site.js`
 - `README.md`
 - `CLAUDE.md`
 - `.agile-v/STATE.md`, `DECISION_LOG.md`, `VALIDATION_SUMMARY.md`, `CHANGELOG.md`
 
-Not changed: `public/sitemap.xml`, `public/js/site.js`, `AGENTS.md`, `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
+Not changed: `public/sitemap.xml`, `AGENTS.md`, `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
 
 ## Validation
 
-No typecheck, lint, test, or build script exists. The footer and the three image roles were checked in a local browser. See `VALIDATION_SUMMARY.md`.
+No typecheck, lint, test, or build script exists. The FAQ list, the slogan, and the contact copy were checked in a local browser. See `VALIDATION_SUMMARY.md`.
 
 ## Blockers
 
 - `GATE-0001` was superseded. Do not halt new page work on token `C1-HG1-7f3a`.
 - Cloudflare is managed outside this repo. Canonical pages use `https://buildsafe.com.bd/`.
-- Project photographs `p1.jpg` through `p6.jpg` are still absent (`REQ-0005`). Pull request 5 is merged. Cloudflare is unchanged.
+- Project photographs `p1.jpg` through `p6.jpg` are still absent (`REQ-0005`). This branch is committed locally and is not yet pushed.
 
 ## Unresolved questions
 

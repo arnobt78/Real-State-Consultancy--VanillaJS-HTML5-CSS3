@@ -92,3 +92,15 @@ Local browser checks on a static server rooted at `public/`, after the footer ch
 - `meta-logo.jpg` measured 2000 by 2000 JPEG and returned HTTP 200. `public/sitemap.xml` still listed nine page URLs and no images.
 - The only 404 responses were the absent optional files `public/img/projects/p1.jpg` through `p6.jpg`.
 - No typecheck, lint, unit test, or build script exists, so none was run.
+
+## 2026-10-29 — FAQ list and contact copy
+
+Local browser checks on a static server rooted at `public/`:
+
+- The FAQ title stayed `প্রশ্নোত্তর | Build Safe Engineering & Consultancy`. The visible heading was “বাড়ি নির্মাণের আগে যে প্রশ্ন আসে” in Bangla and “Frequently asked questions” in English. The old short-answers line was absent.
+- Fifteen visible questions matched the Bangla `FAQPage` structured data, including the answers. The first item had 20px of padding and an 8px gap before the answer. The heading weight was 700.
+- The home page still had three `.q` items. The global section padding rule was still present, and the FAQ items were not `section` elements.
+- At 1280px the footer row kept space between the copyright and the slogan “Partner with BUILD SAFE to turn your vision into reality”. At 390px both lines were centered.
+- The contact email matched the phone number at 19px and weight 600, kept `mailto:contact.buildsafe@gmail.com`, and copied that address. The notice sat 16px from the right edge.
+- No unexpected failed requests. The only known 404s remain the absent optional files `public/img/projects/p1.jpg` through `p6.jpg`.
+- No typecheck, lint, unit test, or build script exists, so none was run.

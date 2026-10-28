@@ -49,7 +49,7 @@
     try { navigator.clipboard.writeText(text).then(ok, fallback); } catch (e) { fallback(); }
   }
   document.querySelectorAll('[data-copy]').forEach(function (b) {
-    b.addEventListener('click', function () { copyText(b.dataset.copy, document.getElementById('phone-text')); });
+    b.addEventListener('click', function () { copyText(b.dataset.copy, b.previousElementSibling); });
   });
 
   /* The enquiry form exists only on /contact/. Other pages skip this block. */
