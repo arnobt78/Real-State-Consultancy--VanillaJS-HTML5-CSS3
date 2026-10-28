@@ -4,7 +4,7 @@
 
 Project Name: Build Safe Engineering
 Description: Bilingual Bangla/English brochure for Build Safe Engineering & Consultancy. Static pages in `public/`, WhatsApp enquiry handoff.
-Current Status: Saved English is applied before first paint. The FAQ list, the footer slogan, and the contact email copy ship from pull request 6 into `main`. Vercel Production follows `main`. This repo is not the live Cloudflare site.
+Current Status: Saved English is applied before first paint. The header and the footer Pages list include FAQ, and the Information column is gone. That change ships from pull request 7 into `main`. Vercel Production follows `main`. This repo is not the live Cloudflare site.
 Current Agile V Cycle: C1
 Current Gate: `GATE-0001` was superseded by later direction to build `public/`. See `.agile-v/STATE.md`.
 
@@ -42,7 +42,7 @@ Preserve:
 
 ## Rendering
 
-This is not a server-rendered application. Each HTML file is a page. A short script in the page head sets `data-lang` to `en` only when `bs-lang` is already `en`, so the first paint matches the saved language. `public/js/site.js` handles language changes, the menu, old home hashes, the enquiry preview, and copy-to-clipboard. Header links are only as wide as the visible language, with the same padding and a 4px gap. Their order is Home, About, Services, Projects, Contact. The current page link is slightly bolder. The contact service menu is two selects, one Bangla and one English, so that label does not wait on the bottom script. The footer columns are brand, Pages, Information, and Office. Pages lists Home, About, Services, and Projects. Information lists FAQ and Contact. Office lists the phone, `contact.buildsafe@gmail.com`, and the address. At 760px and below, Pages and Information sit side by side and Office stays full width. The footer address uses the same size, weight, and color as the other footer lines. The contact page email uses the same size, weight, and color as the phone number, and it has the same copy button. The copy notice sits at the bottom right. On a phone, the two footer lines are centered. The slogan is “Partner with BUILD SAFE to turn your vision into reality”, in one color. The FAQ page lists 15 questions from the existing pages in a compact list. Link previews use `meta-logo.jpg`. The structured-data logo and the header image stay `logo.png`. The home photo stays `hero.jpg`.
+This is not a server-rendered application. Each HTML file is a page. A short script in the page head sets `data-lang` to `en` only when `bs-lang` is already `en`, so the first paint matches the saved language. `public/js/site.js` handles language changes, the menu, old home hashes, the enquiry preview, and copy-to-clipboard. Header links are only as wide as the visible language, with the same padding and a 4px gap. Their order is Home, About, Services, Projects, FAQ, Contact. The current page link is slightly bolder. The contact service menu is two selects, one Bangla and one English, so that label does not wait on the bottom script. The footer columns are brand, Pages, and Office. Pages lists Home, About, Services, Projects, FAQ, and Contact. Office lists the phone, `contact.buildsafe@gmail.com`, and the address, with the social icons under those lines. At 760px and below, brand, Pages, and Office each take a full row. The footer address uses the same size, weight, and color as the other footer lines. The contact page email uses the same size, weight, and color as the phone number, and it has the same copy button. The copy notice sits at the bottom right. On a phone, the two footer lines are centered. The slogan is “Partner with BUILD SAFE to turn your vision into reality”, in one color. The FAQ page lists 15 questions from the existing pages in a compact list. Link previews use `meta-logo.jpg`. The structured-data logo and the header image stay `logo.png`. The home photo stays `hero.jpg`.
 
 Do not split the pages into a component framework. Do not add a copy-to-dist build. Serve `public/` directly.
 
@@ -133,4 +133,4 @@ Always continue from
 
 unless instructed otherwise.
 
-Current stop: pull request 6 carries the FAQ list, the footer slogan, and the contact email copy into `main`. Vercel Production follows `main`. Do not open another branch. Do not push new implementation straight to `main`. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
+Current stop: pull request 7 carries FAQ in the header and in the footer Pages list into `main`. The Information column is gone. Vercel Production follows `main`. Do not open another branch. Do not push new implementation straight to `main`. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.

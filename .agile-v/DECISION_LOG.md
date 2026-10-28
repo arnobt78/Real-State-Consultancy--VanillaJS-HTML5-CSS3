@@ -90,3 +90,11 @@ Append-only. Do not rewrite earlier entries.
 - Decision: The FAQ page lists 15 bilingual questions taken from the home, about, services, and contact pages. The visible heading is “বাড়ি নির্মাণের আগে যে প্রশ্ন আসে” / “Frequently asked questions”. The intro uses the existing home and about lines. Each item is an article with about 20px of padding, not a padded `section`. The slogan is “Partner with BUILD SAFE to turn your vision into reality”, in one color. On a phone the two footer lines are centered. The contact email matches the phone number, keeps `mailto:contact.buildsafe@gmail.com`, and has the same copy button. The copy notice sits at the bottom right.
 - Rationale: The old FAQ items were short and sat inside the 72px section padding. The email looked like a brown link, and the copied notice sat in the middle.
 - Linked: `DEC-0010`
+
+## DEC-0012 — FAQ in the header and Pages
+
+- Date: 2026-10-29
+- Agent: Cursor
+- Decision: The Information column is gone. Pages lists Home, About, Services, Projects, FAQ, and Contact. The header lists FAQ immediately before Contact, and the phone menu is that same list. `aria-current="page"` stays on the FAQ footer link only on the FAQ page, and on the Contact footer link only on the contact page. The footer is three columns. At 760px and below, the brand, Pages, and Office each take a full row. Facebook, LinkedIn, and YouTube stay under the office phone, email, and address.
+- Rationale: FAQ and Contact belong with the other pages. The social icons are other ways to reach the office, so they stay with those details.
+- Linked: `DEC-0011`
