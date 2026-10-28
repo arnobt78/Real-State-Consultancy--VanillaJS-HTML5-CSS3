@@ -3,12 +3,12 @@
 ## Resume point
 
 Cycle: `C1`
-Phase: Saved English is applied before first paint. Header links size to the visible language. The footer Office column lists the phone, email, and address. The FAQ page lists 15 questions in a compact list. The slogan is “Partner with BUILD SAFE to turn your vision into reality”. That work is committed on `fix/footer-information` and is not yet on `main`. Vercel Production follows `main`. A push on `fix/footer-information` stays a Vercel Preview until it is merged. Cloudflare is still the older live site and is managed separately.
+Phase: Saved English is applied before first paint. Header links size to the visible language. The footer Office column lists the phone, email, and address. The FAQ page lists 15 questions in a compact list. The slogan is “Partner with BUILD SAFE to turn your vision into reality”. That work ships from pull request 6 into `main`. Vercel Production follows `main`. A later push on `fix/footer-information` stays a Vercel Preview until it is merged. Cloudflare is still the older live site and is managed separately.
 Branch: `fix/footer-information` is the only feature branch. Do not open another branch. Older branches were removed after their pull requests merged.
 Remote: `https://github.com/arnobt78/Real-State-Consultancy--VanillaJS-HTML5-CSS3.git`
 Gate: `GATE-0001` was superseded. Do not wait on token `C1-HG1-7f3a`. Do not revert `public/` because that token is missing.
 
-Next exact action: wait for approval to push `fix/footer-information` and open one pull request into `main`. Do not push straight to `main`. Do not open another branch. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy uses output directory `public` with no build command.
+Next exact action: none after pull request 6 is on `main`. Vercel Production deploys `main`. Do not push new implementation straight to `main`. Do not open another branch. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy uses output directory `public` with no build command.
 
 ## What the project is
 
@@ -85,7 +85,7 @@ No typecheck, lint, test, or build script exists. The FAQ list, the slogan, and 
 
 - `GATE-0001` was superseded. Do not halt new page work on token `C1-HG1-7f3a`.
 - Cloudflare is managed outside this repo. Canonical pages use `https://buildsafe.com.bd/`.
-- Project photographs `p1.jpg` through `p6.jpg` are still absent (`REQ-0005`). This branch is committed locally and is not yet pushed.
+- Project photographs `p1.jpg` through `p6.jpg` are still absent (`REQ-0005`). Pull request 6 carries this work into `main`.
 
 ## Unresolved questions
 
