@@ -59,6 +59,8 @@
 
 ## 2026-10-29 — FAQ in the header and Pages
 
+Pull request 7.
+
 - Removed the Information column and listed FAQ and Contact in Pages, after Projects.
 - Added FAQ immediately before Contact in the header. The phone menu uses that same list.
 - Stacked the brand, Pages, and Office on full rows at 760px and below. Left the social icons under the office lines.
