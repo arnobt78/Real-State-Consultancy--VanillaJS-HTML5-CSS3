@@ -3,12 +3,12 @@
 ## Resume point
 
 Cycle: `C1`
-Phase: Saved English is applied before first paint. Header links size to the visible language. The footer has an Information column, and the link order is Home, About, Services, Projects, Contact. That work is published from `fix/footer-information` by one pull request into `main`. Cloudflare is still the older live site and is managed separately.
-Branch: `fix/footer-information` is the only feature branch for this work. Do not open another branch for it. Older branches are removed once their pull requests are merged.
+Phase: Saved English is applied before first paint. Header links size to the visible language. The footer Office column lists the phone, email, and address. Information lists FAQ and Contact. Link previews use `meta-logo.jpg`, and the site logo stays `logo.png`. That work is committed on `fix/footer-information` and is not yet on `main`. Cloudflare is still the older live site and is managed separately.
+Branch: `fix/footer-information` is the only feature branch. Do not open another branch. Older branches were removed after their pull requests merged.
 Remote: `https://github.com/arnobt78/Real-State-Consultancy--VanillaJS-HTML5-CSS3.git`
 Gate: `GATE-0001` was superseded. Do not wait on token `C1-HG1-7f3a`. Do not revert `public/` because that token is missing.
 
-Next exact action: none after the `fix/footer-information` pull request is merged. Do not push new implementation straight to `main`. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy, if wanted, is a separate approval and must use output directory `public` with no build command.
+Next exact action: wait for approval to push `fix/footer-information` and open one pull request into `main`. Do not push straight to `main`. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy, if wanted, is a separate approval and must use output directory `public` with no build command.
 
 ## What the project is
 
@@ -26,11 +26,12 @@ Public contact data in the pages (intentional, not a secret):
 - LinkedIn: `https://www.linkedin.com/in/md-mamunoor-rashid/`
 - YouTube: `https://www.youtube.com/@BuildSafe-EC`
 - Messenger: `https://m.me/buildsafe.ec`
+- Email: `contact.buildsafe@gmail.com`
 
 ## Architecture (current)
 
 - Publish root is `public/`. Nine HTML pages share `public/css/site.css` and `public/js/site.js`.
-- Bangla is the default. English is in the same file and is shown when `data-lang` is `en`. The choice is stored as `bs-lang`. A head script sets that attribute before first paint when the saved value is `en`. Header links follow the visible words, in the order Home, About, Services, Projects, Contact. The footer repeats that order, then an Information column lists Terms, Privacy, Cookies, and FAQ. On a phone those two lists sit side by side. The footer address matches the other footer lines. The contact service menu is two selects so its label is already in the saved language.
+- Bangla is the default. English is in the same file and is shown when `data-lang` is `en`. The choice is stored as `bs-lang`. A head script sets that attribute before first paint when the saved value is `en`. Header links follow the visible words, in the order Home, About, Services, Projects, Contact. Footer Pages omits Contact. Information lists FAQ and Contact. The Office column lists the phone, `contact.buildsafe@gmail.com`, and the Dilara Tower address. On a phone, Pages and Information sit side by side and Office stays full width. The footer address matches the other footer lines. The slogan marks “vision” and “reality” in `#E39272` at weight 600. Link previews use `public/img/meta-logo.jpg`. The structured-data logo and the header image stay `logo.png`. The home photo stays `hero.jpg`. Terms, Privacy, and Cookies stay public and in the sitemap, and they are not in the footer. The contact service menu is two selects so its label is already in the saved language.
 - The contact form validates a name and a Bangladesh mobile number, then prepares a WhatsApp link. It does not post to a server.
 - Project cards show a photo only when `public/img/projects/p1.jpg` through `p6.jpg` exist.
 - Dark colors follow the system. Fonts are files in `public/fonts/`.
@@ -49,10 +50,10 @@ Public contact data in the pages (intentional, not a secret):
 
 ## Completed this session
 
-- Confirmed `.agile-v/` did not exist. Bootstrapped Cycle `C1`.
-- Read `docs/AGILE_V_PROTOCOL.md`, `CLAUDE.md`, `AGENTS.md`, `index.html`, and the image files.
-- Reconciled an empty project memory with the static site.
-- Wrote planning records only. No implementation change.
+- Footer Pages lists Home, About, Services, and Projects. Information lists FAQ and Contact.
+- The third footer column is Office: phone, `contact.buildsafe@gmail.com`, and the address. The contact page has a matching email card. Structured data includes that email.
+- The footer slogan is “Partner with build safe to turn your vision into reality”, with vision and reality marked.
+- Share tags and the structured-data image use `meta-logo.jpg`. The structured-data logo and the header stay `logo.png`. The home photo stays `hero.jpg`.
 
 ## Active requirement IDs
 
@@ -66,29 +67,24 @@ Proposed, blocked on `GATE-0001`:
 
 ## Files changed this session
 
-- `.agile-v/STATE.md`
-- `.agile-v/REQUIREMENTS.md`
-- `.agile-v/TASKS.md`
-- `.agile-v/DECISION_LOG.md`
-- `.agile-v/RISKS.md`
-- `.agile-v/GATES.md`
-- `.agile-v/CHECKPOINTS.md`
-- `.agile-v/APPROVALS.md`
-- `.agile-v/VALIDATION_SUMMARY.md`
-- `.agile-v/CHANGELOG.md`
+- the nine pages in `public/`
+- `public/css/site.css`
+- `public/img/meta-logo.jpg`
+- `README.md`
 - `CLAUDE.md`
+- `.agile-v/STATE.md`, `DECISION_LOG.md`, `VALIDATION_SUMMARY.md`, `CHANGELOG.md`
 
-Not changed: `index.html`, `img/*`, `AGENTS.md`, `README.md`, `docs/AGILE_V_PROTOCOL.md`.
+Not changed: `public/sitemap.xml`, `public/js/site.js`, `AGENTS.md`, `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
 
 ## Validation
 
-No typecheck, lint, test, or build script exists. The page was not opened in a browser. See `VALIDATION_SUMMARY.md`.
+No typecheck, lint, test, or build script exists. The footer and the three image roles were checked in a local browser. See `VALIDATION_SUMMARY.md`.
 
 ## Blockers
 
-- `GATE-0001` is PENDING. Implementation is stopped.
-- Production URL is unknown, so canonical and Open Graph URLs cannot be finished (`RISK-0003`).
-- Project photographs are not in the repository (`REQ-0005`).
+- `GATE-0001` was superseded. Do not halt new page work on token `C1-HG1-7f3a`.
+- Cloudflare is managed outside this repo. Canonical pages use `https://buildsafe.com.bd/`.
+- Project photographs `p1.jpg` through `p6.jpg` are still absent (`REQ-0005`). Push of this branch is waiting for approval.
 
 ## Unresolved questions
 

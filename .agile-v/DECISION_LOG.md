@@ -74,3 +74,11 @@ Append-only. Do not rewrite earlier entries.
 - Decision: Header and footer Pages links run Home, About, Services, Projects, Contact. The phone menu uses that same header list. The current-page mark still comes from `data-nav`.
 - Rationale: The requested order puts About immediately after Home.
 - Linked: `DEC-0007`
+
+## DEC-0010 — Office footer and share picture
+
+- Date: 2026-10-28
+- Agent: Cursor
+- Decision: Information lists FAQ and Contact. Terms, Privacy, and Cookies stay as pages and in the sitemap, and they are not footer links. The third column is Office and lists the phone, `contact.buildsafe@gmail.com`, and the address. The contact page has an email card. The slogan marks “vision” and “reality” in `#E39272` at weight 600. Footer Pages omits Contact. Link previews and the structured-data image use `public/img/meta-logo.jpg`. The structured-data logo, the header image, the favicon, and `icon-180.png` stay as they were. The home photo stays `hero.jpg`.
+- Rationale: The footer should show how to reach the office. The square logo is the picture chat apps show, and the page itself still uses the existing logo and the office photograph.
+- Linked: `DEC-0008`
