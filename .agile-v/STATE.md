@@ -3,12 +3,12 @@
 ## Resume point
 
 Cycle: `C1`
-Phase: The `public/` site is on `main`. Saved English is applied before first paint. Header links size to the visible language. Cloudflare is still the older live site and is managed separately.
-Branch: `fix/nav-label-width` (nav label width), merged to `main` by pull request. `fix/language-flash` is the earlier language-flash branch. `feat/public-seo` is the brochure branch.
+Phase: Saved English is applied before first paint. Header links size to the visible language. The footer has an Information column, and the link order is Home, About, Services, Projects, Contact. That work is published from `fix/footer-information` by one pull request into `main`. Cloudflare is still the older live site and is managed separately.
+Branch: `fix/footer-information` is the only feature branch for this work. Do not open another branch for it. Older branches are removed once their pull requests are merged.
 Remote: `https://github.com/arnobt78/Real-State-Consultancy--VanillaJS-HTML5-CSS3.git`
 Gate: `GATE-0001` was superseded. Do not wait on token `C1-HG1-7f3a`. Do not revert `public/` because that token is missing.
 
-Next exact action: none for the nav-width task. Do not push new implementation straight to `main`. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy, if wanted, is a separate approval and must use output directory `public` with no build command.
+Next exact action: none after the `fix/footer-information` pull request is merged. Do not push new implementation straight to `main`. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy, if wanted, is a separate approval and must use output directory `public` with no build command.
 
 ## What the project is
 
@@ -30,7 +30,7 @@ Public contact data in the pages (intentional, not a secret):
 ## Architecture (current)
 
 - Publish root is `public/`. Nine HTML pages share `public/css/site.css` and `public/js/site.js`.
-- Bangla is the default. English is in the same file and is shown when `data-lang` is `en`. The choice is stored as `bs-lang`. A head script sets that attribute before first paint when the saved value is `en`. Header links follow the visible words. The contact service menu is two selects so its label is already in the saved language.
+- Bangla is the default. English is in the same file and is shown when `data-lang` is `en`. The choice is stored as `bs-lang`. A head script sets that attribute before first paint when the saved value is `en`. Header links follow the visible words, in the order Home, About, Services, Projects, Contact. The footer repeats that order, then an Information column lists Terms, Privacy, Cookies, and FAQ. On a phone those two lists sit side by side. The footer address matches the other footer lines. The contact service menu is two selects so its label is already in the saved language.
 - The contact form validates a name and a Bangladesh mobile number, then prepares a WhatsApp link. It does not post to a server.
 - Project cards show a photo only when `public/img/projects/p1.jpg` through `p6.jpg` exist.
 - Dark colors follow the system. Fonts are files in `public/fonts/`.

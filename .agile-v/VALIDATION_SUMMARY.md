@@ -57,3 +57,25 @@ Local browser checks on a static server rooted at `public/`:
 - All nine routes returned 200. A valid contact enquiry prepared a WhatsApp message for Concrete Mix Design.
 - At 390px the menu was one language per full-width row, and the page did not scroll sideways.
 - No typecheck, lint, unit test, or build script exists, so none was run.
+
+## 2026-10-28 — footer Information column
+
+Local browser checks on a static server rooted at `public/`:
+
+- At 1280px the columns were brand, Pages, Information, and Contact. Information listed Terms, Privacy, Cookies, and FAQ once.
+- The footer address computed to 15px, weight 400, and the same color as the phone line. The contact-page office card stayed 16px and weight 600.
+- At 761px the four columns stayed in one row. At 760px and at 390px, Pages and Information shared a row and Contact was full width underneath.
+- Checked all nine routes in Bangla and English. The matching Information link kept `aria-current="page"` on Terms, Privacy, Cookies, and FAQ.
+- `/#services`, `/#about`, `/#projects`, and `/#contact` opened those routes. A short name was rejected. A valid enquiry, including Bangla digits, prepared `https://wa.me/8801814116677`.
+- The only 404 responses were the absent optional files `public/img/projects/p1.jpg` through `p6.jpg`. Placeholders stayed. No page errors.
+- No typecheck, lint, unit test, or build script exists, so none was run.
+
+## 2026-10-28 — nav link order
+
+Local browser checks on a static server rooted at `public/`:
+
+- All nine routes, in Bangla and English, showed Home, About, Services, Projects, Contact in the header and in the footer Pages list.
+- At 1280px those links ran left to right in that order. At 390px the open phone menu ran them top to bottom in that order.
+- `/about/` marked About. `/services/` marked Services. Legal pages did not mark a header link.
+- The home button still said আমাদের সেবাসমূহ / Our services.
+- No typecheck, lint, unit test, or build script exists, so none was run.

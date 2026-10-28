@@ -29,3 +29,15 @@
 - Made only the current page link bolder.
 - Kept the Consultation button one width, with its label centered.
 - Rechecked both languages, the nine routes, the old home hash, and one contact enquiry in a local browser.
+
+## 2026-10-28 — footer Information column
+
+- Added an Information column between Pages and Contact on all nine pages.
+- Moved Terms, Privacy, Cookies, and FAQ into that column and removed the old legal row.
+- On a phone, Pages and Information sit side by side and Contact stays full width.
+- Matched the footer address to the other footer lines. Left the contact-page office card as it was.
+
+## 2026-10-28 — nav link order
+
+- Put About before Services in the header and in the footer Pages list.
+- Left the Information column, breadcrumbs, and the home services button unchanged.
