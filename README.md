@@ -73,7 +73,7 @@ Every page uses the same shell:
 
 There are no shared components, hooks, or a component library. To reuse a page in another static site, copy the HTML file and keep the same `/css`, `/js`, `/img`, and `/fonts` paths, or change those paths in that copy.
 
-The header keeps five links: Home, Services, About, Projects, and Contact. Terms, Privacy, Cookies, and FAQ sit in the footer.
+The header keeps five links: Home, About, Services, Projects, and Contact. The footer repeats that order under Pages, then lists Terms, Privacy, Cookies, and FAQ under Information.
 
 ---
 

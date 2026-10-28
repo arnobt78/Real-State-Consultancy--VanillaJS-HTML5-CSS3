@@ -4,7 +4,7 @@
 
 Project Name: Build Safe Engineering
 Description: Bilingual Bangla/English brochure for Build Safe Engineering & Consultancy. Static pages in `public/`, WhatsApp enquiry handoff.
-Current Status: The public site is on `main`. Saved English is applied before first paint. It is not the live Cloudflare site.
+Current Status: Saved English is applied before first paint. The footer Information column and the Home, About, Services order are committed on `fix/footer-information` and are not on `main` yet. This repo is not the live Cloudflare site.
 Current Agile V Cycle: C1
 Current Gate: `GATE-0001` was superseded by later direction to build `public/`. See `.agile-v/STATE.md`.
 
@@ -41,7 +41,7 @@ Preserve:
 
 ## Rendering
 
-This is not a server-rendered application. Each HTML file is a page. A short script in the page head sets `data-lang` to `en` only when `bs-lang` is already `en`, so the first paint matches the saved language. `public/js/site.js` handles language changes, the menu, old home hashes, the enquiry preview, and copy-to-clipboard. Header links are only as wide as the visible language, with the same padding and a 4px gap. The current page link is slightly bolder. The contact service menu is two selects, one Bangla and one English, so that label does not wait on the bottom script.
+This is not a server-rendered application. Each HTML file is a page. A short script in the page head sets `data-lang` to `en` only when `bs-lang` is already `en`, so the first paint matches the saved language. `public/js/site.js` handles language changes, the menu, old home hashes, the enquiry preview, and copy-to-clipboard. Header links are only as wide as the visible language, with the same padding and a 4px gap. Their order is Home, About, Services, Projects, Contact. The current page link is slightly bolder. The contact service menu is two selects, one Bangla and one English, so that label does not wait on the bottom script. The footer columns are brand, Pages, Information, and Contact. Information lists Terms, Privacy, Cookies, and FAQ. At 760px and below, Pages and Information sit side by side and Contact stays full width. The footer address uses the same size, weight, and color as the other footer lines. The contact-page office card stays larger.
 
 Do not split the pages into a component framework. Do not add a copy-to-dist build. Serve `public/` directly.
 
@@ -132,4 +132,4 @@ Always continue from
 
 unless instructed otherwise.
 
-Current stop: header links size to the visible language. That change is on `fix/nav-label-width` and merged to `main` through a pull request. Do not push new implementation straight to `main`. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
+Current stop: the footer Information column and the Home, About, Services order are committed on `fix/footer-information`. They are not pushed. Do not push new implementation straight to `main`. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.

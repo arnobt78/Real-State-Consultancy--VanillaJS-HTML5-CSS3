@@ -58,3 +58,19 @@ Append-only. Do not rewrite earlier entries.
 - Decision: A header link is only as wide as the language on screen. Links share one padding and a 4px gap. The current page is weight 600 and the others stay 500. The Consultation button still keeps both labels so its width does not jump.
 - Rationale: Reserving the longer language made short English titles sit in wide boxes. A small shift when the current title is bolder is acceptable.
 - Linked: `DEC-0006`
+
+## DEC-0008 — Footer Information column
+
+- Date: 2026-10-28
+- Agent: Cursor
+- Decision: The footer is four columns: brand, Pages, Information, and Contact. Information lists Terms, Privacy, Cookies, and FAQ, and the old legal row is gone. At 760px and below, Pages and Information share one row and Contact stays full width. The footer address uses the same size, weight, and color as the phone line. The contact-page office card stays 16px and weight 600.
+- Rationale: The legal links were a separate row, and the address was larger and brighter than the other footer lines.
+- Linked: `DEC-0005`
+
+## DEC-0009 — About comes before Services
+
+- Date: 2026-10-28
+- Agent: Cursor
+- Decision: Header and footer Pages links run Home, About, Services, Projects, Contact. The phone menu uses that same header list. The current-page mark still comes from `data-nav`.
+- Rationale: The requested order puts About immediately after Home.
+- Linked: `DEC-0007`
