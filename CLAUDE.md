@@ -4,7 +4,7 @@
 
 Project Name: Build Safe Engineering
 Description: Bilingual Bangla/English brochure for Build Safe Engineering & Consultancy. Static pages in `public/`, WhatsApp enquiry handoff.
-Current Status: Saved English is applied before first paint. The footer office column, the Information links, and the share picture are committed on `fix/footer-information` and are not yet on `main`. This repo is not the live Cloudflare site.
+Current Status: Saved English is applied before first paint. The footer office column, the Information links, and the share picture are in pull request 5 from `fix/footer-information` into `main`. This repo is not the live Cloudflare site.
 Current Agile V Cycle: C1
 Current Gate: `GATE-0001` was superseded by later direction to build `public/`. See `.agile-v/STATE.md`.
 
@@ -133,4 +133,4 @@ Always continue from
 
 unless instructed otherwise.
 
-Current stop: the office footer, the share picture, and the site logo are committed on `fix/footer-information`. Push and the pull request wait for approval. Do not open another branch. Do not push new implementation straight to `main`. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
+Current stop: pull request 5 is open from `fix/footer-information` into `main`. Do not merge it until asked. Do not open another branch. Do not push new implementation straight to `main`. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
