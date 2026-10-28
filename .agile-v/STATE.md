@@ -3,12 +3,12 @@
 ## Resume point
 
 Cycle: `C1`
-Phase: Saved English is applied before first paint. Header links size to the visible language. The footer has an Information column, and the link order is Home, About, Services, Projects, Contact. Those two changes are committed on `fix/footer-information` and are not on `main`. Cloudflare is still the older live site and is managed separately.
-Branch: `fix/footer-information` (footer Information column and nav order), committed locally, not pushed. `fix/nav-label-width` is merged to `main`. `fix/language-flash` is the earlier language-flash branch. `feat/public-seo` is the brochure branch.
+Phase: Saved English is applied before first paint. Header links size to the visible language. The footer has an Information column, and the link order is Home, About, Services, Projects, Contact. That work is published from `fix/footer-information` by one pull request into `main`. Cloudflare is still the older live site and is managed separately.
+Branch: `fix/footer-information` is the only feature branch for this work. Do not open another branch for it. Older branches are removed once their pull requests are merged.
 Remote: `https://github.com/arnobt78/Real-State-Consultancy--VanillaJS-HTML5-CSS3.git`
 Gate: `GATE-0001` was superseded. Do not wait on token `C1-HG1-7f3a`. Do not revert `public/` because that token is missing.
 
-Next exact action: none until a push of `fix/footer-information` is approved. Do not push new implementation straight to `main`. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy, if wanted, is a separate approval and must use output directory `public` with no build command.
+Next exact action: none after the `fix/footer-information` pull request is merged. Do not push new implementation straight to `main`. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy, if wanted, is a separate approval and must use output directory `public` with no build command.
 
 ## What the project is
 
