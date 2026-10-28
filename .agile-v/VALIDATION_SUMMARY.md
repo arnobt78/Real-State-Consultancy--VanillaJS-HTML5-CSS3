@@ -79,3 +79,16 @@ Local browser checks on a static server rooted at `public/`:
 - `/about/` marked About. `/services/` marked Services. Legal pages did not mark a header link.
 - The home button still said আমাদের সেবাসমূহ / Our services.
 - No typecheck, lint, unit test, or build script exists, so none was run.
+
+## 2026-10-28 — office footer and share picture
+
+Local browser checks on a static server rooted at `public/`, after the footer change and again after the picture split:
+
+- All nine routes, in Bangla and English, at 1280px and 390px, showed Pages as Home, About, Services, and Projects. Information showed FAQ and Contact. Office showed the phone, `contact.buildsafe@gmail.com`, and the Dilara Tower address.
+- The contact page email card used `mailto:contact.buildsafe@gmail.com`. Structured data on every page included that email.
+- The slogan was “Partner with build safe to turn your vision into reality”. The words vision and reality computed to `rgb(227, 146, 114)` and weight 600 in the dark footer.
+- On every page, `og:image`, `twitter:image`, and the structured-data image were `https://buildsafe.com.bd/img/meta-logo.jpg`, with width 2000, height 2000, and type `image/jpeg`. The structured-data logo was `https://buildsafe.com.bd/img/logo.png`.
+- The header image was `/img/logo.png` and had a visible width. The home photo was `/img/hero.jpg` with the engineers alt text. Other pages had no hero image. The favicon and apple-touch icon were unchanged.
+- `meta-logo.jpg` measured 2000 by 2000 JPEG and returned HTTP 200. `public/sitemap.xml` still listed nine page URLs and no images.
+- The only 404 responses were the absent optional files `public/img/projects/p1.jpg` through `p6.jpg`.
+- No typecheck, lint, unit test, or build script exists, so none was run.

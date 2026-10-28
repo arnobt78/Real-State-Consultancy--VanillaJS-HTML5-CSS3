@@ -41,3 +41,11 @@
 
 - Put About before Services in the header and in the footer Pages list.
 - Left the Information column, breadcrumbs, and the home services button unchanged.
+
+## 2026-10-28 — office footer and share picture
+
+- Listed FAQ and Contact in Information. Left Terms, Privacy, and Cookies out of the footer.
+- Renamed the third footer column to Office and listed the phone, email, and address. Added the email on the contact page and in structured data.
+- Set the slogan to “Partner with build safe to turn your vision into reality”, with vision and reality marked.
+- Removed Contact from the Pages column. Left it in the header and in Information.
+- Pointed link previews at `meta-logo.jpg`. Kept the site logo as `logo.png` and the home photo as `hero.jpg`.

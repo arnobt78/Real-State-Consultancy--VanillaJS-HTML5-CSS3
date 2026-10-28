@@ -15,6 +15,6 @@ Cycle: `C1`. Reviewed 2026-10-27 against `index.html` and `img/`.
 | RISK-0009 | Low | The folder is not a git repository, so there is no revision history. | `git status` returned “not a git repository”. | `DEC-0001` |
 | RISK-0010 | Low | Service-detail images carry visible labels but `alt=""`, so a screen-reader user gets the heading and not the diagram labels. Card images are less of a gap because the heading is inside the link. | `alt=""` on `.svc-row-img img` and `.svc-img img`. | `REQ-0010` |
 
-Not treated as a secret leak: the phone number and social URLs are the published contact path (`REQ-0006`).
+Not treated as a secret leak: the phone number, `contact.buildsafe@gmail.com`, and social URLs are the published contact path (`REQ-0006`).
 
 Enquiry text is assigned with `textContent` and `encodeURIComponent`. That avoids HTML injection in the preview. Not a penetration test.

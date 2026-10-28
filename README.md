@@ -36,7 +36,7 @@ There is no `package.json`, so there is nothing to install.
 
 ## Environment
 
-No `.env` file is required. The phone number, Facebook page, and LinkedIn profile are written in the HTML because they are already public on the site.
+No `.env` file is required. The phone number, email `contact.buildsafe@gmail.com`, Facebook page, and LinkedIn profile are written in the HTML because they are already public on the site.
 
 You do not need to set any environment variable to run these pages.
 
@@ -73,7 +73,7 @@ Every page uses the same shell:
 
 There are no shared components, hooks, or a component library. To reuse a page in another static site, copy the HTML file and keep the same `/css`, `/js`, `/img`, and `/fonts` paths, or change those paths in that copy.
 
-The header keeps five links: Home, About, Services, Projects, and Contact. The footer repeats that order under Pages, then lists Terms, Privacy, Cookies, and FAQ under Information.
+The header keeps five links: Home, About, Services, Projects, and Contact. The footer Pages list is Home, About, Services, and Projects. Information lists FAQ and Contact. The office column shows the phone, email, and address.
 
 ---
 
@@ -106,13 +106,13 @@ The script accepts a name of more than one character and a Bangladesh mobile num
 
 Headings use Anek Bangla. Body text uses Hind Siliguri. Small labels use IBM Plex Mono. The files are in `public/fonts/` and are licensed under the SIL Open Font License in that folder.
 
-The home hero is loaded with the page. Service pictures below the first screen use `loading="lazy"`. On the projects page, a photo appears only when `img/projects/p1.jpg` through `p6.jpg` exist. Missing files stay as placeholders.
+The home photo is `public/img/hero.jpg`. The header uses `public/img/logo.png`. Chat and email previews use `public/img/meta-logo.jpg`. Service pictures below the first screen use `loading="lazy"`. On the projects page, a photo appears only when `img/projects/p1.jpg` through `p6.jpg` exist. Missing files stay as placeholders.
 
 ---
 
 ## Search files
 
-Each page has its own title, description, canonical URL, and social tags. The address used there is `https://buildsafe.com.bd/`. The FAQ page also has structured data for the questions printed on that page.
+Each page has its own title, description, canonical URL, and social tags. The address used there is `https://buildsafe.com.bd/`. The share picture is `https://buildsafe.com.bd/img/meta-logo.jpg`. The structured-data logo is `https://buildsafe.com.bd/img/logo.png`. The FAQ page also has structured data for the questions printed on that page.
 
 Keywords are the ordinary words already on the pages: engineering consultancy, design, testing, material advice, Dhaka, and Bangladesh. There is no keywords meta tag.
 

@@ -315,6 +315,9 @@ footer a:hover { color: var(--band-ink) }
 footer a[aria-current="page"] { color: var(--band-ink); font-weight: 600 }
 footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px }
 footer .office { color: inherit; font-weight: inherit; font-size: inherit; line-height: inherit }
+footer .reach { display: flex; align-items: flex-start; gap: 8px }
+footer .reach svg { flex: 0 0 16px; margin-top: 3px; color: inherit }
+footer .reach a, footer .reach .office { min-width: 0 }
 footer .socials { margin-top: 14px }
 footer .socials a { border-color: var(--band-line); color: var(--band-ink) }
 footer .socials a:hover { background: rgba(255,255,255,.06) }
@@ -322,6 +325,7 @@ footer .socials a:hover { background: rgba(255,255,255,.06) }
 .foot-logo { height: 110px; width: auto }
 .foot-tag { color: var(--band-ink-2); font-family: var(--f-body); font-size: 14px; font-weight: 500; line-height: 1.6; padding-left: 12px; white-space: nowrap; font-size: clamp(11.5px, 3.3vw, 14px); border-left: 2px solid var(--brand) }
 .foot-bottom { grid-column: 1 / -1; border-top: 1px solid var(--band-line); padding-top: 18px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 14px }
+.foot-bottom .mark { color: #E39272; font-weight: 600 }
 @media (max-width: 760px) {
   footer .wrap { grid-template-columns: 1fr 1fr }
   .foot-brand, .foot-contact, .foot-bottom { grid-column: 1 / -1 }

@@ -4,7 +4,7 @@
 
 Project Name: Build Safe Engineering
 Description: Bilingual Bangla/English brochure for Build Safe Engineering & Consultancy. Static pages in `public/`, WhatsApp enquiry handoff.
-Current Status: Saved English is applied before first paint. The footer Information column and the Home, About, Services order ship from `fix/footer-information` through one pull request into `main`. This repo is not the live Cloudflare site.
+Current Status: Saved English is applied before first paint. The footer office column, the Information links, and the share picture are in pull request 5 from `fix/footer-information` into `main`. This repo is not the live Cloudflare site.
 Current Agile V Cycle: C1
 Current Gate: `GATE-0001` was superseded by later direction to build `public/`. See `.agile-v/STATE.md`.
 
@@ -31,17 +31,18 @@ Preserve:
 - routes `/`, `/services/`, `/about/`, `/projects/`, `/contact/`, `/terms/`, `/privacy/`, `/cookies/`, `/faq/`
 - old home hashes `#services`, `#about`, `#projects`, and `#contact` redirect to those routes
 - Bangla as the default language, English via `data-lang` and `localStorage` key `bs-lang`
-- service images `public/img/s1.jpg` through `s8.jpg` and logos `public/img/logo.png` and `logo-white.png`
+- service images `public/img/s1.jpg` through `s8.jpg`, the header logos `public/img/logo.png` and `logo-white.png`, the home photo `public/img/hero.jpg`, and the share picture `public/img/meta-logo.jpg`
 - optional project images `public/img/projects/p1.jpg` through `p6.jpg`
 - enquiry handoff to WhatsApp number `8801814116677` (no server storage)
 - office address at Dilara Tower, Hatirpool, Dhaka-1205
+- public email `contact.buildsafe@gmail.com`
 - self-hosted fonts in `public/fonts/`
 
 ---
 
 ## Rendering
 
-This is not a server-rendered application. Each HTML file is a page. A short script in the page head sets `data-lang` to `en` only when `bs-lang` is already `en`, so the first paint matches the saved language. `public/js/site.js` handles language changes, the menu, old home hashes, the enquiry preview, and copy-to-clipboard. Header links are only as wide as the visible language, with the same padding and a 4px gap. Their order is Home, About, Services, Projects, Contact. The current page link is slightly bolder. The contact service menu is two selects, one Bangla and one English, so that label does not wait on the bottom script. The footer columns are brand, Pages, Information, and Contact. Information lists Terms, Privacy, Cookies, and FAQ. At 760px and below, Pages and Information sit side by side and Contact stays full width. The footer address uses the same size, weight, and color as the other footer lines. The contact-page office card stays larger.
+This is not a server-rendered application. Each HTML file is a page. A short script in the page head sets `data-lang` to `en` only when `bs-lang` is already `en`, so the first paint matches the saved language. `public/js/site.js` handles language changes, the menu, old home hashes, the enquiry preview, and copy-to-clipboard. Header links are only as wide as the visible language, with the same padding and a 4px gap. Their order is Home, About, Services, Projects, Contact. The current page link is slightly bolder. The contact service menu is two selects, one Bangla and one English, so that label does not wait on the bottom script. The footer columns are brand, Pages, Information, and Office. Pages lists Home, About, Services, and Projects. Information lists FAQ and Contact. Office lists the phone, `contact.buildsafe@gmail.com`, and the address. At 760px and below, Pages and Information sit side by side and Office stays full width. The footer address uses the same size, weight, and color as the other footer lines. The contact page adds an email card and keeps the larger office card. The footer slogan keeps “vision” and “reality” in `#E39272` at weight 600. Link previews use `meta-logo.jpg`. The structured-data logo and the header image stay `logo.png`. The home photo stays `hero.jpg`.
 
 Do not split the pages into a component framework. Do not add a copy-to-dist build. Serve `public/` directly.
 
@@ -132,4 +133,4 @@ Always continue from
 
 unless instructed otherwise.
 
-Current stop: the footer Information column and the Home, About, Services order ship from `fix/footer-information` through one pull request into `main`. Do not open another branch for this work. Do not push new implementation straight to `main`. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
+Current stop: pull request 5 is open from `fix/footer-information` into `main`. Do not merge it until asked. Do not open another branch. Do not push new implementation straight to `main`. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
