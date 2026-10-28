@@ -23,9 +23,10 @@
     document.getElementById('lang-bn').setAttribute('aria-pressed', l === 'bn');
     document.getElementById('lang-en').setAttribute('aria-pressed', l === 'en');
     document.querySelectorAll('[data-bn][data-en]').forEach(function (el) {
-      var v = el.getAttribute('data-' + l);
-      if (el.tagName === 'OPTION') el.textContent = v; else el.setAttribute('placeholder', v);
+      el.setAttribute('placeholder', el.getAttribute('data-' + l));
     });
+    var svcBn = document.getElementById('f-svc'), svcEn = document.getElementById('f-svc-en');
+    if (svcBn && svcEn) { if (l === 'en') svcEn.value = svcBn.value; else svcBn.value = svcEn.value; }
     try { localStorage.setItem('bs-lang', l); } catch (e) {}
   }
   document.getElementById('lang-bn').addEventListener('click', function () { setLang('bn'); });
@@ -64,7 +65,8 @@
       document.getElementById('e-phone').hidden = okPhone;
       if (!okName) { F('f-name').focus(); return; }
       if (!okPhone) { F('f-phone').focus(); return; }
-      var svcOpt = F('f-svc').options[F('f-svc').selectedIndex];
+      var svcEl = lang === 'en' && document.getElementById('f-svc-en') ? document.getElementById('f-svc-en') : F('f-svc');
+      var svcOpt = svcEl.options[svcEl.selectedIndex];
       var stage = STAGE[form.querySelector('input[name=stage]:checked').value];
       var bn = lang === 'bn';
       var lines = [
@@ -74,7 +76,7 @@
         (bn ? 'নাম: ' : 'Name: ') + name,
         (bn ? 'মোবাইল: ' : 'Mobile: ') + phone,
         F('f-area').value.trim() ? (bn ? 'এলাকা: ' : 'Location: ') + F('f-area').value.trim() : null,
-        (bn ? 'সেবা: ' : 'Service: ') + svcOpt.getAttribute('data-' + lang),
+        (bn ? 'সেবা: ' : 'Service: ') + svcOpt.textContent,
         (bn ? 'প্রকল্পের অবস্থা: ' : 'Project stage: ') + stage[bn ? 0 : 1],
         F('f-msg').value.trim() ? (bn ? 'বিস্তারিত: ' : 'Details: ') + F('f-msg').value.trim() : null
       ].filter(function (x) { return x !== null; });
@@ -98,6 +100,6 @@
   setLang(lang === 'en' ? 'en' : 'bn');
   if (form) {
     var svc = new URLSearchParams(location.search).get('service');
-    if (svc && /^[0-8]$/.test(svc)) F('f-svc').value = svc;
+    if (svc && /^[0-8]$/.test(svc)) { F('f-svc').value = svc; var svcEn = document.getElementById('f-svc-en'); if (svcEn) svcEn.value = svc; }
   }
 })();

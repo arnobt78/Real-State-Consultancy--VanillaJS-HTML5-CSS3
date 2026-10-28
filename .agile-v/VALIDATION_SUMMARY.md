@@ -35,3 +35,13 @@ Local browser checks on a static server rooted at `public/`:
 - JSON-LD on the pages parses. `postalCode` is `1205`.
 - No typecheck, lint, unit test, or build script exists, so none was run.
 - The live host `https://buildsafe.com.bd/` was still the older single page when last checked. This repo has not been deployed.
+
+## 2026-10-28 — language flash
+
+Local browser checks on a static server rooted at `public/`:
+
+- With `bs-lang` set to `en`, reloading `/contact/?service=3` showed **Concrete Mix Design**. The Bangla select was `display: none`.
+- Switching to Bangla showed **কংক্রিট মিক্স ডিজাইন** and kept value `3`. Switching back showed the English label again.
+- A valid enquiry prepared a WhatsApp message whose service line matched the visible menu in each language.
+- `node --check` on `public/js/site.js` passed. No typecheck, lint, unit test, or build script exists.
+- Security review of this diff found no exploitable issue. The site has no backend, auth, or package manifest.
