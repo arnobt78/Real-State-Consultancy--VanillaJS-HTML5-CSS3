@@ -41,7 +41,7 @@ Preserve:
 
 ## Rendering
 
-This is not a server-rendered application. Each HTML file is a page. A short script in the page head sets `data-lang` to `en` only when `bs-lang` is already `en`, so the first paint matches the saved language. `public/js/site.js` handles language changes, the menu, old home hashes, the enquiry preview, and copy-to-clipboard. The contact service menu is two selects, one Bangla and one English, so that label does not wait on the bottom script.
+This is not a server-rendered application. Each HTML file is a page. A short script in the page head sets `data-lang` to `en` only when `bs-lang` is already `en`, so the first paint matches the saved language. `public/js/site.js` handles language changes, the menu, old home hashes, the enquiry preview, and copy-to-clipboard. Header links are only as wide as the visible language, with the same padding and a 4px gap. The current page link is slightly bolder. The contact service menu is two selects, one Bangla and one English, so that label does not wait on the bottom script.
 
 Do not split the pages into a component framework. Do not add a copy-to-dist build. Serve `public/` directly.
 
@@ -132,4 +132,4 @@ Always continue from
 
 unless instructed otherwise.
 
-Current stop: the language-flash fix is committed on `fix/language-flash` and merged to `main` through a pull request. Do not push implementation straight to `main`. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
+Current stop: header links size to the visible language. That change is on `fix/nav-label-width` and merged to `main` through a pull request. Do not push new implementation straight to `main`. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.

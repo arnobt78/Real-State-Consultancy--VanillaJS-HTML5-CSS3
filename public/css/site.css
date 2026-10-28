@@ -100,17 +100,15 @@ p { margin: 0 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .brand .logo-light { display: none } :root:not([data-theme="light"]) .brand .logo-dark { display: block } }
 :root[data-theme="dark"] .brand .logo-light { display: none }
 :root[data-theme="dark"] .brand .logo-dark { display: block }
+/* A nav link is only as wide as the language on screen. The consultation button keeps both labels so that one control does not change width. */
 nav.main { display: flex; gap: 4px; margin-left: auto }
-nav.main a { display: inline-grid; text-decoration: none; padding: 8px 12px; border-radius: 8px; font-weight: 600; color: var(--ink-2) }
-nav.main a > span { grid-area: 1 / 1; white-space: nowrap }
+nav.main a { text-decoration: none; padding: 8px 12px; border-radius: 8px; font-weight: 500; color: var(--ink-2); white-space: nowrap }
 nav.main a:hover { color: var(--ink); background: var(--brand-soft) }
-nav.main a.on { color: var(--brand-text) }
+nav.main a.on { color: var(--brand-text); font-weight: 600 }
 .tools { display: flex; align-items: center; gap: 10px }
-.tools .btn { display: inline-grid }
+.tools .btn { display: inline-grid; place-items: center }
 .tools .btn > span { grid-area: 1 / 1; white-space: nowrap }
-html:not([data-lang="en"]) .top nav.main a > [lang="en"],
 html:not([data-lang="en"]) .top .tools .btn > [lang="en"],
-html[data-lang="en"] .top nav.main a > [lang="bn"],
 html[data-lang="en"] .top .tools .btn > [lang="bn"] { display: block; visibility: hidden }
 .lang { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; background: var(--surface) }
 .lang button { border: 0; background: transparent; color: var(--ink-2); font: 600 14px var(--f-body); padding: 5px 12px; border-radius: 999px; cursor: pointer }

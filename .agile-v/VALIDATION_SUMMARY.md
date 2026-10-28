@@ -45,3 +45,15 @@ Local browser checks on a static server rooted at `public/`:
 - A valid enquiry prepared a WhatsApp message whose service line matched the visible menu in each language.
 - `node --check` on `public/js/site.js` passed. No typecheck, lint, unit test, or build script exists.
 - Security review of this diff found no exploitable issue. The site has no backend, auth, or package manifest.
+
+## 2026-10-28 — nav label width
+
+Local browser checks on a static server rooted at `public/`:
+
+- Bangla header widths followed the words. The gaps between links were 4px.
+- English **About** was 71px, not the width of **আমাদের সম্পর্কে**. The gaps were 4px.
+- Hover on **Services** used the soft background at the width of that word plus padding.
+- Reload with English saved showed English. `/#services` opened `/services/`.
+- All nine routes returned 200. A valid contact enquiry prepared a WhatsApp message for Concrete Mix Design.
+- At 390px the menu was one language per full-width row, and the page did not scroll sideways.
+- No typecheck, lint, unit test, or build script exists, so none was run.

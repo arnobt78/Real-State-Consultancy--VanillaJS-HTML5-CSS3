@@ -22,3 +22,10 @@
 - Kept header labels one width, and stopped the active nav link from changing weight.
 - Gave the contact form a Bangla service menu and an English service menu.
 - Checked `/contact/` in a local browser in both languages, including a prepared WhatsApp message.
+
+## 2026-10-28 — nav label width
+
+- Sized each header link to the visible language, with the same padding and a 4px gap.
+- Made only the current page link bolder.
+- Kept the Consultation button one width, with its label centered.
+- Rechecked both languages, the nine routes, the old home hash, and one contact enquiry in a local browser.
