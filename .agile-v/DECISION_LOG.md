@@ -50,3 +50,11 @@ Append-only. Do not rewrite earlier entries.
 - Decision: Each page sets `data-lang` in the head when `bs-lang` is `en`. Header labels keep one width. The contact service control is two selects, one per language. The bottom script no longer rewrites option text.
 - Rationale: The bottom script ran after first paint, so English visitors briefly saw Bangla, and the navbar shifted.
 - Linked: `DEC-0005`
+
+## DEC-0007 — Nav links follow the visible words
+
+- Date: 2026-10-28
+- Agent: Cursor
+- Decision: A header link is only as wide as the language on screen. Links share one padding and a 4px gap. The current page is weight 600 and the others stay 500. The Consultation button still keeps both labels so its width does not jump.
+- Rationale: Reserving the longer language made short English titles sit in wide boxes. A small shift when the current title is bolder is acceptable.
+- Linked: `DEC-0006`
