@@ -112,3 +112,9 @@ Pull request 12.
 - Let the caption side rules follow the current Bangla or English line, with the same 0.7s ease as the picture.
 - Replaced the four later captions with the licensed-partner, construction-support, test-report, and inside-the-home slogans. The office-photo caption stays.
 - Gave the detail-page buttons the same 28px space below as above.
+
+## 2026-10-30 — home pictures
+
+- Pointed the home frame at `hero-1.jpeg` through `hero-5.jpeg`. The captions stay in that same order.
+- Removed `hero.jpg` and `hero-2.png` through `hero-4.png`. `hero-1.png` stays as the design detail banner.
+- `hero-2.jpeg` through `hero-5.jpeg` are 1024×768. `hero-1.jpeg` is 1024×678, so the frame still crops a little of each side.

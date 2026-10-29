@@ -130,3 +130,11 @@ Append-only. Do not rewrite earlier entries.
 - Decision: The caption side rules follow the current line and ease for 0.7s. The office-photo caption stays. The other four lines are “A licensed partner for every decision”, “Technical support while construction is underway”, “Everyone says best. The report shows the truth.”, and “The dream home, on the inside too”, with the matching Bangla lines. Detail pages keep 28px above and below the two buttons.
 - Rationale: The rules were stuck at the width of the longest line. The four captions repeated the words already printed on the pictures. The buttons sat against the footer.
 - Linked: `DEC-0015`
+
+## DEC-0017 — Home pictures
+
+- Date: 2026-10-30
+- Agent: Cursor
+- Decision: The home frame uses `hero-1.jpeg` through `hero-5.jpeg` in the same order as the five captions. `hero.jpg` and `hero-2.png` through `hero-4.png` are removed. `hero-1.png` stays, because the design detail banner is 16:9 and the new shield picture is 4:3.
+- Rationale: The client supplied five new home pictures. Four are 1024×768. The office picture is 1024×678, so the 4:3 frame still crops a little of each side.
+- Linked: `DEC-0016`

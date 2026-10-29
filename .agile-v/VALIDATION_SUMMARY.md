@@ -169,3 +169,15 @@ A local static server rooted at `public/` and a browser check:
 - On the fire detail page, the space above the buttons and the space below them were both 28px. The banner stayed `project-6-poster.jpeg`.
 - A 3-digit phone number kept the contact form. A valid number hid the form and set a WhatsApp link to `https://wa.me/8801814116677` that included the name.
 - An independent file check matched the four slogans, the caption-width rules, and the button spacing. Page-load timing was not measured. The live Vercel and Cloudflare headers were not opened.
+
+## 2026-10-30 — home pictures
+
+A local static server rooted at `public/` and a browser check:
+
+- `node --check public/js/site.js` passed. No typecheck, lint, unit test, or build script exists, so none was run.
+- All 15 HTML routes returned HTTP 200. The five new home pictures returned 200. `hero.jpg` and `hero-2.png` through `hero-4.png` returned 404, and the home page did not request them.
+- At 1280px the frame ratio was 1.333 and `object-fit` was cover. Each caption changed with its picture. Natural sizes were 1024×678, then four files at 1024×768.
+- At 390px the hero was one column, the frame ratio was 1.333, and the side rules were hidden. Reduced motion kept `hero-1.jpeg` and the office caption at opacity 1.
+- `/#projects` opened `/projects/`. The design banner stayed `hero-1.png` at 2560×1440. Project cards had no broken pictures.
+- A 3-digit phone number kept the contact form. A valid number hid the form and set a WhatsApp link to `https://wa.me/8801814116677` that included the name.
+- An independent file check matched the five sources, the deletions, and the design banner. Page-load timing was not measured. The live Vercel and Cloudflare headers were not opened.

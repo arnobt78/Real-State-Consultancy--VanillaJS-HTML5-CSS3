@@ -111,7 +111,7 @@ public/
 ├── cookies/index.html
 ├── css/site.css            # Layout, color, language, footer, toast
 ├── js/site.js              # Menu, language, form, copy, home photo cycle
-├── img/                    # logo.png, hero.jpg, home-hero/, meta-logo.jpg, s1.jpg–s8.jpg
+├── img/                    # logo.png, home-hero/, meta-logo.jpg, s1.jpg–s8.jpg
 ├── fonts/                  # Self-hosted faces and their SIL licenses
 ├── robots.txt
 └── sitemap.xml             # The nine page addresses only
@@ -239,15 +239,15 @@ Headings use Anek Bangla. Body text uses Hind Siliguri. Small labels use IBM Ple
 | --------------------------------------------- | ---------------------------------------------------------- |
 | `public/img/logo.png`                         | Header logo and the structured-data logo                   |
 | `public/img/logo-white.png`                   | Logo on the dark header                                    |
-| `public/img/hero.jpg`                         | First picture in the home frame                           |
 | `public/img/meta-logo.jpg`                    | Picture named in the share tags (2000×2000 JPEG)           |
 | `public/img/favicon.png`                      | Browser icon                                               |
 | `public/img/icon-180.png`                     | Apple touch icon                                           |
 | `public/img/s1.jpg` through `s8.jpg`          | Service pictures. Later ones use `loading="lazy"`          |
-| `public/img/home-hero/hero-1.png` through `hero-4.png` | The other four pictures in the home frame. `hero-1.png` is also the design detail banner |
+| `public/img/home-hero/hero-1.jpeg` through `hero-5.jpeg` | The five pictures in the home frame. `hero-1.jpeg` is 1024×678. The other four are 1024×768 |
+| `public/img/home-hero/hero-1.png`             | Design detail banner only                                  |
 | `public/img/projects/`                    | Card pictures, banners, and gallery pictures for the six jobs |
 
-The home frame is 4:3. It shows `hero.jpg` and its caption when JavaScript is off or motion is reduced. The other four pictures fade in with their own caption, and the side rules follow that line. They hold for 3 seconds, and the next file is decoded before it fades. From 861px up, the diamond row and the caption share one line. Concrete, interior, assessment, and fire cards use 4:3 pictures. Their detail pages keep the poster banners, with the same space above and below the two buttons.
+The home frame is 4:3. It shows `hero-1.jpeg` and its caption when JavaScript is off or motion is reduced. The other four pictures fade in with their own caption, and the side rules follow that line. They hold for 3 seconds, and the next file is decoded before it fades. From 861px up, the diamond row and the caption share one line. Concrete, interior, assessment, and fire cards use 4:3 pictures. Their detail pages keep the poster banners, with the same space above and below the two buttons.
 
 ---
 
