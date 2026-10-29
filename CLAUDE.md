@@ -4,7 +4,7 @@
 
 Project Name: Build Safe Engineering
 Description: Bilingual Bangla/English brochure for Build Safe Engineering & Consultancy. Static pages in `public/`, WhatsApp enquiry handoff.
-Current Status: The home frame is 4:3 and crossfades five pictures with a matching caption. Concrete, interior, assessment, and fire cards use 4:3 pictures. Design and solar cards still use their posters. Vercel Production follows `main`. This repo is not the live Cloudflare site.
+Current Status: The home frame is 4:3 and crossfades five pictures with a matching caption. Concrete, interior, assessment, and fire cards use 4:3 pictures. Design and solar cards still use their posters. Pull request 11 carries that into `main`. Vercel Production follows `main`. This repo is not the live Cloudflare site.
 Current Agile V Cycle: C1
 Current Gate: `GATE-0001` was superseded by later direction to build `public/`. See `.agile-v/STATE.md`.
 
@@ -133,4 +133,4 @@ Always continue from
 
 unless instructed otherwise.
 
-Current stop: the home frame is 4:3, crossfades each picture with its caption, and the interior, assessment, and fire cards use their 4:3 pictures. Vercel Production follows `main`. Do not open another branch. Do not push new implementation straight to `main`. After the merge, merge `main` back into `fix/footer-information` and leave that branch in place. Design and solar card pictures stay until the client supplies new 4:3 files. The five home pictures are not all 4:3 yet, so the frame still crops the wider ones until those files arrive. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
+Current stop: pull request 11 carries the 4:3 home crossfade, the synced captions, and the interior, assessment, and fire cards into `main`. Vercel Production follows `main`. Do not open another branch. Do not push new implementation straight to `main`. After the merge, merge `main` back into `fix/footer-information` and leave that branch in place. Design and solar card pictures stay until the client supplies new 4:3 files. The five home pictures are not all 4:3 yet, so the frame still crops the wider ones until those files arrive. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
