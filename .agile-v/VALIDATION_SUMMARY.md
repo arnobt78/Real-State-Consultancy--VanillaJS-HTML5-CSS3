@@ -186,6 +186,8 @@ A local static server rooted at `public/` and a browser check:
 
 ## 2026-10-30 — category wording on project pages
 
+Pull request 14.
+
 A local static server rooted at `public/` and a browser check:
 
 - No typecheck, lint, unit test, or build script exists, so none was run.

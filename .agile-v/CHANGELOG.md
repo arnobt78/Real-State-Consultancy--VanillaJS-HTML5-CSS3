@@ -123,5 +123,7 @@ Pull request 13.
 
 ## 2026-10-30 — category wording on project pages
 
+Pull request 14.
+
 - Rewrote the six detail-page opening paragraphs so each page describes its category.
 - Changed the picture lines to “Pictures from ongoing work.”, “Pictures from on-site work.”, and “Pictures of proposed system.”, with the matching Bangla.

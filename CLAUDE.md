@@ -4,7 +4,7 @@
 
 Project Name: Build Safe Engineering
 Description: Bilingual Bangla/English brochure for Build Safe Engineering & Consultancy. Static pages in `public/`, WhatsApp enquiry handoff.
-Current Status: The home frame is 4:3 and cycles `hero-1.jpeg` through `hero-5.jpeg`. Each picture fades with its own caption, and the side rules follow that line. The office picture is 1024×678, so the frame still crops a little of each side. Each project detail page describes that category, not one job. The picture lines are “Pictures from ongoing work.”, “Pictures from on-site work.”, and “Pictures of proposed system.” Detail pages keep 28px above and below the two buttons. Concrete, interior, assessment, and fire cards use 4:3 pictures. Design and solar cards still use their posters. The design banner stays `hero-1.png`. Vercel Production follows `main`. This repo is not the live Cloudflare site.
+Current Status: The home frame is 4:3 and cycles `hero-1.jpeg` through `hero-5.jpeg`. Each picture fades with its own caption, and the side rules follow that line. The office picture is 1024×678, so the frame still crops a little of each side. Each project detail page describes that category, not one job. The picture lines are “Pictures from ongoing work.”, “Pictures from on-site work.”, and “Pictures of proposed system.” Detail pages keep 28px above and below the two buttons. Concrete, interior, assessment, and fire cards use 4:3 pictures. Design and solar cards still use their posters. The design banner stays `hero-1.png`. Pull request 14 carries the category wording into `main`. Vercel Production follows `main`. This repo is not the live Cloudflare site.
 Current Agile V Cycle: C1
 Current Gate: `GATE-0001` was superseded by later direction to build `public/`. See `.agile-v/STATE.md`.
 
@@ -133,4 +133,4 @@ Always continue from
 
 unless instructed otherwise.
 
-Current stop: each project detail page describes its category. The picture lines no longer say “this”. Vercel Production follows `main`. Do not open another branch. Do not push new implementation straight to `main`. After the merge, merge `main` back into `fix/footer-information` and leave that branch in place. Design and solar card pictures stay until the client supplies new 4:3 files. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
+Current stop: pull request 14 carries the category wording into `main`. Vercel Production follows `main`. Do not open another branch. Do not push new implementation straight to `main`. After the merge, merge `main` back into `fix/footer-information` and leave that branch in place. Design and solar card pictures stay until the client supplies new 4:3 files. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
