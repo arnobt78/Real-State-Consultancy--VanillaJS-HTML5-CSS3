@@ -3,12 +3,12 @@
 ## Resume point
 
 Cycle: `C1`
-Phase: The home frame is 4:3. From 861px up the diamond row and the caption share one line, and the frame sits just above that line. It crossfades `public/img/home-hero/hero-1.jpeg` through `hero-5.jpeg`, and each picture fades its own Bangla and English caption. `hero-2.jpeg` through `hero-5.jpeg` are 1024×768. `hero-1.jpeg` is 1024×678, so the frame still crops a little of each side. The side rules follow the current line. The office-photo caption stays. The other four are the licensed-partner, construction-support, test-report, and inside-the-home slogans. Detail pages keep 28px above and below the two buttons. The hold is 3 seconds. The next picture is decoded before it fades in. The cycle pauses on hover and while the tab is hidden. Reduced motion keeps the first picture and its caption. The projects intro is the showcase line in both languages. Concrete, interior, assessment, and fire cards use `project-1-card.jpeg`, `project-5-card.jpeg`, `project-3-card.jpeg`, and `poster-6-card.jpeg`. Design and solar cards still use their posters. Each detail page opens with a 16:9 banner, then the existing title. The facts list stays in the HTML and is hidden. Gallery pictures keep their own ratio. The design banner is `hero-1.png`. The other five banners are their posters, and those posters are not repeated in the gallery. A picture line appears only for design, concrete, and solar. Pull requests 9 and 10 are already on `main`. Pull requests 11 and 12 are on `main`. Pull request 13 carries `hero-1.jpeg` through `hero-5.jpeg` into `main`. Vercel Production follows `main`. Cloudflare is still managed separately.
+Phase: The home frame is 4:3. From 861px up the diamond row and the caption share one line, and the frame sits just above that line. It crossfades `public/img/home-hero/hero-1.jpeg` through `hero-5.jpeg`, and each picture fades its own Bangla and English caption. `hero-2.jpeg` through `hero-5.jpeg` are 1024×768. `hero-1.jpeg` is 1024×678, so the frame still crops a little of each side. The side rules follow the current line. The office-photo caption stays. The other four are the licensed-partner, construction-support, test-report, and inside-the-home slogans. Detail pages keep 28px above and below the two buttons. The hold is 3 seconds. The next picture is decoded before it fades in. The cycle pauses on hover and while the tab is hidden. Reduced motion keeps the first picture and its caption. The projects intro is the showcase line in both languages. Concrete, interior, assessment, and fire cards use `project-1-card.jpeg`, `project-5-card.jpeg`, `project-3-card.jpeg`, and `poster-6-card.jpeg`. Design and solar cards still use their posters. Each detail page opens with a 16:9 banner, then the existing title. The facts list stays in the HTML and is hidden. Gallery pictures keep their own ratio. The design banner is `hero-1.png`. The other five banners are their posters, and those posters are not repeated in the gallery. A picture line appears only for design, concrete, and solar, and those lines no longer say “this”. Each detail page’s opening paragraph describes the category. Pull requests 11, 12, and 13 are on `main`. Pull request 14 carries the category wording into `main`. Vercel Production follows `main`. Cloudflare is still managed separately.
 Branch: `fix/footer-information` is the only feature branch. Do not open another branch. Older branches were removed after their pull requests merged.
 Remote: `https://github.com/arnobt78/Real-State-Consultancy--VanillaJS-HTML5-CSS3.git`
 Gate: `GATE-0001` was superseded. Do not wait on token `C1-HG1-7f3a`. Do not revert `public/` because that token is missing.
 
-Next exact action: after pull request 13 is on `main`, merge `main` back into `fix/footer-information` and leave that branch in place. Do not push new implementation straight to `main`. Do not open another branch. Design and solar card pictures stay until the client supplies new 4:3 files. `hero-1.jpeg` is 1024×678, so the home frame still crops a little of each side. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy uses output directory `public` with no build command.
+Next exact action: after pull request 14 is on `main`, merge `main` back into `fix/footer-information` and leave that branch in place. Do not push new implementation straight to `main`. Do not open another branch. Design and solar card pictures stay until the client supplies new 4:3 files. `hero-1.jpeg` is 1024×678, so the home frame still crops a little of each side. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy uses output directory `public` with no build command.
 
 ## What the project is
 
@@ -50,8 +50,8 @@ Public contact data in the pages (intentional, not a secret):
 
 ## Completed this session
 
-- The home frame uses `hero-1.jpeg` through `hero-5.jpeg`, in the same order as the five captions.
-- `hero.jpg` and `hero-2.png` through `hero-4.png` are gone. `hero-1.png` stays as the design banner.
+- Each project detail page describes its category in one short paragraph, in Bangla and English.
+- The picture lines are “Pictures from ongoing work.”, “Pictures from on-site work.”, and “Pictures of proposed system.”
 
 ## Active requirement IDs
 
@@ -65,11 +65,14 @@ Proposed, blocked on `GATE-0001`:
 
 ## Files changed this session
 
-- `public/index.html`
-- `public/img/home-hero/hero-1.jpeg` through `hero-5.jpeg`
-- Removed `public/img/hero.jpg` and `public/img/home-hero/hero-2.png` through `hero-4.png`
-- `CLAUDE.md`, `README.md`
-- `.agile-v/STATE.md`, `CHANGELOG.md`, `VALIDATION_SUMMARY.md`, `TASKS.md`, `DECISION_LOG.md`
+- `public/projects/design-technical-support/index.html`
+- `public/projects/concrete-mix-design-testing/index.html`
+- `public/projects/detailed-engineering-assessment/index.html`
+- `public/projects/interior-design/index.html`
+- `public/projects/solar-system-design-installation/index.html`
+- `public/projects/fire-safety-hvac/index.html`
+- `CLAUDE.md`
+- `.agile-v/STATE.md`, `CHANGELOG.md`, `VALIDATION_SUMMARY.md`, `DECISION_LOG.md`
 
 Not changed: `AGENTS.md` and `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
 

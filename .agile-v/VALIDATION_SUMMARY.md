@@ -183,3 +183,13 @@ A local static server rooted at `public/` and a browser check:
 - `/#projects` opened `/projects/`. The design banner stayed `hero-1.png` at 2560×1440. Project cards had no broken pictures.
 - A 3-digit phone number kept the contact form. A valid number hid the form and set a WhatsApp link to `https://wa.me/8801814116677` that included the name.
 - An independent file check matched the five sources, the deletions, and the design banner. Page-load timing was not measured. The live Vercel and Cloudflare headers were not opened.
+
+## 2026-10-30 — category wording on project pages
+
+Pull request 14.
+
+A local static server rooted at `public/` and a browser check:
+
+- No typecheck, lint, unit test, or build script exists, so none was run.
+- Both languages were opened on all six detail pages. Each opening paragraph and the three picture lines matched the category wording. `সব প্রকল্প` / `All projects` stayed.
+- The projects index, services, and FAQ were left unchanged. Page-load timing was not measured.

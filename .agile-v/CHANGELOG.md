@@ -120,3 +120,10 @@ Pull request 13.
 - Pointed the home frame at `hero-1.jpeg` through `hero-5.jpeg`. The captions stay in that same order.
 - Removed `hero.jpg` and `hero-2.png` through `hero-4.png`. `hero-1.png` stays as the design detail banner.
 - `hero-2.jpeg` through `hero-5.jpeg` are 1024×768. `hero-1.jpeg` is 1024×678, so the frame still crops a little of each side.
+
+## 2026-10-30 — category wording on project pages
+
+Pull request 14.
+
+- Rewrote the six detail-page opening paragraphs so each page describes its category.
+- Changed the picture lines to “Pictures from ongoing work.”, “Pictures from on-site work.”, and “Pictures of proposed system.”, with the matching Bangla.
