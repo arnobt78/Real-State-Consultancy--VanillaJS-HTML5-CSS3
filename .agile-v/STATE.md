@@ -3,12 +3,12 @@
 ## Resume point
 
 Cycle: `C1`
-Phase: The projects page has six linked cards, in this order: design, concrete, assessment, interior, solar, fire. Each card opens a folder under `/projects/`. Interior uses `project-5-poster.jpeg`. Fire uses `project-6-poster.jpeg`. The other four use their existing posters. Detail pages list the existing service notes and show only the pictures that exist for that job. Solar’s service title is Solar System Design & Installation. Pull request 8 is already on `main`. This project-page work is on `fix/footer-information` until it is merged. Vercel Production follows `main`. Cloudflare is still managed separately.
+Phase: The projects page has six linked cards, in this order: design, concrete, assessment, interior, solar, fire. Each card opens a folder under `/projects/`. Interior uses `project-5-poster.jpeg`. Fire uses `project-6-poster.jpeg`. The other four use their existing posters. Detail pages list the existing service notes and show only the pictures that exist for that job. Solar’s service title is Solar System Design & Installation. Pull request 8 is already on `main`. Pull request 9 carries the six project cards and their detail pages into `main`. Vercel Production follows `main`. Cloudflare is still managed separately.
 Branch: `fix/footer-information` is the only feature branch. Do not open another branch. Older branches were removed after their pull requests merged.
 Remote: `https://github.com/arnobt78/Real-State-Consultancy--VanillaJS-HTML5-CSS3.git`
 Gate: `GATE-0001` was superseded. Do not wait on token `C1-HG1-7f3a`. Do not revert `public/` because that token is missing.
 
-Next exact action: merge this branch into `main` through a pull request. Vercel Production deploys `main`. Do not push new implementation straight to `main`. Do not open another branch. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy uses output directory `public` with no build command.
+Next exact action: none after pull request 9 is on `main`. Vercel Production deploys `main`. Do not push new implementation straight to `main`. Do not open another branch. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy uses output directory `public` with no build command.
 
 ## What the project is
 

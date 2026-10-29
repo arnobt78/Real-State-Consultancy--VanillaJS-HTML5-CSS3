@@ -81,6 +81,8 @@ Pull request 8.
 
 ## 2026-10-29 — project cards and detail pages
 
+Pull request 9.
+
 - Replaced the six placeholders with posters, badges, and the existing service lines.
 - Added a static detail page for each card. Interior and fire use their new posters. Assessment, interior, and fire have no extra gallery pictures.
 - Renamed the solar service title to Solar System Design & Installation. Left the FAQ solar question unchanged.

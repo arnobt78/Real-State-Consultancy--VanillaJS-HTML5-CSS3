@@ -4,7 +4,7 @@
 
 Project Name: Build Safe Engineering
 Description: Bilingual Bangla/English brochure for Build Safe Engineering & Consultancy. Static pages in `public/`, WhatsApp enquiry handoff.
-Current Status: The projects page shows six cards. Each opens a static detail page. Four cards already had posters, and Interior Design and Fire Safety & HVAC now have posters too. Vercel Production follows `main`. This repo is not the live Cloudflare site.
+Current Status: The projects page shows six cards, and each opens a static detail page. Pull request 9 carries that into `main`. Vercel Production follows `main`. This repo is not the live Cloudflare site.
 Current Agile V Cycle: C1
 Current Gate: `GATE-0001` was superseded by later direction to build `public/`. See `.agile-v/STATE.md`.
 
@@ -133,4 +133,4 @@ Always continue from
 
 unless instructed otherwise.
 
-Current stop: the six project cards and their detail pages are on `fix/footer-information`. Vercel Production follows `main`. Do not open another branch. Do not push new implementation straight to `main`. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
+Current stop: pull request 9 carries the six project cards and their detail pages into `main`. Vercel Production follows `main`. Do not open another branch. Do not push new implementation straight to `main`. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
