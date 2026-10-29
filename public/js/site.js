@@ -91,12 +91,6 @@
     document.getElementById('edit-msg').addEventListener('click', function () { document.getElementById('sent').hidden = true; form.hidden = false; });
   }
 
-  /* A project photo replaces its placeholder only when that file actually loads. */
-  document.querySelectorAll('.proj-img').forEach(function (img) {
-    var probe = new Image();
-    probe.onload = function () { img.src = img.dataset.src; img.hidden = false; img.nextElementSibling.hidden = true; };
-    probe.src = img.dataset.src;
-  });
   setLang(lang === 'en' ? 'en' : 'bn');
   if (form) {
     var svc = new URLSearchParams(location.search).get('service');

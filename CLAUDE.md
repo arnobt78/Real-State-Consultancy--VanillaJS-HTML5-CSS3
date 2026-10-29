@@ -4,7 +4,7 @@
 
 Project Name: Build Safe Engineering
 Description: Bilingual Bangla/English brochure for Build Safe Engineering & Consultancy. Static pages in `public/`, WhatsApp enquiry handoff.
-Current Status: Saved English is applied before first paint. The header and the footer Pages list include FAQ, and the Information column is gone. That change ships from pull request 7 into `main`. The teaching README and the consult, consulting, and consultancy wording ship from pull request 8 into `main`. Vercel Production follows `main`. This repo is not the live Cloudflare site.
+Current Status: The projects page shows six cards, and each opens a static detail page. Pull request 9 carries that into `main`. Vercel Production follows `main`. This repo is not the live Cloudflare site.
 Current Agile V Cycle: C1
 Current Gate: `GATE-0001` was superseded by later direction to build `public/`. See `.agile-v/STATE.md`.
 
@@ -32,7 +32,7 @@ Preserve:
 - old home hashes `#services`, `#about`, `#projects`, and `#contact` redirect to those routes
 - Bangla as the default language, English via `data-lang` and `localStorage` key `bs-lang`
 - service images `public/img/s1.jpg` through `s8.jpg`, the header logos `public/img/logo.png` and `logo-white.png`, the home photo `public/img/hero.jpg`, and the share picture `public/img/meta-logo.jpg`
-- optional project images `public/img/projects/p1.jpg` through `p6.jpg`
+- project posters in `public/img/projects/` for design, concrete, assessment, interior, solar, and fire safety, with extra pictures only where those files exist
 - enquiry handoff to WhatsApp number `8801814116677` (no server storage)
 - office address at Dilara Tower, Hatirpool, Dhaka-1205
 - public email `contact.buildsafe@gmail.com`
@@ -133,4 +133,4 @@ Always continue from
 
 unless instructed otherwise.
 
-Current stop: pull request 8 carries the teaching README and the consult, consulting, and consultancy wording into `main`. Pull request 7 already carries the FAQ header and Pages list into `main`. Vercel Production follows `main`. Do not open another branch. Do not push new implementation straight to `main`. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
+Current stop: pull request 9 carries the six project cards and their detail pages into `main`. Vercel Production follows `main`. Do not open another branch. Do not push new implementation straight to `main`. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.

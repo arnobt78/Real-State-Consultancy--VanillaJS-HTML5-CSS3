@@ -3,12 +3,12 @@
 ## Resume point
 
 Cycle: `C1`
-Phase: Saved English is applied before first paint. Header links size to the visible language. FAQ is in the header before Contact and in the footer Pages list. The Information column is gone. The footer Office column lists the phone, email, and address, with the social icons underneath. The FAQ page lists 15 questions in a compact list. The slogan is “Partner with BUILD SAFE to turn your vision into reality”. Pull request 7 carries that FAQ placement into `main`. Pull request 8 carries the teaching README and the consult, consulting, and consultancy wording into `main`. Vercel Production follows `main`. A later push on `fix/footer-information` stays a Vercel Preview until it is merged. Cloudflare is still the older live site and is managed separately.
+Phase: The projects page has six linked cards, in this order: design, concrete, assessment, interior, solar, fire. Each card opens a folder under `/projects/`. Interior uses `project-5-poster.jpeg`. Fire uses `project-6-poster.jpeg`. The other four use their existing posters. Detail pages list the existing service notes and show only the pictures that exist for that job. Solar’s service title is Solar System Design & Installation. Pull request 8 is already on `main`. Pull request 9 carries the six project cards and their detail pages into `main`. Vercel Production follows `main`. Cloudflare is still managed separately.
 Branch: `fix/footer-information` is the only feature branch. Do not open another branch. Older branches were removed after their pull requests merged.
 Remote: `https://github.com/arnobt78/Real-State-Consultancy--VanillaJS-HTML5-CSS3.git`
 Gate: `GATE-0001` was superseded. Do not wait on token `C1-HG1-7f3a`. Do not revert `public/` because that token is missing.
 
-Next exact action: none after pull request 8 is on `main`. Vercel Production deploys `main`. Do not push new implementation straight to `main`. Do not open another branch. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy uses output directory `public` with no build command.
+Next exact action: none after pull request 9 is on `main`. Vercel Production deploys `main`. Do not push new implementation straight to `main`. Do not open another branch. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy uses output directory `public` with no build command.
 
 ## What the project is
 
@@ -30,10 +30,10 @@ Public contact data in the pages (intentional, not a secret):
 
 ## Architecture (current)
 
-- Publish root is `public/`. Nine HTML pages share `public/css/site.css` and `public/js/site.js`.
+- Publish root is `public/`. Nine HTML pages, plus six project detail pages, share `public/css/site.css` and `public/js/site.js`.
 - Bangla is the default. English is in the same file and is shown when `data-lang` is `en`. The choice is stored as `bs-lang`. A head script sets that attribute before first paint when the saved value is `en`. Header links follow the visible words, in the order Home, About, Services, Projects, FAQ, Contact. The phone menu uses that same header. Footer Pages lists those same six links. The Office column lists the phone, `contact.buildsafe@gmail.com`, and the Dilara Tower address, with Facebook, LinkedIn, and YouTube under those lines. At 760px and below, the brand, Pages, and Office each take a full row. The footer address matches the other footer lines. On a phone, the copyright line and the slogan are centered. The slogan is “Partner with BUILD SAFE to turn your vision into reality”, in the same color as the rest of the line. The contact email matches the phone number and has a copy button. The copy notice sits at the bottom right. The FAQ page has 15 bilingual questions drawn from the existing pages, with about 20px of padding per item. Link previews use `public/img/meta-logo.jpg`. The structured-data logo and the header image stay `logo.png`. The home photo stays `hero.jpg`. Terms, Privacy, and Cookies stay public and in the sitemap, and they are not in the footer. The contact service menu is two selects so its label is already in the saved language.
 - The contact form validates a name and a Bangladesh mobile number, then prepares a WhatsApp link. It does not post to a server.
-- Project cards show a photo only when `public/img/projects/p1.jpg` through `p6.jpg` exist.
+- Project cards link to `/projects/design-technical-support/`, `/projects/concrete-mix-design-testing/`, `/projects/detailed-engineering-assessment/`, `/projects/interior-design/`, `/projects/solar-system-design-installation/`, and `/projects/fire-safety-hvac/`. The old `p1.jpg` through `p6.jpg` probes are gone. The unused `public/img/home-hero/` pictures are not on these cards.
 - Dark colors follow the system. Fonts are files in `public/fonts/`.
 - Serve `public/` with no build command. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
 
@@ -50,6 +50,9 @@ Public contact data in the pages (intentional, not a secret):
 
 ## Completed this session
 
+- Six project cards show their posters, badges, and the existing service lines. Interior and fire no longer say the photo is coming.
+- Each card opens a static detail page with the existing service list, the pictures that exist, and a contact link for that service.
+- The solar service title is Solar System Design & Installation on the home card, the services heading, contact option 7, and the terms list. The FAQ solar question is unchanged.
 - English for this work uses consult, consulting, or consultancy. Bangla is unchanged. Buttons that already said “Consultation” stay.
 - `README.md` is a teaching guide for the static brochure. The title is unchanged. Badges stay MIT, HTML 5, CSS 3, and JavaScript, plus the Diploi launch badge for this repository. `SECURITY.md` is unchanged.
 - The header and the footer Pages list are Home, About, Services, Projects, FAQ, and Contact. The Information column is gone. Social icons stay under the office lines.
@@ -70,22 +73,24 @@ Proposed, blocked on `GATE-0001`:
 
 ## Files changed this session
 
-- the six pages that contained the English words: `public/index.html`, `services`, `about`, `contact`, `terms`, `faq`
-- `README.md`
+- `public/projects/index.html` and the six detail folders
+- `public/img/projects/` for the six jobs
+- `public/css/site.css`, `public/js/site.js`, `public/sitemap.xml`
+- solar title on `public/index.html`, `public/services/index.html`, `public/contact/index.html`, `public/terms/index.html`
 - `CLAUDE.md`
-- `.agile-v/STATE.md`, `CHANGELOG.md`, `DECISION_LOG.md`, `VALIDATION_SUMMARY.md`, `REQUIREMENTS.md`, `RISKS.md`
+- `.agile-v/STATE.md`, `CHANGELOG.md`, `VALIDATION_SUMMARY.md`, `REQUIREMENTS.md`, `RISKS.md`, `TASKS.md`
 
-Not changed: `public/sitemap.xml`, `AGENTS.md`, `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
+Not changed: `AGENTS.md`, `docs/VERCEL-PLAIN-JS-DEPLOY.md`, and the unused `public/img/home-hero/` pictures.
 
 ## Validation
 
-No typecheck, lint, test, or build script exists. The English wording was checked on a local static server. See `VALIDATION_SUMMARY.md`.
+No typecheck, lint, test, or build script exists. The project pages, the contact form, and the other routes were checked in a local browser. See `VALIDATION_SUMMARY.md`.
 
 ## Blockers
 
 - `GATE-0001` was superseded. Do not halt new page work on token `C1-HG1-7f3a`.
 - Cloudflare is managed outside this repo. Canonical pages use `https://buildsafe.com.bd/`.
-- Project photographs `p1.jpg` through `p6.jpg` are still absent (`REQ-0005`). Pull request 7 carries the FAQ header and Pages list into `main`.
+- `REQ-0005` now uses the six named project folders. The old `p1.jpg` through `p6.jpg` names are not requested.
 
 ## Unresolved questions
 
@@ -93,7 +98,7 @@ No typecheck, lint, test, or build script exists. The English wording was checke
 2. Theme: follow the system, lock light, or add a toggle? Recommendation is in `REQ-0009`.
 3. Without JavaScript, is a phone fallback enough, or should every section stay visible? Recommendation is in `REQ-0008`.
 4. What is the public site URL, if any?
-5. Will real project photos be supplied, and for which of the six captions?
+5. The six project posters are in the repository. Extra gallery pictures exist for design, concrete, and solar. Assessment, interior, and fire have the poster only.
 
 ## Deferred
 
