@@ -138,3 +138,11 @@ Append-only. Do not rewrite earlier entries.
 - Decision: The home frame uses `hero-1.jpeg` through `hero-5.jpeg` in the same order as the five captions. `hero.jpg` and `hero-2.png` through `hero-4.png` are removed. `hero-1.png` stays, because the design detail banner is 16:9 and the new shield picture is 4:3.
 - Rationale: The client supplied five new home pictures. Four are 1024×768. The office picture is 1024×678, so the 4:3 frame still crops a little of each side.
 - Linked: `DEC-0016`
+
+## DEC-0018 — Category wording on project pages
+
+- Date: 2026-10-30
+- Agent: Cursor
+- Decision: Each project detail page describes its category in one short paragraph. The picture lines are “Pictures from ongoing work.”, “Pictures from on-site work.”, and “Pictures of proposed system.”, with the matching Bangla. The projects index, services, and FAQ stay as they were.
+- Rationale: Each page will hold more than one job. The old lines read as a single project.
+- Linked: `DEC-0017`
