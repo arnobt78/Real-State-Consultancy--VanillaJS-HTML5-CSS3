@@ -172,6 +172,8 @@ A local static server rooted at `public/` and a browser check:
 
 ## 2026-10-30 — home pictures
 
+Pull request 13.
+
 A local static server rooted at `public/` and a browser check:
 
 - `node --check public/js/site.js` passed. No typecheck, lint, unit test, or build script exists, so none was run.
