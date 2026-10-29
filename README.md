@@ -247,7 +247,7 @@ Headings use Anek Bangla. Body text uses Hind Siliguri. Small labels use IBM Ple
 | `public/img/home-hero/hero-1.png` through `hero-4.png` | The other four pictures in the home frame. `hero-1.png` is also the design detail banner |
 | `public/img/projects/`                    | Card pictures, banners, and gallery pictures for the six jobs |
 
-The home frame shows `hero.jpg` when JavaScript is off. The other four pictures are in the page and stay hidden until the cycle runs.
+The home frame is 4:3. It shows `hero.jpg` and its caption when JavaScript is off or motion is reduced. The other four pictures fade in with their own caption, hold for 3 seconds, and the next file is decoded before it fades. From 861px up, the diamond row and the caption share one line. Concrete, interior, assessment, and fire cards use 4:3 pictures. Their detail pages keep the poster banners.
 
 ---
 

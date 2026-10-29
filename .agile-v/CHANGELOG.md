@@ -96,3 +96,9 @@ Pull request 10.
 - Rewrote the projects intro as the showcase line. Left the share text on that page unchanged.
 - Opened each detail page with a 16:9 banner and let gallery pictures keep their own ratio. Hid the facts list.
 - Used `project-1-card.jpeg` on the concrete card only.
+
+## 2026-10-30 — home crossfade, captions, and card pictures
+
+- Made the home frame 4:3 and replaced the zoom with a paired opacity crossfade. The hold is 3 seconds, and the next picture is decoded before it fades in.
+- Faded a matching Bangla and English caption with each picture. The office-photo caption stays. From 861px up, the diamond row and the caption share one line.
+- Used `project-5-card.jpeg`, `project-3-card.jpeg`, and `poster-6-card.jpeg` on the interior, assessment, and fire cards. Detail pages keep their posters.

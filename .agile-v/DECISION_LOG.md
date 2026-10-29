@@ -114,3 +114,11 @@ Append-only. Do not rewrite earlier entries.
 - Decision: The home frame is 3:2, with `object-fit: cover`. From 861px up it aligns to the bottom of the text column. It cycles `hero.jpg`, then `hero-1.png` through `hero-4.png`. The cycle pauses on hover and while the tab is hidden. Reduced motion keeps the first picture. Detail pages open with a 16:9 contain banner. Gallery pictures keep their own ratio. The facts list stays in the HTML and is hidden. The concrete card uses `project-1-card.jpeg` and that file is not on the detail page.
 - Rationale: The home photo was shorter than the text beside it. The healthcare timing was adapted to this frame. Tall site photos should not be cropped into 4:3, and the client asked to hide the facts for now.
 - Linked: `DEC-0013`
+
+## DEC-0015 — Home crossfade, captions, and card pictures
+
+- Date: 2026-10-30
+- Agent: Cursor
+- Decision: The home frame is 4:3. Pictures and their captions crossfade on opacity only, for 0.7s, and hold for 3 seconds. The next picture is decoded before it fades in. The office-photo caption stays. The other four lines are the shield, ongoing project, free material consultation, and interior design lines already used on the site. From 861px up, the diamond row and the caption share one line. Interior, assessment, and fire cards use their new 4:3 files. Detail pages keep the posters.
+- Rationale: The zoom and the empty frame were the problem. A paired fade keeps a picture on screen. The new card files are 1024×768, so they fill the existing 4:3 card. Design, solar, and the five home files are not all 4:3 yet, so those stay until the client supplies replacements.
+- Linked: `DEC-0014`

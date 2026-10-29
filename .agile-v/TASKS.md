@@ -26,7 +26,7 @@ Recommended order if the full proposed set is approved. Wave 2 waits for Wave 1 
 
 | Item | Why it is waiting |
 |---|---|
-| Project photo drop-in | Done for the six posters, the three galleries, and the concrete card collage. Other clipped card pictures wait until the client supplies new 4:3 files. |
+| Project photo drop-in | Done for the six posters, the three galleries, and the concrete, interior, assessment, and fire cards. Design and solar cards, and the five home pictures, wait until the client supplies new 4:3 files. |
 | Canonical URL and social preview image | No production origin in the repo (`RISK-0003`). |
 | Enquiry database or email | Changes the architecture. Current design hands the message to WhatsApp. |
 | Framework, TypeScript, or bundler | `DEC-0002`. The working page is one HTML file. |
