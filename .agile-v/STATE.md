@@ -3,12 +3,12 @@
 ## Resume point
 
 Cycle: `C1`
-Phase: Saved English is applied before first paint. Header links size to the visible language. FAQ is in the header before Contact and in the footer Pages list. The Information column is gone. The footer Office column lists the phone, email, and address, with the social icons underneath. The FAQ page lists 15 questions in a compact list. The slogan is “Partner with BUILD SAFE to turn your vision into reality”. Pull request 7 carries that FAQ placement into `main`. Vercel Production follows `main`. A later push on `fix/footer-information` stays a Vercel Preview until it is merged. Cloudflare is still the older live site and is managed separately.
+Phase: Saved English is applied before first paint. Header links size to the visible language. FAQ is in the header before Contact and in the footer Pages list. The Information column is gone. The footer Office column lists the phone, email, and address, with the social icons underneath. The FAQ page lists 15 questions in a compact list. The slogan is “Partner with BUILD SAFE to turn your vision into reality”. Pull request 7 carries that FAQ placement into `main`. Pull request 8 carries the teaching README and the consult, consulting, and consultancy wording into `main`. Vercel Production follows `main`. A later push on `fix/footer-information` stays a Vercel Preview until it is merged. Cloudflare is still the older live site and is managed separately.
 Branch: `fix/footer-information` is the only feature branch. Do not open another branch. Older branches were removed after their pull requests merged.
 Remote: `https://github.com/arnobt78/Real-State-Consultancy--VanillaJS-HTML5-CSS3.git`
 Gate: `GATE-0001` was superseded. Do not wait on token `C1-HG1-7f3a`. Do not revert `public/` because that token is missing.
 
-Next exact action: none after pull request 7 is on `main`. Vercel Production deploys `main`. Do not push new implementation straight to `main`. Do not open another branch. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy uses output directory `public` with no build command.
+Next exact action: none after pull request 8 is on `main`. Vercel Production deploys `main`. Do not push new implementation straight to `main`. Do not open another branch. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy uses output directory `public` with no build command.
 
 ## What the project is
 
@@ -50,6 +50,8 @@ Public contact data in the pages (intentional, not a secret):
 
 ## Completed this session
 
+- English for this work uses consult, consulting, or consultancy. Bangla is unchanged. Buttons that already said “Consultation” stay.
+- `README.md` is a teaching guide for the static brochure. The title is unchanged. Badges stay MIT, HTML 5, CSS 3, and JavaScript, plus the Diploi launch badge for this repository. `SECURITY.md` is unchanged.
 - The header and the footer Pages list are Home, About, Services, Projects, FAQ, and Contact. The Information column is gone. Social icons stay under the office lines.
 - The third footer column is Office: phone, `contact.buildsafe@gmail.com`, and the address. The contact page has a matching email card. Structured data includes that email.
 - The slogan is “Partner with BUILD SAFE to turn your vision into reality”, in one color. On a phone those two footer lines are centered.
@@ -68,17 +70,16 @@ Proposed, blocked on `GATE-0001`:
 
 ## Files changed this session
 
-- the nine pages in `public/`
-- `public/css/site.css`
+- the six pages that contained the English words: `public/index.html`, `services`, `about`, `contact`, `terms`, `faq`
 - `README.md`
 - `CLAUDE.md`
-- `.agile-v/STATE.md`, `DECISION_LOG.md`, `VALIDATION_SUMMARY.md`, `CHANGELOG.md`
+- `.agile-v/STATE.md`, `CHANGELOG.md`, `DECISION_LOG.md`, `VALIDATION_SUMMARY.md`, `REQUIREMENTS.md`, `RISKS.md`
 
 Not changed: `public/sitemap.xml`, `AGENTS.md`, `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
 
 ## Validation
 
-No typecheck, lint, test, or build script exists. The FAQ header link and the Pages list were checked in a local browser. See `VALIDATION_SUMMARY.md`.
+No typecheck, lint, test, or build script exists. The English wording was checked on a local static server. See `VALIDATION_SUMMARY.md`.
 
 ## Blockers
 

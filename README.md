@@ -5,23 +5,77 @@
 [![CSS](https://img.shields.io/badge/CSS-3-blue)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES5-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-A bilingual Bangla and English brochure for Build Safe Engineering & Consultancy in Dhaka. The pages are static files. There is no framework, no build step, and no server.
+A bilingual Bangla and English brochure for Build Safe Engineering & Consultancy in Dhaka. The pages are static files in `public/`. There is no framework, no build step, no package install, and no server.
 
-The consultancy owner is Md Mamunoor Rasid ([LinkedIn](https://www.linkedin.com/in/md-mamunoor-rashid/)). Questions about this repository can go to [contact@arnobmahmud.com](mailto:contact@arnobmahmud.com) or [arnobmahmud.com](https://www.arnobmahmud.com).
+Bangla is the language on screen until the visitor chooses English. Both languages are written in the same HTML file. A small script shows one of them. The contact form checks the name and mobile number in the browser, then prepares a WhatsApp message. The site does not store that message.
+
+The consultancy owner is Md Mamunoor Rasid ([LinkedIn](https://www.linkedin.com/in/md-mamunoor-rashid/)). Questions about this repository can go to [Arnob Mahmud](https://www.arnobmahmud.com/) at [contact@arnobmahmud.com](mailto:contact@arnobmahmud.com).
+
+- **Test site:** [https://build-safe-testing.vercel.app/](https://build-safe-testing.vercel.app/) serves this folder. Vercel Production follows `main`.
+- **Official site address:** the pages name `https://buildsafe.com.bd/` in their canonical and share tags. Cloudflare is managed outside this repository and may still be an older copy.
+- **Security:** private reports go to [SECURITY.md](SECURITY.md).
 
 ---
 
-## What you get
+## Table of contents
 
-Nine real addresses. Bangla is the language on screen until the visitor chooses English. Both languages are written in the same HTML file. A small script shows one of them.
+- [Project summary](#project-summary)
+- [What you will learn](#what-you-will-learn)
+- [How to open it](#how-to-open-it)
+- [Environment](#environment)
+- [Project structure](#project-structure)
+- [Routes](#routes)
+- [How a page is built](#how-a-page-is-built)
+- [Language](#language)
+- [Header, footer, and the phone menu](#header-footer-and-the-phone-menu)
+- [Enquiry](#enquiry)
+- [Copy and the notice](#copy-and-the-notice)
+- [Fonts and pictures](#fonts-and-pictures)
+- [Search and link previews](#search-and-link-previews)
+- [Words used here](#words-used-here)
+- [Reusing a page](#reusing-a-page)
+- [Security](#security)
+- [Keywords](#keywords)
+- [Conclusion](#conclusion)
+- [License](#license)
 
-The contact form checks the name and mobile number in the browser, then prepares a WhatsApp message. The site does not store that message.
+---
+
+## Project summary
+
+This repository is the brochure. A host only has to serve the `public/` folder. Each HTML file is one page. Shared files are `public/css/site.css` and `public/js/site.js`.
+
+What a visitor can do:
+
+1. Read the home page, eight services, the about page, project slots, and 15 questions on the FAQ page.
+2. Switch between Bangla and English. The choice stays on that device.
+3. Open the phone menu on a narrow screen. It is the same header list.
+4. Send an enquiry by preparing a WhatsApp message to `+880 1814-116677`. Nothing is posted to this site.
+5. Copy the phone number or `contact.buildsafe@gmail.com` from the contact page.
+
+There is no account, database, API, or admin screen.
+
+---
+
+## What you will learn
+
+| Topic                                      | Where it lives                                            |
+| ------------------------------------------ | --------------------------------------------------------- |
+| One HTML file per route                    | `public/` and `public/*/index.html`                       |
+| Shared layout, color, and type             | `public/css/site.css`                                     |
+| Menu, language, form, copy, project photos | `public/js/site.js`                                       |
+| Two languages in one file                  | `lang="bn"` and `lang="en"` spans, plus `data-lang`       |
+| Saved language before first paint          | The short script in each page `<head>`                    |
+| Browser-only form check                    | The `#enq` block in `public/js/site.js`                   |
+| Old home links                             | `/#services` and the other home hashes                    |
+| Share tags                                 | `og:` and `twitter:` tags, plus JSON-LD in each page head |
+| Crawl hints                                | `public/robots.txt` and `public/sitemap.xml`              |
 
 ---
 
 ## How to open it
 
-The publish folder is `public/`. Open `public/index.html` in a browser for a quick look. Root-absolute links such as `/css/site.css` work when a local server is rooted at `public/`:
+Root-absolute links such as `/css/site.css` need a server whose root is `public/`. Opening `index.html` as a file makes those links miss.
 
 ```bash
 cd public
@@ -30,35 +84,69 @@ python3 -m http.server 8765
 
 Then open [http://127.0.0.1:8765/](http://127.0.0.1:8765/).
 
-There is no `package.json`, so there is nothing to install.
+There is no `package.json`, so there is nothing to install and no `npm run` script. There is no lint, typecheck, unit test, or production build in this repository.
 
 ---
 
 ## Environment
 
-No `.env` file is required. The phone number, email `contact.buildsafe@gmail.com`, Facebook page, and LinkedIn profile are written in the HTML because they are already public on the site.
+No `.env` file is required. You do not need to set any environment variable to run these pages.
 
-You do not need to set any environment variable to run these pages.
+The phone number, the email `contact.buildsafe@gmail.com`, the office address, and the Facebook, LinkedIn, YouTube, and Messenger links are written in the HTML because they are already public on the site. Do not treat those lines as secrets.
+
+---
+
+## Project structure
+
+```bash
+public/
+├── index.html              # Home, route /
+├── about/index.html
+├── services/index.html
+├── projects/index.html
+├── contact/index.html
+├── faq/index.html
+├── terms/index.html
+├── privacy/index.html
+├── cookies/index.html
+├── css/site.css            # Layout, color, language, footer, toast
+├── js/site.js              # Menu, language, form, copy, project photos
+├── img/                    # logo.png, hero.jpg, meta-logo.jpg, s1.jpg–s8.jpg
+├── fonts/                  # Self-hosted faces and their SIL licenses
+├── robots.txt
+└── sitemap.xml             # The nine page addresses only
+```
+
+`README.md`, `LICENSE`, and `SECURITY.md` sit at the repository root. `docs/` and `.agile-v/` are project notes. They are not part of the published site.
 
 ---
 
 ## Routes
 
-| Path         | File                         | What it is                             |
-| ------------ | ---------------------------- | -------------------------------------- |
-| `/`          | `public/index.html`          | Home                                   |
-| `/services/` | `public/services/index.html` | Eight services                         |
-| `/about/`    | `public/about/index.html`    | About the firm                         |
-| `/projects/` | `public/projects/index.html` | Project slots                          |
-| `/contact/`  | `public/contact/index.html`  | Enquiry form                           |
-| `/terms/`    | `public/terms/index.html`    | Terms of use                           |
-| `/privacy/`  | `public/privacy/index.html`  | How the form is used                   |
-| `/cookies/`  | `public/cookies/index.html`  | What the site saves                    |
-| `/faq/`      | `public/faq/index.html`      | Questions already answered on the site |
+| Path         | File                         | What it is                                        |
+| ------------ | ---------------------------- | ------------------------------------------------- |
+| `/`          | `public/index.html`          | Home                                              |
+| `/about/`    | `public/about/index.html`    | About the firm                                    |
+| `/services/` | `public/services/index.html` | Eight services, anchors `#svc-1` through `#svc-8` |
+| `/projects/` | `public/projects/index.html` | Six project slots                                 |
+| `/faq/`      | `public/faq/index.html`      | 15 questions taken from the other pages           |
+| `/contact/`  | `public/contact/index.html`  | Enquiry form                                      |
+| `/terms/`    | `public/terms/index.html`    | Terms of use                                      |
+| `/privacy/`  | `public/privacy/index.html`  | How the form is used                              |
+| `/cookies/`  | `public/cookies/index.html`  | What the site saves                               |
 
-`public/sitemap.xml` lists those nine addresses. `public/robots.txt` allows crawlers and points at the sitemap.
+`public/sitemap.xml` lists those nine addresses. `public/robots.txt` allows crawlers and points at the sitemap. Terms, Privacy, and Cookies stay public. They are not links in the footer.
 
-An old home link such as `/#services` is sent to `/services/`. The same happens for about, projects, and contact.
+An old home link is sent to the real page:
+
+| Old link     | Opens        |
+| ------------ | ------------ |
+| `/#services` | `/services/` |
+| `/#about`    | `/about/`    |
+| `/#projects` | `/projects/` |
+| `/#contact`  | `/contact/`  |
+
+That redirect is in `public/js/site.js`. It runs only on the home page, then stops the rest of the script with `return`.
 
 ---
 
@@ -67,13 +155,13 @@ An old home link such as `/#services` is sent to `/services/`. The same happens 
 Every page uses the same shell:
 
 - `public/css/site.css` for layout, color, language, and fonts
-- `public/js/site.js` for the menu, language, form, and project photos
-- `public/img/` for the logo, hero, favicon, and service pictures
+- `public/js/site.js` for the menu, language, form, copy, and project photos
+- `public/img/` for the logo, hero, favicon, share picture, and service pictures
 - `public/fonts/` for the typefaces
 
-There are no shared components, hooks, or a component library. To reuse a page in another static site, copy the HTML file and keep the same `/css`, `/js`, `/img`, and `/fonts` paths, or change those paths in that copy.
+`body` carries `data-page`. The script marks the header link whose `data-nav` matches that value. There is one `nav.main`. The phone menu is that same list, opened by the menu button. There is no second menu and no router.
 
-The header and the footer Pages list are Home, About, Services, Projects, FAQ, and Contact. The office column shows the phone, email, address, and the social icons. The FAQ page answers 15 questions taken from those pages.
+There are no shared components, hooks, or a component library. The HTML is repeated on each page so a host can serve the files as they are.
 
 ---
 
@@ -81,7 +169,20 @@ The header and the footer Pages list are Home, About, Services, Projects, FAQ, a
 
 The buttons are বাংলা and EN. The choice is saved in the browser under the key `bs-lang`. It is not sent to a server.
 
-CSS hides the language that is not active:
+Bangla is the default. A short script in each page head runs before the first paint. It sets `lang` and `data-lang` to `en` only when the saved value is already `en`:
+
+```html
+<script>
+  try {
+    if (localStorage.getItem("bs-lang") === "en") {
+      document.documentElement.lang = "en";
+      document.documentElement.setAttribute("data-lang", "en");
+    }
+  } catch (e) {}
+</script>
+```
+
+CSS then hides the language that is not active:
 
 ```css
 html:not([data-lang="en"]) [lang="en"],
@@ -90,15 +191,43 @@ html[data-lang="en"] [lang="bn"] {
 }
 ```
 
-Text that must change inside a form field uses `data-bn` and `data-en`. The script copies the active value into the placeholder or the option label.
+`public/js/site.js` updates `data-lang`, the pressed state of the two buttons, and `localStorage` when a button is clicked. Text that must change inside a form field uses `data-bn` and `data-en`. The script copies the active value into the placeholder.
+
+The contact service menu is two `<select>` elements, one Bangla and one English, so the visible label does not wait on the bottom script. Choosing a language copies the selected index from one menu to the other.
+
+---
+
+## Header, footer, and the phone menu
+
+Header order, and the footer Pages list, are:
+
+Home, About, Services, Projects, FAQ, Contact
+
+The current page link is slightly bolder. Header links are only as wide as the visible language. They share the same padding and a 4px gap.
+
+The footer has three columns: the logo and tagline, Pages, and Office. Office lists the phone, `contact.buildsafe@gmail.com`, and the Dilara Tower address. Facebook, LinkedIn, and YouTube sit under those lines.
+
+At 760px and below, the brand, Pages, and Office each take a full row. On a phone, the copyright line and the slogan are centered. The slogan is “Partner with BUILD SAFE to turn your vision into reality”, in one color.
+
+The FAQ page marks the FAQ link in the header and in Pages. The contact page marks Contact the same way. `aria-current="page"` is on that footer link only.
 
 ---
 
 ## Enquiry
 
-`/contact/?service=3` opens the form with service 3 selected. The allowed values are `0` through `8`.
+`/contact/?service=3` opens the form with service 3 selected. The allowed values are `0` through `8`. Any other value is ignored.
 
-The script accepts a name of more than one character and a Bangladesh mobile number. Bangla digits are converted first. A valid form writes the message with `textContent` and sets a link to `https://wa.me/8801814116677`. The visitor still sends the message. Nothing is posted to this site.
+The script accepts a name of more than one character and a Bangladesh mobile number. Bangla digits are converted first. A leading `880` is removed. The number must match `01` then `3`–`9`, then eight more digits.
+
+A valid form writes the message with `textContent` and sets a link to `https://wa.me/8801814116677`. The visitor still sends the message. The site does not call `window.open`, does not post the form, and does not store the fields. Submitting does not create a contract. Scope, fee, and deliverables are agreed separately. This site has no fee table.
+
+---
+
+## Copy and the notice
+
+The contact page shows the phone number and `contact.buildsafe@gmail.com` at the same size and weight. Each has a copy button. The button’s `data-copy` value is what gets copied. If the clipboard is blocked, the script selects that button’s own text.
+
+The notice sits at the bottom right. On a phone it stays above the Call us / Consultation bar. A short fade-and-rise runs unless the visitor has asked the system to reduce motion.
 
 ---
 
@@ -106,15 +235,28 @@ The script accepts a name of more than one character and a Bangladesh mobile num
 
 Headings use Anek Bangla. Body text uses Hind Siliguri. Small labels use IBM Plex Mono. The files are in `public/fonts/` and are licensed under the SIL Open Font License in that folder.
 
-The home photo is `public/img/hero.jpg`. The header uses `public/img/logo.png`. Chat and email previews use `public/img/meta-logo.jpg`. Service pictures below the first screen use `loading="lazy"`. On the projects page, a photo appears only when `img/projects/p1.jpg` through `p6.jpg` exist. Missing files stay as placeholders.
+| File                                          | Role                                                       |
+| --------------------------------------------- | ---------------------------------------------------------- |
+| `public/img/logo.png`                         | Header logo and the structured-data logo                   |
+| `public/img/logo-white.png`                   | Logo on the dark header                                    |
+| `public/img/hero.jpg`                         | Home photo                                                 |
+| `public/img/meta-logo.jpg`                    | Picture named in the share tags (2000×2000 JPEG)           |
+| `public/img/favicon.png`                      | Browser icon                                               |
+| `public/img/icon-180.png`                     | Apple touch icon                                           |
+| `public/img/s1.jpg` through `s8.jpg`          | Service pictures. Later ones use `loading="lazy"`          |
+| `public/img/projects/p1.jpg` through `p6.jpg` | Optional. A slot shows the photo only when that file loads |
+
+Missing project photos stay as placeholders. Those requests can 404. That is expected until the files are added.
 
 ---
 
-## Search files
+## Search and link previews
 
-Each page has its own title, description, canonical URL, and social tags. The address used there is `https://buildsafe.com.bd/`. The share picture is `https://buildsafe.com.bd/img/meta-logo.jpg`. The structured-data logo is `https://buildsafe.com.bd/img/logo.png`. The FAQ page also has structured data for the questions printed on that page.
+Each page has its own title, description, canonical URL, and social tags. The address written there is `https://buildsafe.com.bd/`. The share picture is `https://buildsafe.com.bd/img/meta-logo.jpg`. The structured-data logo is `https://buildsafe.com.bd/img/logo.png`. The FAQ page also has structured data for the questions printed on that page. The sitemap lists pages only, not images.
 
-Keywords are the ordinary words already on the pages: engineering consultancy, design, testing, material advice, Dhaka, and Bangladesh. There is no keywords meta tag.
+Chat and email apps read the address written in the tags. They do not run the page script. The picture file is in this folder, but the tags name it on `buildsafe.com.bd`. A preview of [https://build-safe-testing.vercel.app/](https://build-safe-testing.vercel.app/) stays without that picture until Cloudflare serves this same `public/` folder and a fresh share of `https://buildsafe.com.bd/` is fetched. An older saved card can linger until the app fetches again.
+
+Keywords are the ordinary words already on the pages: engineering consultancy, design, testing, material consultancy, Dhaka, and Bangladesh. There is no keywords meta tag.
 
 ---
 
@@ -122,16 +264,39 @@ Keywords are the ordinary words already on the pages: engineering consultancy, d
 
 - **Static site.** The HTML files are the pages. A host only has to serve the `public/` folder.
 - **Canonical URL.** The preferred address of a page, so a crawler does not treat copies as different pages.
-- **JSON-LD.** A block of structured data in the page head. It describes the business. It is not a database.
+- **JSON-LD.** A block of structured data in the page head. It describes the business, and on the FAQ page the questions. It is not a database.
 - **localStorage.** A small store in the browser. This site uses it for the language choice only.
+- **Share tags.** `og:` and `twitter:` lines that chat apps read when someone pastes a link.
 
 There is no API, backend, database, or foreign key.
 
 ---
 
+## Reusing a page
+
+Copy the HTML file into another static site and keep the same `/css`, `/js`, `/img`, and `/fonts` paths, or change those paths in that copy. The script looks up elements by id (`enq`, `nav`, `menu-btn`, `toast`). A copied contact page needs those ids if the form and the copy buttons should keep working.
+
+There is no package to import and no component to drop into a React or Next.js app.
+
+---
+
 ## Security
 
-See [SECURITY.md](SECURITY.md). Report a vulnerability privately to [contact@arnobmahmud.com](mailto:contact@arnobmahmud.com).
+See [SECURITY.md](SECURITY.md). Report a vulnerability privately to [contact@arnobmahmud.com](mailto:contact@arnobmahmud.com). Do not open a public GitHub issue for it.
+
+The public contact details in the HTML are intentional. The form never sends those fields to a server of this site.
+
+---
+
+## Keywords
+
+engineering consultancy, structural design, material testing, concrete testing, material consultancy, Dilara Tower, Hatirpool, Dhaka, Bangladesh, bilingual brochure, static HTML, WhatsApp enquiry, Build Safe Engineering
+
+---
+
+## Conclusion
+
+This project is a small static brochure you can read from top to bottom. Serve `public/`, switch the language, open the phone menu, and submit the contact form with a short name and a Bangladesh mobile number. The useful behavior is in two shared files, `public/css/site.css` and `public/js/site.js`, plus the nine HTML pages.
 
 ---
 

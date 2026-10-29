@@ -98,3 +98,11 @@ Append-only. Do not rewrite earlier entries.
 - Decision: The Information column is gone. Pages lists Home, About, Services, Projects, FAQ, and Contact. The header lists FAQ immediately before Contact, and the phone menu is that same list. `aria-current="page"` stays on the FAQ footer link only on the FAQ page, and on the Contact footer link only on the contact page. The footer is three columns. At 760px and below, the brand, Pages, and Office each take a full row. Facebook, LinkedIn, and YouTube stay under the office phone, email, and address.
 - Rationale: FAQ and Contact belong with the other pages. The social icons are other ways to reach the office, so they stay with those details.
 - Linked: `DEC-0011`
+
+## DEC-0013 — Consult, consulting, and consultancy
+
+- Date: 2026-10-29
+- Agent: Cursor
+- Decision: English for this work uses “consult” as the verb, “consulting” for the work, and “consultancy” for the material-selection service, including “Material Selection Consultancy”. Bangla stays. Buttons that already say “Consultation”, and the home line “Material selection consultation, completely free”, stay. Do not restore the previous guidance noun or verb.
+- Rationale: The client does not want that previous wording on the site. “Consultation” is a different word already used for the enquiry button.
+- Linked: `DEC-0012`

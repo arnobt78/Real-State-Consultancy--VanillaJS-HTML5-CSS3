@@ -64,3 +64,17 @@ Pull request 7.
 - Removed the Information column and listed FAQ and Contact in Pages, after Projects.
 - Added FAQ immediately before Contact in the header. The phone menu uses that same list.
 - Stacked the brand, Pages, and Office on full rows at 760px and below. Left the social icons under the office lines.
+
+## 2026-10-29 — teaching README
+
+Pull request 8.
+
+- Rewrote `README.md` as a guide to the nine static pages, the language switch, the form, and the share tags.
+- Left the title and `SECURITY.md` unchanged. Added the Diploi badge for this repository.
+
+## 2026-10-29 — consult, consulting, and consultancy
+
+Pull request 8.
+
+- Replaced the previous English guidance noun and verb with consult, consulting, or consultancy.
+- Left Bangla unchanged. Left buttons that already said “Consultation”.
