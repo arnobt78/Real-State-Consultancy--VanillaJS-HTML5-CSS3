@@ -47,7 +47,7 @@ This repository is the brochure. A host only has to serve the `public/` folder. 
 
 What a visitor can do:
 
-1. Read the home page, eight services, the about page, project slots, and 15 questions on the FAQ page.
+1. Read the home page, eight services, the about page, six project cards, and 15 questions on the FAQ page.
 2. Switch between Bangla and English. The choice stays on that device.
 3. Open the phone menu on a narrow screen. It is the same header list.
 4. Send an enquiry by preparing a WhatsApp message to `+880 1814-116677`. Nothing is posted to this site.
@@ -63,7 +63,7 @@ There is no account, database, API, or admin screen.
 | ------------------------------------------ | --------------------------------------------------------- |
 | One HTML file per route                    | `public/` and `public/*/index.html`                       |
 | Shared layout, color, and type             | `public/css/site.css`                                     |
-| Menu, language, form, copy, project photos | `public/js/site.js`                                       |
+| Menu, language, form, copy, home photo cycle | `public/js/site.js`                                |
 | Two languages in one file                  | `lang="bn"` and `lang="en"` spans, plus `data-lang`       |
 | Saved language before first paint          | The short script in each page `<head>`                    |
 | Browser-only form check                    | The `#enq` block in `public/js/site.js`                   |
@@ -110,8 +110,8 @@ public/
 ├── privacy/index.html
 ├── cookies/index.html
 ├── css/site.css            # Layout, color, language, footer, toast
-├── js/site.js              # Menu, language, form, copy, project photos
-├── img/                    # logo.png, hero.jpg, meta-logo.jpg, s1.jpg–s8.jpg
+├── js/site.js              # Menu, language, form, copy, home photo cycle
+├── img/                    # logo.png, hero.jpg, home-hero/, meta-logo.jpg, s1.jpg–s8.jpg
 ├── fonts/                  # Self-hosted faces and their SIL licenses
 ├── robots.txt
 └── sitemap.xml             # The nine page addresses only
@@ -128,7 +128,7 @@ public/
 | `/`          | `public/index.html`          | Home                                              |
 | `/about/`    | `public/about/index.html`    | About the firm                                    |
 | `/services/` | `public/services/index.html` | Eight services, anchors `#svc-1` through `#svc-8` |
-| `/projects/` | `public/projects/index.html` | Six project slots                                 |
+| `/projects/` | `public/projects/index.html` | Six project cards                                 |
 | `/faq/`      | `public/faq/index.html`      | 15 questions taken from the other pages           |
 | `/contact/`  | `public/contact/index.html`  | Enquiry form                                      |
 | `/terms/`    | `public/terms/index.html`    | Terms of use                                      |
@@ -155,7 +155,7 @@ That redirect is in `public/js/site.js`. It runs only on the home page, then sto
 Every page uses the same shell:
 
 - `public/css/site.css` for layout, color, language, and fonts
-- `public/js/site.js` for the menu, language, form, copy, and project photos
+- `public/js/site.js` for the menu, language, form, copy, and the home photo cycle
 - `public/img/` for the logo, hero, favicon, share picture, and service pictures
 - `public/fonts/` for the typefaces
 
@@ -239,14 +239,15 @@ Headings use Anek Bangla. Body text uses Hind Siliguri. Small labels use IBM Ple
 | --------------------------------------------- | ---------------------------------------------------------- |
 | `public/img/logo.png`                         | Header logo and the structured-data logo                   |
 | `public/img/logo-white.png`                   | Logo on the dark header                                    |
-| `public/img/hero.jpg`                         | Home photo                                                 |
+| `public/img/hero.jpg`                         | First picture in the home frame                           |
 | `public/img/meta-logo.jpg`                    | Picture named in the share tags (2000×2000 JPEG)           |
 | `public/img/favicon.png`                      | Browser icon                                               |
 | `public/img/icon-180.png`                     | Apple touch icon                                           |
 | `public/img/s1.jpg` through `s8.jpg`          | Service pictures. Later ones use `loading="lazy"`          |
-| `public/img/projects/p1.jpg` through `p6.jpg` | Optional. A slot shows the photo only when that file loads |
+| `public/img/home-hero/hero-1.png` through `hero-4.png` | The other four pictures in the home frame. `hero-1.png` is also the design detail banner |
+| `public/img/projects/`                    | Card pictures, banners, and gallery pictures for the six jobs |
 
-Missing project photos stay as placeholders. Those requests can 404. That is expected until the files are added.
+The home frame shows `hero.jpg` when JavaScript is off. The other four pictures are in the page and stay hidden until the cycle runs.
 
 ---
 

@@ -159,7 +159,21 @@ section { padding-block: 72px }
 .hero-meta span { display: inline-flex; align-items: center; gap: 8px }
 .hero-meta span::before { content: ""; width: 8px; height: 8px; background: var(--brand-text); transform: rotate(45deg) }
 .hero-fig { position: relative; min-width: 0 }
-.hero-fig img { border-radius: 20px; border: 1px solid var(--line) }
+.hero-slides { position: relative; aspect-ratio: 3 / 2; border-radius: 20px; border: 1px solid var(--line); overflow: hidden; background: var(--surface) }
+.hero-slides img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; border: 0; border-radius: 0; opacity: 0; transform: scale(1) }
+.hero-slides img.is-on { opacity: 1 }
+.hero-slides.is-live img.is-on { animation: hero-cycle 17.5s linear forwards }
+.hero-slides.is-paused img { animation-play-state: paused }
+@keyframes hero-cycle {
+  0% { opacity: 0; transform: scale(1); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1) }
+  10% { opacity: 1; transform: scale(1.06); animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1) }
+  90% { opacity: 1; transform: scale(1); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1) }
+  100% { opacity: 0; transform: scale(1) }
+}
+@media (min-width: 861px) { .hero-fig { align-self: end } }
+@media (prefers-reduced-motion: reduce) {
+  .hero-slides img, .hero-slides.is-live img.is-on { animation: none; transform: none }
+}
 .dim { display: flex; align-items: center; gap: 14px; margin-top: 14px; color: var(--ink); text-align: center }
 .dim.cap { font-size: clamp(10.5px, 2.85vw, 13.5px); font-weight: 500; color: var(--ink-2); line-height: 1.5; white-space: nowrap }
 .dim.cap > span { flex: 0 0 auto }
@@ -278,14 +292,16 @@ a.proj:hover { transform: translateY(-3px); border-color: var(--brand-text) }
 .proj-body { padding: 0 16px; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; min-width: 0 }
 .proj-body h2 { margin: 0; font-size: 19px; font-weight: 600 }
 .proj-body p { margin: 0; color: var(--ink-2); font-size: 15px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden }
+.proj-banner { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: contain; object-position: center; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; margin-bottom: 28px }
 .proj-facts { background: var(--band); color: var(--band-ink-2); border-radius: 18px; padding: 22px 24px; display: flex; flex-direction: column; gap: 16px; margin: 8px 0 28px }
+.proj-facts[hidden] { display: none }
 .proj-facts h2 { margin: 0; color: var(--band-ink); font-size: 22px }
 .proj-facts dt { color: var(--brand-text); font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase }
 .proj-facts dd { margin: 4px 0 0 }
 .proj-facts ul { margin: 6px 0 0; padding-left: 18px }
-.proj-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 16px }
-.proj-gallery img { width: 100%; border-radius: 18px; border: 1px solid var(--line); object-fit: cover }
-.proj-gallery img:first-child { grid-column: 1 / -1; max-height: 520px }
+.proj-note { margin-bottom: 16px }
+.proj-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start }
+.proj-gallery img { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--line) }
 .proj-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px }
 @media (max-width: 860px) { .proj-grid { grid-template-columns: repeat(2, 1fr) } .proj-gallery { grid-template-columns: 1fr } }
 @media (max-width: 520px) { .proj-grid { grid-template-columns: 1fr } a.proj:hover { transform: none } }

@@ -87,3 +87,12 @@ Pull request 9.
 - Added a static detail page for each card. Interior and fire use their new posters. Assessment, interior, and fire have no extra gallery pictures.
 - Renamed the solar service title to Solar System Design & Installation. Left the FAQ solar question unchanged.
 - Stopped requesting the missing `p1.jpg` through `p6.jpg` files.
+
+## 2026-10-30 — home photo cycle and project pictures
+
+Pull request 10.
+
+- Made the home frame 3:2 and cycled `hero.jpg` with the four `public/img/home-hero/` pictures. The cycle pauses on hover and while the tab is hidden. Reduced motion keeps the first picture.
+- Rewrote the projects intro as the showcase line. Left the share text on that page unchanged.
+- Opened each detail page with a 16:9 banner and let gallery pictures keep their own ratio. Hid the facts list.
+- Used `project-1-card.jpeg` on the concrete card only.

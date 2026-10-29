@@ -118,6 +118,8 @@ Local browser checks on a static server rooted at `public/`:
 
 ## 2026-10-29 — consult, consulting, and consultancy
 
+A local static server rooted at `public/` returned the nine pages. None of the served HTML contained the previous guidance noun or verb. The planned English lines were present, including “We consult based only on test reports”, “Material Selection Consultancy” with option value `8`, “This is not legal consulting”, and “Independent consulting”. Bangla spans beside those lines were unchanged. The FAQ structured data stayed Bangla. A repository search found none of that previous wording. No browser tool was available for this check. No typecheck, lint, unit test, or build script exists, so none was run.
+
 ## 2026-10-29 — project cards and detail pages
 
 A local static server rooted at `public/` and a browser check covered all 15 routes.
@@ -128,4 +130,13 @@ A local static server rooted at `public/` and a browser check covered all 15 rou
 - The FAQ page still had 15 questions, including “সোলার সিস্টেমে কী থাকে?”. No project image request failed. The nine project JPEGs had no EXIF and no GPS data.
 - No typecheck, lint, unit test, or build script exists, so none was run.
 
-A local static server rooted at `public/` returned the nine pages. None of the served HTML contained the previous guidance noun or verb. The planned English lines were present, including “We consult based only on test reports”, “Material Selection Consultancy” with option value `8`, “This is not legal consulting”, and “Independent consulting”. Bangla spans beside those lines were unchanged. The FAQ structured data stayed Bangla. A repository search found none of that previous wording. No browser tool was available for this check. No typecheck, lint, unit test, or build script exists, so none was run.
+## 2026-10-30 — home photo cycle and project pictures
+
+A local static server rooted at `public/` and a browser check:
+
+- All 15 HTML routes returned HTTP 200. Every local image, stylesheet, script, and font named by those pages was on disk. The home page had no broken images and no failed resource requests.
+- The home frame ratio was 1.5. The cycle class was `hero-cycle`, and the visible picture started as `hero.jpg`. English and Bangla both rendered. An earlier check in the same session, at 1280px, placed the extra frame height above the caption, and at 390px the frame stayed one column.
+- The projects intro matched the showcase line in both languages. The concrete card was `project-1-card.jpeg` at 1600×1200, and its box ratio was 1.333.
+- The concrete detail banner was `project-1-poster.png`. The facts list computed to `display: none`. The six gallery pictures matched their own ratios. The card collage was not on that page.
+- A 3-digit phone number kept the contact form and showed the valid-number message. A valid number hid the form and set a link to `https://wa.me/8801814116677`. `/#projects` opened `/projects/`.
+- No page errors were recorded on the concrete detail page or the contact page. No typecheck, lint, unit test, or build script exists, so none was run. An independent file check matched the hero markup, the six detail pages, and the asset list. Page-load timing was not measured.

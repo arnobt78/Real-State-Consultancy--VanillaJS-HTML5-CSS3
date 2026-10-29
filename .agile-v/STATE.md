@@ -3,12 +3,12 @@
 ## Resume point
 
 Cycle: `C1`
-Phase: The projects page has six linked cards, in this order: design, concrete, assessment, interior, solar, fire. Each card opens a folder under `/projects/`. Interior uses `project-5-poster.jpeg`. Fire uses `project-6-poster.jpeg`. The other four use their existing posters. Detail pages list the existing service notes and show only the pictures that exist for that job. Solar’s service title is Solar System Design & Installation. Pull request 8 is already on `main`. Pull request 9 carries the six project cards and their detail pages into `main`. Vercel Production follows `main`. Cloudflare is still managed separately.
+Phase: The home frame is 3:2 and, from 861px up, aligns with the bottom of the text so the extra height sits above the caption. It cycles `hero.jpg`, then `public/img/home-hero/hero-1.png` through `hero-4.png`. The cycle pauses on hover and while the tab is hidden. Reduced motion keeps the first picture. The projects intro is the showcase line in both languages. The concrete card uses `project-1-card.jpeg`. Each detail page opens with a 16:9 banner, then the existing title. The facts list stays in the HTML and is hidden. Gallery pictures keep their own ratio. The design banner is `hero-1.png`. The other five banners are their posters, and those posters are not repeated in the gallery. A picture line appears only for design, concrete, and solar. Pull request 9 is already on `main`. Pull request 10 carries the home photo cycle, the showcase line, the detail banners, and the concrete card into `main`. Vercel Production follows `main`. Cloudflare is still managed separately.
 Branch: `fix/footer-information` is the only feature branch. Do not open another branch. Older branches were removed after their pull requests merged.
 Remote: `https://github.com/arnobt78/Real-State-Consultancy--VanillaJS-HTML5-CSS3.git`
 Gate: `GATE-0001` was superseded. Do not wait on token `C1-HG1-7f3a`. Do not revert `public/` because that token is missing.
 
-Next exact action: none after pull request 9 is on `main`. Vercel Production deploys `main`. Do not push new implementation straight to `main`. Do not open another branch. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy uses output directory `public` with no build command.
+Next exact action: after pull request 10 is on `main`, merge `main` back into `fix/footer-information` and leave that branch in place. Do not push new implementation straight to `main`. Do not open another branch. Do not start the remaining 4:3 project-card replacements until the client supplies those files. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy uses output directory `public` with no build command.
 
 ## What the project is
 
@@ -31,9 +31,9 @@ Public contact data in the pages (intentional, not a secret):
 ## Architecture (current)
 
 - Publish root is `public/`. Nine HTML pages, plus six project detail pages, share `public/css/site.css` and `public/js/site.js`.
-- Bangla is the default. English is in the same file and is shown when `data-lang` is `en`. The choice is stored as `bs-lang`. A head script sets that attribute before first paint when the saved value is `en`. Header links follow the visible words, in the order Home, About, Services, Projects, FAQ, Contact. The phone menu uses that same header. Footer Pages lists those same six links. The Office column lists the phone, `contact.buildsafe@gmail.com`, and the Dilara Tower address, with Facebook, LinkedIn, and YouTube under those lines. At 760px and below, the brand, Pages, and Office each take a full row. The footer address matches the other footer lines. On a phone, the copyright line and the slogan are centered. The slogan is “Partner with BUILD SAFE to turn your vision into reality”, in the same color as the rest of the line. The contact email matches the phone number and has a copy button. The copy notice sits at the bottom right. The FAQ page has 15 bilingual questions drawn from the existing pages, with about 20px of padding per item. Link previews use `public/img/meta-logo.jpg`. The structured-data logo and the header image stay `logo.png`. The home photo stays `hero.jpg`. Terms, Privacy, and Cookies stay public and in the sitemap, and they are not in the footer. The contact service menu is two selects so its label is already in the saved language.
+- Bangla is the default. English is in the same file and is shown when `data-lang` is `en`. The choice is stored as `bs-lang`. A head script sets that attribute before first paint when the saved value is `en`. Header links follow the visible words, in the order Home, About, Services, Projects, FAQ, Contact. The phone menu uses that same header. Footer Pages lists those same six links. The Office column lists the phone, `contact.buildsafe@gmail.com`, and the Dilara Tower address, with Facebook, LinkedIn, and YouTube under those lines. At 760px and below, the brand, Pages, and Office each take a full row. The footer address matches the other footer lines. On a phone, the copyright line and the slogan are centered. The slogan is “Partner with BUILD SAFE to turn your vision into reality”, in the same color as the rest of the line. The contact email matches the phone number and has a copy button. The copy notice sits at the bottom right. The FAQ page has 15 bilingual questions drawn from the existing pages, with about 20px of padding per item. Link previews use `public/img/meta-logo.jpg`. The structured-data logo and the header image stay `logo.png`. The home frame starts with `hero.jpg` and then cycles the four `public/img/home-hero/` pictures. Without JavaScript, only the first picture shows. Terms, Privacy, and Cookies stay public and in the sitemap, and they are not in the footer. The contact service menu is two selects so its label is already in the saved language.
 - The contact form validates a name and a Bangladesh mobile number, then prepares a WhatsApp link. It does not post to a server.
-- Project cards link to `/projects/design-technical-support/`, `/projects/concrete-mix-design-testing/`, `/projects/detailed-engineering-assessment/`, `/projects/interior-design/`, `/projects/solar-system-design-installation/`, and `/projects/fire-safety-hvac/`. The old `p1.jpg` through `p6.jpg` probes are gone. The unused `public/img/home-hero/` pictures are not on these cards.
+- Project cards link to `/projects/design-technical-support/`, `/projects/concrete-mix-design-testing/`, `/projects/detailed-engineering-assessment/`, `/projects/interior-design/`, `/projects/solar-system-design-installation/`, and `/projects/fire-safety-hvac/`. The concrete card image is `project-1-card.jpeg`. The old `p1.jpg` through `p6.jpg` probes are gone. `hero-1.png` is the design-page banner and the second home picture. `hero-2.png`, `hero-3.png`, and `hero-4.png` are home pictures only.
 - Dark colors follow the system. Fonts are files in `public/fonts/`.
 - Serve `public/` with no build command. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
 
@@ -50,16 +50,10 @@ Public contact data in the pages (intentional, not a secret):
 
 ## Completed this session
 
-- Six project cards show their posters, badges, and the existing service lines. Interior and fire no longer say the photo is coming.
-- Each card opens a static detail page with the existing service list, the pictures that exist, and a contact link for that service.
-- The solar service title is Solar System Design & Installation on the home card, the services heading, contact option 7, and the terms list. The FAQ solar question is unchanged.
-- English for this work uses consult, consulting, or consultancy. Bangla is unchanged. Buttons that already said “Consultation” stay.
-- `README.md` is a teaching guide for the static brochure. The title is unchanged. Badges stay MIT, HTML 5, CSS 3, and JavaScript, plus the Diploi launch badge for this repository. `SECURITY.md` is unchanged.
-- The header and the footer Pages list are Home, About, Services, Projects, FAQ, and Contact. The Information column is gone. Social icons stay under the office lines.
-- The third footer column is Office: phone, `contact.buildsafe@gmail.com`, and the address. The contact page has a matching email card. Structured data includes that email.
-- The slogan is “Partner with BUILD SAFE to turn your vision into reality”, in one color. On a phone those two footer lines are centered.
-- The contact email matches the phone number and can be copied. The copy notice sits at the bottom right.
-- The FAQ page lists 15 questions from the existing pages. The old short-answers line is gone.
+- The home photo frame is 3:2 and cycles five pictures with a slow fade and zoom.
+- The projects page intro is the agreed showcase line. Share text on that page is unchanged.
+- Detail pages lead with a 16:9 banner. Gallery pictures keep their own ratio. The facts list is hidden.
+- The concrete card uses `project-1-card.jpeg`. That file is not on the concrete detail page.
 
 ## Active requirement IDs
 
@@ -73,18 +67,17 @@ Proposed, blocked on `GATE-0001`:
 
 ## Files changed this session
 
-- `public/projects/index.html` and the six detail folders
-- `public/img/projects/` for the six jobs
-- `public/css/site.css`, `public/js/site.js`, `public/sitemap.xml`
-- solar title on `public/index.html`, `public/services/index.html`, `public/contact/index.html`, `public/terms/index.html`
-- `CLAUDE.md`
-- `.agile-v/STATE.md`, `CHANGELOG.md`, `VALIDATION_SUMMARY.md`, `REQUIREMENTS.md`, `RISKS.md`, `TASKS.md`
+- `public/index.html`, `public/css/site.css`, `public/js/site.js`
+- `public/img/home-hero/` and `public/img/projects/concrete-testing/project-1-card.jpeg`
+- `public/projects/index.html` and the six detail pages
+- `CLAUDE.md`, `README.md`
+- `.agile-v/STATE.md`, `CHANGELOG.md`, `VALIDATION_SUMMARY.md`, `TASKS.md`, `DECISION_LOG.md`
 
-Not changed: `AGENTS.md`, `docs/VERCEL-PLAIN-JS-DEPLOY.md`, and the unused `public/img/home-hero/` pictures.
+Not changed: `AGENTS.md` and `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
 
 ## Validation
 
-No typecheck, lint, test, or build script exists. The project pages, the contact form, and the other routes were checked in a local browser. See `VALIDATION_SUMMARY.md`.
+No typecheck, lint, test, or build script exists. The home cycle, the project pages, the contact form, and the other routes were checked in a local browser. See `VALIDATION_SUMMARY.md`.
 
 ## Blockers
 
@@ -98,7 +91,7 @@ No typecheck, lint, test, or build script exists. The project pages, the contact
 2. Theme: follow the system, lock light, or add a toggle? Recommendation is in `REQ-0009`.
 3. Without JavaScript, is a phone fallback enough, or should every section stay visible? Recommendation is in `REQ-0008`.
 4. What is the public site URL, if any?
-5. The six project posters are in the repository. Extra gallery pictures exist for design, concrete, and solar. Assessment, interior, and fire have the poster only.
+5. The concrete card is a 4:3 collage. The client may still replace the other clipped card pictures with new 4:3 files. Do not start that until those files arrive.
 
 ## Deferred
 
