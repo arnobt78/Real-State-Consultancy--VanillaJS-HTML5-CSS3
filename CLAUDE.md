@@ -4,7 +4,7 @@
 
 Project Name: Build Safe Engineering
 Description: Bilingual Bangla/English brochure for Build Safe Engineering & Consultancy. Static pages in `public/`, WhatsApp enquiry handoff.
-Current Status: The home frame cycles five pictures. Each project card opens a detail page that starts with a banner, and the concrete card uses its 4:3 collage. Pull request 9 is already on `main`. This newer work stays on `fix/footer-information` until its pull request is on `main`. Vercel Production follows `main`. This repo is not the live Cloudflare site.
+Current Status: The home frame cycles five pictures. Each project card opens a detail page that starts with a banner, and the concrete card uses its 4:3 collage. Pull request 10 carries that into `main`. Vercel Production follows `main`. This repo is not the live Cloudflare site.
 Current Agile V Cycle: C1
 Current Gate: `GATE-0001` was superseded by later direction to build `public/`. See `.agile-v/STATE.md`.
 
@@ -133,4 +133,4 @@ Always continue from
 
 unless instructed otherwise.
 
-Current stop: the home photo cycle, the project-page showcase line, the detail-page banners, and the concrete card image are on `fix/footer-information`. Open that as a pull request into `main`, then squash-merge it. Vercel Production follows `main`. Do not open another branch. Do not push new implementation straight to `main`. After the merge, merge `main` back into `fix/footer-information` and leave that branch in place. The other project-card pictures stay until the client supplies new 4:3 files. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
+Current stop: pull request 10 carries the home photo cycle, the project-page showcase line, the detail-page banners, and the concrete card image into `main`. Vercel Production follows `main`. Do not open another branch. Do not push new implementation straight to `main`. After the merge, merge `main` back into `fix/footer-information` and leave that branch in place. The other project-card pictures stay until the client supplies new 4:3 files. Cloudflare is still managed separately. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
