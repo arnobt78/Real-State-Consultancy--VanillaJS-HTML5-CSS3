@@ -115,3 +115,7 @@ Local browser checks on a static server rooted at `public/`:
 - Facebook, LinkedIn, and YouTube stayed inside the office column.
 - The only 404 responses were the absent optional files `public/img/projects/p1.jpg` through `p6.jpg`. No page errors.
 - No typecheck, lint, unit test, or build script exists, so none was run. An independent file check matched the same header, Pages list, `aria-current` placement, and three-column footer.
+
+## 2026-10-29 — consult, consulting, and consultancy
+
+A local static server rooted at `public/` returned the nine pages. None of the served HTML contained the previous guidance noun or verb. The planned English lines were present, including “We consult based only on test reports”, “Material Selection Consultancy” with option value `8`, “This is not legal consulting”, and “Independent consulting”. Bangla spans beside those lines were unchanged. The FAQ structured data stayed Bangla. A repository search found none of that previous wording. No browser tool was available for this check. No typecheck, lint, unit test, or build script exists, so none was run.

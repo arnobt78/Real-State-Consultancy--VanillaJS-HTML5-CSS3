@@ -256,7 +256,7 @@ Each page has its own title, description, canonical URL, and social tags. The ad
 
 Chat and email apps read the address written in the tags. They do not run the page script. The picture file is in this folder, but the tags name it on `buildsafe.com.bd`. A preview of [https://build-safe-testing.vercel.app/](https://build-safe-testing.vercel.app/) stays without that picture until Cloudflare serves this same `public/` folder and a fresh share of `https://buildsafe.com.bd/` is fetched. An older saved card can linger until the app fetches again.
 
-Keywords are the ordinary words already on the pages: engineering consultancy, design, testing, material advice, Dhaka, and Bangladesh. There is no keywords meta tag.
+Keywords are the ordinary words already on the pages: engineering consultancy, design, testing, material consultancy, Dhaka, and Bangladesh. There is no keywords meta tag.
 
 ---
 
@@ -290,7 +290,7 @@ The public contact details in the HTML are intentional. The form never sends tho
 
 ## Keywords
 
-engineering consultancy, structural design, material testing, concrete testing, material advice, Dilara Tower, Hatirpool, Dhaka, Bangladesh, bilingual brochure, static HTML, WhatsApp enquiry, Build Safe Engineering
+engineering consultancy, structural design, material testing, concrete testing, material consultancy, Dilara Tower, Hatirpool, Dhaka, Bangladesh, bilingual brochure, static HTML, WhatsApp enquiry, Build Safe Engineering
 
 ---
 

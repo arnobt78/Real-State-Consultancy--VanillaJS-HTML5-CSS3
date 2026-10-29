@@ -38,7 +38,7 @@ The page presents these services, each with `img/sN.jpg` and a contact link that
 | svc-5 | ভবনের নিরাপত্তা মূল্যায়ন (DEA) | Detailed Engineering Assessment | `img/s5.jpg` |
 | svc-6 | ফায়ার সেফটি ও HVAC | Fire Safety & HVAC | `img/s6.jpg` |
 | svc-7 | সোলার সিস্টেম | Solar Systems | `img/s7.jpg` |
-| svc-8 | নির্মাণসামগ্রী বাছাইয়ে পরামর্শ | Material Selection Advice | `img/s8.jpg` |
+| svc-8 | নির্মাণসামগ্রী বাছাইয়ে পরামর্শ | Material Selection Consultancy | `img/s8.jpg` |
 
 Service 8 is marked free. Illustrations were inspected on 2026-10-27 and match those topics. `img/s2.jpg` is a photoreal interior; the other service images are stylized 3D scenes (`RISK-0008`).
 
@@ -75,7 +75,7 @@ Done when:
 - `<title>`, charset, viewport, description, and font links are in `<head>`.
 - The title remains `Build Safe Engineering`.
 - `<html lang="bn">` is in the initial markup. The script may change it to `en`.
-- The description is the existing offer, not new marketing copy: `Build Safe Engineering & Consultancy. ডিজাইন থেকে টেস্টিং ও নির্মাণসামগ্রী বাছাই — বাড়ি নির্মাতাদের জন্য। Design, testing, and material advice for home builders.`
+- The description is the existing offer, not new marketing copy: `Build Safe Engineering & Consultancy. ডিজাইন থেকে টেস্টিং ও নির্মাণসামগ্রী বাছাই — বাড়ি নির্মাতাদের জন্য। Design, testing, and material consultancy for home builders.`
 - A favicon points at `img/logo.png`.
 - Canonical and `og:image` URLs are omitted until a production origin is known.
 
@@ -111,7 +111,7 @@ Traceability: `TASK-0003`. Affected file: `index.html`.
 
 ### REQ-0010 Alternative text
 
-The hero image has alternative text. Service and project images use `alt=""`. Service cards also contain a heading, so the empty card alt avoids a repeated name. The large service images contain visible labels (materials, UPV, DEA, HVAC, the free-advice seal).
+The hero image has alternative text. Service and project images use `alt=""`. Service cards also contain a heading, so the empty card alt avoids a repeated name. The large service images contain visible labels (materials, UPV, DEA, HVAC, the free-consultancy seal).
 
 Done when:
 

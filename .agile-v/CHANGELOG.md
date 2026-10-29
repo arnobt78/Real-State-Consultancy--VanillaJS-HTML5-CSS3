@@ -69,3 +69,8 @@ Pull request 7.
 
 - Rewrote `README.md` as a guide to the nine static pages, the language switch, the form, and the share tags.
 - Left the title and `SECURITY.md` unchanged. Added the Diploi badge for this repository.
+
+## 2026-10-29 — consult, consulting, and consultancy
+
+- Replaced the previous English guidance noun and verb with consult, consulting, or consultancy.
+- Left Bangla unchanged. Left buttons that already said “Consultation”.
