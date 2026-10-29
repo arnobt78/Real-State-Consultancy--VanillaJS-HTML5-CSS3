@@ -158,6 +158,8 @@ A local static server rooted at `public/` and a browser check:
 
 ## 2026-10-30 — caption rules, slogans, and detail spacing
 
+Pull request 12.
+
 A local static server rooted at `public/` and a browser check:
 
 - `node --check public/js/site.js` passed. No typecheck, lint, unit test, or build script exists, so none was run.

@@ -107,6 +107,8 @@ Pull request 11.
 
 ## 2026-10-30 — caption rules, slogans, and detail spacing
 
+Pull request 12.
+
 - Let the caption side rules follow the current Bangla or English line, with the same 0.7s ease as the picture.
 - Replaced the four later captions with the licensed-partner, construction-support, test-report, and inside-the-home slogans. The office-photo caption stays.
 - Gave the detail-page buttons the same 28px space below as above.
