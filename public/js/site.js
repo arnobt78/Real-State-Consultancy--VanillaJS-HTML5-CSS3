@@ -91,10 +91,11 @@
     document.getElementById('edit-msg').addEventListener('click', function () { document.getElementById('sent').hidden = true; form.hidden = false; });
   }
 
-  /* Home photo frame. The visible picture zooms out, then the next one fades in. */
+  /* Home photo frame. The settled picture stays, then both pictures ease together. */
   var slides = document.querySelector('.hero-slides');
   if (slides && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     var frames = slides.querySelectorAll('img');
+    var caps = slides.parentNode.querySelectorAll('.cap-line');
     var frame = 0;
     var wait = 0;
     var due = 0;
@@ -102,19 +103,23 @@
     var held = false;
     var unseen = document.hidden;
     var pausedAt = 0;
-    function preload(n) {
-      var el = frames[n % frames.length];
-      if (el.complete && el.naturalWidth) return;
-      var pic = new Image();
-      pic.src = el.getAttribute('src');
+    var fading = false;
+    var layer = 1;
+    function whenReady(el, ok, fail) {
+      function success() {
+        if (el.decode) el.decode().then(ok, ok);
+        else ok();
+      }
+      if (el.complete && el.naturalWidth) { success(); return; }
+      if (el.complete) { fail(); return; }
+      el.addEventListener('load', success, { once: true });
+      el.addEventListener('error', fail, { once: true });
     }
     function run() {
       clearTimeout(wait);
-      var stop = held || unseen;
-      slides.classList.toggle('is-paused', stop);
-      if (stop) { if (!pausedAt) pausedAt = performance.now(); return; }
+      if (held || unseen) { if (!pausedAt) pausedAt = performance.now(); return; }
       if (pausedAt) { due += performance.now() - pausedAt; pausedAt = 0; }
-      if (!step) return;
+      if (!step || fading) return;
       wait = setTimeout(function () {
         var done = step;
         step = null;
@@ -126,25 +131,55 @@
       due = performance.now() + ms;
       run();
     }
-    function show(n) {
-      frame = n;
-      var cur = frames[frame];
-      cur.classList.remove('is-on');
-      void cur.offsetWidth;
-      cur.classList.add('is-on');
-      preload(frame + 1);
-      after(15750, function () { show((frame + 1) % frames.length); });
+    function retire(prev, next) {
+      if (prev === next) return;
+      prev.classList.remove('is-on');
+      prev.classList.remove('is-leaving');
+      var line = caps[Array.prototype.indexOf.call(frames, prev)];
+      if (line) { line.classList.remove('is-on'); line.classList.remove('is-leaving'); }
     }
-    slides.addEventListener('animationend', function (e) {
-      if (e.animationName !== 'hero-cycle' || e.elapsedTime < 17 || e.target === frames[frame]) return;
-      e.target.classList.remove('is-on');
-    });
+    function begin(n) {
+      var next = frames[n];
+      var prev = frames[frame];
+      var nextLine = caps[n];
+      var prevLine = caps[frame];
+      if (held || unseen) { after(0, function () { begin(n); }); return; }
+      fading = true;
+      layer += 1;
+      next.style.zIndex = String(layer);
+      next.classList.add('is-on');
+      if (nextLine) nextLine.classList.add('is-on');
+      if (prev === next) { fading = false; after(3000, function () { go((frame + 1) % frames.length, 0); }); return; }
+      prev.classList.add('is-leaving');
+      if (prevLine && prevLine !== nextLine) prevLine.classList.add('is-leaving');
+      frame = n;
+      var settled = false;
+      function finish(e) {
+        if (settled) return;
+        if (e && e.target !== prev) return;
+        if (e && e.propertyName && e.propertyName !== 'opacity') return;
+        settled = true;
+        prev.removeEventListener('transitionend', finish);
+        retire(prev, next);
+        fading = false;
+        after(3000, function () { go((frame + 1) % frames.length, 0); });
+      }
+      prev.addEventListener('transitionend', finish);
+      setTimeout(function () { finish({ target: prev, propertyName: 'opacity' }); }, 800);
+    }
+    function go(n, skipped) {
+      var next = frames[n];
+      whenReady(next, function () { begin(n); }, function () {
+        if (skipped + 1 >= frames.length) return;
+        go((n + 1) % frames.length, skipped + 1);
+      });
+    }
     slides.addEventListener('pointerenter', function () { held = true; run(); });
     slides.addEventListener('pointerleave', function () { held = false; run(); });
     document.addEventListener('visibilitychange', function () { unseen = document.hidden; run(); });
-    preload(1);
-    slides.classList.add('is-live');
-    after(15750, function () { show(1); });
+    frames[0].style.zIndex = '1';
+    whenReady(frames[1 % frames.length], function () {}, function () {});
+    after(3000, function () { go(1 % frames.length, 0); });
   }
 
   setLang(lang === 'en' ? 'en' : 'bn');

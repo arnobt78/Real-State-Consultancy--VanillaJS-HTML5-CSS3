@@ -140,3 +140,18 @@ A local static server rooted at `public/` and a browser check:
 - The concrete detail banner was `project-1-poster.png`. The facts list computed to `display: none`. The six gallery pictures matched their own ratios. The card collage was not on that page.
 - A 3-digit phone number kept the contact form and showed the valid-number message. A valid number hid the form and set a link to `https://wa.me/8801814116677`. `/#projects` opened `/projects/`.
 - No page errors were recorded on the concrete detail page or the contact page. No typecheck, lint, unit test, or build script exists, so none was run. An independent file check matched the hero markup, the six detail pages, and the asset list. Page-load timing was not measured.
+
+## 2026-10-30 — home crossfade, captions, and card pictures
+
+Pull request 11.
+
+A local static server rooted at `public/` and a browser check:
+
+- `node --check public/js/site.js` passed. No typecheck, lint, unit test, or build script exists, so none was run.
+- All 15 HTML routes returned HTTP 200. The only 404s were two guessed project paths that are not links on the site.
+- At 1280px the home frame ratio was 1.333. During the crossfade, picture opacity and the matching caption opacity stayed paired, and each pair summed to 1. The diamond row and the caption differed by 1px. The frame glow was the brown and grey shadow.
+- English showed the visible caption and hid the Bangla line. At 390px the hero was one column, the frame ratio stayed 1.333, and the caption side rules were hidden.
+- Reduced motion kept `hero.jpg` and the first caption at opacity 1, with the transition duration at 0s.
+- `/#projects` opened `/projects/`. Interior, assessment, and fire cards were 1024×768 with a box ratio of 1.333. Their detail banners stayed `project-5-poster.jpeg`, `project-3-poster.jpeg`, and `project-6-poster.jpeg`, each 1600×900.
+- A 3-digit phone number kept the contact form and showed the phone error. A valid number hid the form and set a WhatsApp link to `https://wa.me/8801814116677` that included the name.
+- An independent file check matched the caption lines, the fade classes, and the three card sources. Page-load timing was not measured.
