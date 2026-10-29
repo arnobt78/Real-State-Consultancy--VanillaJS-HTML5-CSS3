@@ -8,7 +8,7 @@ Branch: `fix/footer-information` is the only feature branch. Do not open another
 Remote: `https://github.com/arnobt78/Real-State-Consultancy--VanillaJS-HTML5-CSS3.git`
 Gate: `GATE-0001` was superseded. Do not wait on token `C1-HG1-7f3a`. Do not revert `public/` because that token is missing.
 
-Next exact action: none after pull request 7 is on `main`. Vercel Production deploys `main`. Do not push new implementation straight to `main`. Do not open another branch. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy uses output directory `public` with no build command.
+Next exact action: await authorization to push `fix/footer-information` and open one pull request into `main` for the teaching README. Vercel Production deploys `main`. Do not push new implementation straight to `main`. Do not open another branch. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy uses output directory `public` with no build command.
 
 ## What the project is
 
@@ -50,6 +50,7 @@ Public contact data in the pages (intentional, not a secret):
 
 ## Completed this session
 
+- `README.md` is a teaching guide for the static brochure. The title is unchanged. Badges stay MIT, HTML 5, CSS 3, and JavaScript, plus the Diploi launch badge for this repository. `SECURITY.md` is unchanged.
 - The header and the footer Pages list are Home, About, Services, Projects, FAQ, and Contact. The Information column is gone. Social icons stay under the office lines.
 - The third footer column is Office: phone, `contact.buildsafe@gmail.com`, and the address. The contact page has a matching email card. Structured data includes that email.
 - The slogan is “Partner with BUILD SAFE to turn your vision into reality”, in one color. On a phone those two footer lines are centered.
@@ -68,11 +69,9 @@ Proposed, blocked on `GATE-0001`:
 
 ## Files changed this session
 
-- the nine pages in `public/`
-- `public/css/site.css`
 - `README.md`
 - `CLAUDE.md`
-- `.agile-v/STATE.md`, `DECISION_LOG.md`, `VALIDATION_SUMMARY.md`, `CHANGELOG.md`
+- `.agile-v/STATE.md`, `CHANGELOG.md`
 
 Not changed: `public/sitemap.xml`, `AGENTS.md`, `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
 
