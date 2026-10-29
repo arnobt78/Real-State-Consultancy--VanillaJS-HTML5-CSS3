@@ -17,6 +17,24 @@
     if (legacy[hash]) { location.replace(legacy[hash]); return; }
   }
 
+  /* The caption cell is only as wide as the line on screen, so the side rules follow it. */
+  function fitCaption() {
+    var box = document.querySelector('.cap-lines');
+    if (!box) return;
+    var line = box.querySelector('.cap-line.is-on:not(.is-leaving)') || box.querySelector('.cap-line.is-on');
+    if (!line) return;
+    var w = line.scrollWidth;
+    if (!w) return;
+    var current = box.getBoundingClientRect().width;
+    if (!box.style.width && current && Math.abs(current - w) > 1) {
+      box.style.width = current + 'px';
+      void box.offsetWidth;
+    }
+    box.style.width = w + 'px';
+  }
+  window.addEventListener('resize', fitCaption);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitCaption);
+
   /* Shows one language. Placeholders and option labels follow the same choice. */
   function setLang(l) {
     lang = l; root.setAttribute('data-lang', l); root.setAttribute('lang', l);
@@ -28,6 +46,7 @@
     var svcBn = document.getElementById('f-svc'), svcEn = document.getElementById('f-svc-en');
     if (svcBn && svcEn) { if (l === 'en') svcEn.value = svcBn.value; else svcBn.value = svcEn.value; }
     try { localStorage.setItem('bs-lang', l); } catch (e) {}
+    fitCaption();
   }
   document.getElementById('lang-bn').addEventListener('click', function () { setLang('bn'); });
   document.getElementById('lang-en').addEventListener('click', function () { setLang('en'); });
@@ -149,9 +168,10 @@
       next.style.zIndex = String(layer);
       next.classList.add('is-on');
       if (nextLine) nextLine.classList.add('is-on');
-      if (prev === next) { fading = false; after(3000, function () { go((frame + 1) % frames.length, 0); }); return; }
+      if (prev === next) { fading = false; fitCaption(); after(3000, function () { go((frame + 1) % frames.length, 0); }); return; }
       prev.classList.add('is-leaving');
       if (prevLine && prevLine !== nextLine) prevLine.classList.add('is-leaving');
+      fitCaption();
       frame = n;
       var settled = false;
       function finish(e) {

@@ -122,3 +122,11 @@ Append-only. Do not rewrite earlier entries.
 - Decision: The home frame is 4:3. Pictures and their captions crossfade on opacity only, for 0.7s, and hold for 3 seconds. The next picture is decoded before it fades in. The office-photo caption stays. The other four lines are the shield, ongoing project, free material consultation, and interior design lines already used on the site. From 861px up, the diamond row and the caption share one line. Interior, assessment, and fire cards use their new 4:3 files. Detail pages keep the posters.
 - Rationale: The zoom and the empty frame were the problem. A paired fade keeps a picture on screen. The new card files are 1024×768, so they fill the existing 4:3 card. Design, solar, and the five home files are not all 4:3 yet, so those stay until the client supplies replacements.
 - Linked: `DEC-0014`
+
+## DEC-0016 — Caption rules, slogans, and detail spacing
+
+- Date: 2026-10-30
+- Agent: Cursor
+- Decision: The caption side rules follow the current line and ease for 0.7s. The office-photo caption stays. The other four lines are “A licensed partner for every decision”, “Technical support while construction is underway”, “Everyone says best. The report shows the truth.”, and “The dream home, on the inside too”, with the matching Bangla lines. Detail pages keep 28px above and below the two buttons.
+- Rationale: The rules were stuck at the width of the longest line. The four captions repeated the words already printed on the pictures. The buttons sat against the footer.
+- Linked: `DEC-0015`

@@ -155,3 +155,15 @@ A local static server rooted at `public/` and a browser check:
 - `/#projects` opened `/projects/`. Interior, assessment, and fire cards were 1024×768 with a box ratio of 1.333. Their detail banners stayed `project-5-poster.jpeg`, `project-3-poster.jpeg`, and `project-6-poster.jpeg`, each 1600×900.
 - A 3-digit phone number kept the contact form and showed the phone error. A valid number hid the form and set a WhatsApp link to `https://wa.me/8801814116677` that included the name.
 - An independent file check matched the caption lines, the fade classes, and the three card sources. Page-load timing was not measured.
+
+## 2026-10-30 — caption rules, slogans, and detail spacing
+
+A local static server rooted at `public/` and a browser check:
+
+- `node --check public/js/site.js` passed. No typecheck, lint, unit test, or build script exists, so none was run.
+- All 15 HTML routes returned HTTP 200. No image request on the checked pages failed.
+- In Bangla the caption cell matched the visible line, and the side gaps were equal. Switching to English eased the cell toward the English line, and the side gaps stayed equal. The picture opacity sum stayed 1.
+- At 390px the hero was one column, the frame ratio was 1.333, and the side rules were hidden.
+- On the fire detail page, the space above the buttons and the space below them were both 28px. The banner stayed `project-6-poster.jpeg`.
+- A 3-digit phone number kept the contact form. A valid number hid the form and set a WhatsApp link to `https://wa.me/8801814116677` that included the name.
+- An independent file check matched the four slogans, the caption-width rules, and the button spacing. Page-load timing was not measured. The live Vercel and Cloudflare headers were not opened.
