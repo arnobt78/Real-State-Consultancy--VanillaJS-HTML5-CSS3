@@ -118,4 +118,14 @@ Local browser checks on a static server rooted at `public/`:
 
 ## 2026-10-29 — consult, consulting, and consultancy
 
+## 2026-10-29 — project cards and detail pages
+
+A local static server rooted at `public/` and a browser check covered all 15 routes.
+
+- The six project cards loaded their posters. Interior and fire no longer showed a dashed placeholder. At desktop width the grid was three columns. At 390px it was one column.
+- `/#projects` opened `/projects/`. Each detail page showed its facts and its pictures. Contact links were service 1, 2, 3, 5, 6, and 7.
+- `/contact/?service=7` selected Solar System Design & Installation. A short number was rejected. A valid number prepared a WhatsApp link to `8801814116677` and did not store the message.
+- The FAQ page still had 15 questions, including “সোলার সিস্টেমে কী থাকে?”. No project image request failed. The nine project JPEGs had no EXIF and no GPS data.
+- No typecheck, lint, unit test, or build script exists, so none was run.
+
 A local static server rooted at `public/` returned the nine pages. None of the served HTML contained the previous guidance noun or verb. The planned English lines were present, including “We consult based only on test reports”, “Material Selection Consultancy” with option value `8`, “This is not legal consulting”, and “Independent consulting”. Bangla spans beside those lines were unchanged. The FAQ structured data stayed Bangla. A repository search found none of that previous wording. No browser tool was available for this check. No typecheck, lint, unit test, or build script exists, so none was run.

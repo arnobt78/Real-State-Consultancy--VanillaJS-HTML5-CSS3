@@ -26,7 +26,7 @@ Recommended order if the full proposed set is approved. Wave 2 waits for Wave 1 
 
 | Item | Why it is waiting |
 |---|---|
-| Project photo drop-in | `REQ-0005` already handles missing files. Needs real images from the human. |
+| Project photo drop-in | Done for the six supplied posters. Extra pictures remain only where those files exist. |
 | Canonical URL and social preview image | No production origin in the repo (`RISK-0003`). |
 | Enquiry database or email | Changes the architecture. Current design hands the message to WhatsApp. |
 | Framework, TypeScript, or bundler | `DEC-0002`. The working page is one HTML file. |

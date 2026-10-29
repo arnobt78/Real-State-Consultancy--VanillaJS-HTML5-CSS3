@@ -54,7 +54,7 @@ Acceptance: invalid name or phone keeps the form and shows the matching error. A
 
 ### REQ-0005 Project placeholders
 
-Six project slots use captions for residential design, concrete testing, DEA, interior, solar installation, and fire safety. Each shows a placeholder until `img/projects/p1.jpg` … `p6.jpg` loads. Those files are not in the repository.
+Six project cards use the service titles and link to static detail pages. Posters live under `public/img/projects/` in named folders. The old `p1.jpg` through `p6.jpg` names are not used.
 
 Acceptance: with the files absent, six placeholders remain visible and no broken-image icon replaces them. Adding a file later, without further markup changes, shows that image and hides its placeholder.
 
