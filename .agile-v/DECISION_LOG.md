@@ -106,3 +106,11 @@ Append-only. Do not rewrite earlier entries.
 - Decision: English for this work uses “consult” as the verb, “consulting” for the work, and “consultancy” for the material-selection service, including “Material Selection Consultancy”. Bangla stays. Buttons that already say “Consultation”, and the home line “Material selection consultation, completely free”, stay. Do not restore the previous guidance noun or verb.
 - Rationale: The client does not want that previous wording on the site. “Consultation” is a different word already used for the enquiry button.
 - Linked: `DEC-0012`
+
+## DEC-0014 — Home photo cycle and project pictures
+
+- Date: 2026-10-30
+- Agent: Cursor
+- Decision: The home frame is 3:2, with `object-fit: cover`. From 861px up it aligns to the bottom of the text column. It cycles `hero.jpg`, then `hero-1.png` through `hero-4.png`. The cycle pauses on hover and while the tab is hidden. Reduced motion keeps the first picture. Detail pages open with a 16:9 contain banner. Gallery pictures keep their own ratio. The facts list stays in the HTML and is hidden. The concrete card uses `project-1-card.jpeg` and that file is not on the detail page.
+- Rationale: The home photo was shorter than the text beside it. The healthcare timing was adapted to this frame. Tall site photos should not be cropped into 4:3, and the client asked to hide the facts for now.
+- Linked: `DEC-0013`

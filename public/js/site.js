@@ -91,6 +91,62 @@
     document.getElementById('edit-msg').addEventListener('click', function () { document.getElementById('sent').hidden = true; form.hidden = false; });
   }
 
+  /* Home photo frame. The visible picture zooms out, then the next one fades in. */
+  var slides = document.querySelector('.hero-slides');
+  if (slides && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var frames = slides.querySelectorAll('img');
+    var frame = 0;
+    var wait = 0;
+    var due = 0;
+    var step = null;
+    var held = false;
+    var unseen = document.hidden;
+    var pausedAt = 0;
+    function preload(n) {
+      var el = frames[n % frames.length];
+      if (el.complete && el.naturalWidth) return;
+      var pic = new Image();
+      pic.src = el.getAttribute('src');
+    }
+    function run() {
+      clearTimeout(wait);
+      var stop = held || unseen;
+      slides.classList.toggle('is-paused', stop);
+      if (stop) { if (!pausedAt) pausedAt = performance.now(); return; }
+      if (pausedAt) { due += performance.now() - pausedAt; pausedAt = 0; }
+      if (!step) return;
+      wait = setTimeout(function () {
+        var done = step;
+        step = null;
+        done();
+      }, Math.max(0, due - performance.now()));
+    }
+    function after(ms, done) {
+      step = done;
+      due = performance.now() + ms;
+      run();
+    }
+    function show(n) {
+      frame = n;
+      var cur = frames[frame];
+      cur.classList.remove('is-on');
+      void cur.offsetWidth;
+      cur.classList.add('is-on');
+      preload(frame + 1);
+      after(15750, function () { show((frame + 1) % frames.length); });
+    }
+    slides.addEventListener('animationend', function (e) {
+      if (e.animationName !== 'hero-cycle' || e.elapsedTime < 17 || e.target === frames[frame]) return;
+      e.target.classList.remove('is-on');
+    });
+    slides.addEventListener('pointerenter', function () { held = true; run(); });
+    slides.addEventListener('pointerleave', function () { held = false; run(); });
+    document.addEventListener('visibilitychange', function () { unseen = document.hidden; run(); });
+    preload(1);
+    slides.classList.add('is-live');
+    after(15750, function () { show(1); });
+  }
+
   setLang(lang === 'en' ? 'en' : 'bn');
   if (form) {
     var svc = new URLSearchParams(location.search).get('service');
