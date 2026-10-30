@@ -127,3 +127,17 @@ Pull request 14.
 
 - Rewrote the six detail-page opening paragraphs so each page describes its category.
 - Changed the picture lines to “Pictures from ongoing work.”, “Pictures from on-site work.”, and “Pictures of proposed system.”, with the matching Bangla.
+
+## 2026-10-30 — about page markup
+
+Pull request 15 also carries this wrap.
+
+- Wrapped the about-page share tag and footer icons onto shorter lines. The phone, email, address, and links are unchanged.
+
+## 2026-10-31 — Cloudflare asset config
+
+Pull request 15.
+
+- Added `wrangler.toml` so Worker `divine-dream-20ba` serves `public/`.
+- Folder pages keep a trailing slash. A missing page stays a 404. There is no custom 404 page.
+- The file does not connect GitHub and does not publish the site by itself.

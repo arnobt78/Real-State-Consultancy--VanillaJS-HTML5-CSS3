@@ -193,3 +193,12 @@ A local static server rooted at `public/` and a browser check:
 - No typecheck, lint, unit test, or build script exists, so none was run.
 - Both languages were opened on all six detail pages. Each opening paragraph and the three picture lines matched the category wording. `সব প্রকল্প` / `All projects` stayed.
 - The projects index, services, and FAQ were left unchanged. Page-load timing was not measured.
+
+## 2026-10-31 — Cloudflare asset config
+
+Pull request 15.
+
+- `wrangler.toml` parses. The Worker name is `divine-dream-20ba`. The asset directory is `./public`. There is no token, route, or Worker script.
+- `public/index.html` and `public/about/index.html` exist. `public/404.html` does not. A missing page is an empty 404.
+- No typecheck, lint, unit test, or build script exists, so none was run. `node --check public/js/site.js` was not required because that file did not change.
+- An independent file check matched the config. A security review of this branch found no issue. A browser cannot show the trailing-slash rule or the empty 404 until the Worker is connected. The live site was not changed.
