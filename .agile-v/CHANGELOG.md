@@ -141,3 +141,11 @@ Pull request 15.
 - Added `wrangler.toml` so Worker `divine-dream-20ba` serves `public/`.
 - Folder pages keep a trailing slash. A missing page stays a 404. There is no custom 404 page.
 - The file does not connect GitHub and does not publish the site by itself.
+
+## 2026-10-31 — first Cloudflare Git build
+
+Pull request 16.
+
+- Recorded that Worker `divine-dream-20ba` is connected to this repository on branch `main`, with no build command, deploy command `npx wrangler deploy`, and preview builds off.
+- The GitHub app can see only this repository. The API token stays in Cloudflare.
+- Connecting did not build the commit already on `main`. The active deployment was still manual upload `e6b06886`. This pull request is the push that starts the first Git build.

@@ -4,7 +4,7 @@
 
 Project Name: Build Safe Engineering
 Description: Bilingual Bangla/English brochure for Build Safe Engineering & Consultancy. Static pages in `public/`, WhatsApp enquiry handoff.
-Current Status: The home frame is 4:3 and cycles `hero-1.jpeg` through `hero-5.jpeg`. Each picture fades with its own caption, and the side rules follow that line. The office picture is 1024×678, so the frame still crops a little of each side. Each project detail page describes that category, not one job. The picture lines are “Pictures from ongoing work.”, “Pictures from on-site work.”, and “Pictures of proposed system.” Detail pages keep 28px above and below the two buttons. Concrete, interior, assessment, and fire cards use 4:3 pictures. Design and solar cards still use their posters. The design banner stays `hero-1.png`. `wrangler.toml` names the existing Cloudflare Worker `divine-dream-20ba` and serves `public/`. That Worker is not connected to GitHub yet, so this file does not publish the site. Vercel Production follows `main` and stays the test site. The official address stays `https://buildsafe.com.bd`.
+Current Status: The home frame is 4:3 and cycles `hero-1.jpeg` through `hero-5.jpeg`. Each picture fades with its own caption, and the side rules follow that line. The office picture is 1024×678, so the frame still crops a little of each side. Each project detail page describes that category, not one job. The picture lines are “Pictures from ongoing work.”, “Pictures from on-site work.”, and “Pictures of proposed system.” Detail pages keep 28px above and below the two buttons. Concrete, interior, assessment, and fire cards use 4:3 pictures. Design and solar cards still use their posters. The design banner stays `hero-1.png`. `wrangler.toml` names the existing Cloudflare Worker `divine-dream-20ba` and serves `public/`. That Worker is connected to this GitHub repository on branch `main`. The first Git build starts when the next commit reaches `main`. Vercel Production follows `main` and stays the test site. The official address stays `https://buildsafe.com.bd`.
 Current Agile V Cycle: C1
 Current Gate: `GATE-0001` was superseded by later direction to build `public/`. See `.agile-v/STATE.md`.
 
@@ -17,7 +17,7 @@ Backend: none
 Database: none
 Authentication: none
 Infrastructure: none in the repo
-Deployment: `wrangler.toml` points the existing Cloudflare Worker at `public/`. No build command and no `package.json`. GitHub is not connected on that Worker.
+Deployment: `wrangler.toml` points the existing Cloudflare Worker at `public/`. No build command and no `package.json`. The Worker is connected to this GitHub repository on branch `main`. The API token stays in Cloudflare.
 Testing: none in the repo. Check behavior in a browser.
 
 ---
@@ -133,4 +133,4 @@ Always continue from
 
 unless instructed otherwise.
 
-Current stop: pull request 15 carries `wrangler.toml` and the about-page line wrap into `main`. After the merge, merge `main` back into `fix/footer-information` and leave that branch. Do not click GitHub, GitLab, or Origin on the Cloudflare Worker until that file is on `main`. Do not drag-upload `public/`. Vercel Production follows `main` and stays the test site. Do not open another branch. Do not push new implementation straight to `main`. Design and solar card pictures stay until the client supplies new 4:3 files. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.
+Current stop: Worker `divine-dream-20ba` is connected to the brochure repository on branch `main`. Preview builds are off. The API token stays in Cloudflare. Pull request 16 starts the first Git build. After the merge, merge `main` back into `fix/footer-information` and leave that branch. The live pages change only after a Git deploy shows Ready. Do not click New deployment. Do not drag-upload `public/`. Vercel Production follows `main` and stays the test site. Do not open another branch. Do not push new implementation straight to `main`. Design and solar card pictures stay until the client supplies new 4:3 files. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`.

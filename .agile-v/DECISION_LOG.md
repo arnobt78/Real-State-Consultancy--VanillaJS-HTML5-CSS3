@@ -154,3 +154,11 @@ Append-only. Do not rewrite earlier entries.
 - Decision: Keep Cloudflare as the official host and `https://buildsafe.com.bd` as the only public address. Vercel stays the test site. `wrangler.toml` names the existing Worker `divine-dream-20ba` and serves `./public`. Do not drag-upload the folder. Do not connect GitHub until this file is on `main`.
 - Rationale: The domain and mail already live on that Cloudflare account. The dashboard uploader accepts only HTML, CSS, and JS. A plain static site does not need a framework host.
 - Linked: `DEC-0005`
+
+## DEC-0020 — A push to main starts the Cloudflare build
+
+- Date: 2026-10-31
+- Agent: Cursor
+- Decision: The Worker is connected to this one GitHub repository, production branch `main`, with preview builds off. The API token stays in Cloudflare. A new commit on `main` starts the build. Do not use the dashboard file upload.
+- Rationale: Connecting the repository did not build the commit already on `main`. The active deployment was still manual upload `e6b06886`.
+- Linked: `DEC-0019`

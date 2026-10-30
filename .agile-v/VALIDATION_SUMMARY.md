@@ -202,3 +202,11 @@ Pull request 15.
 - `public/index.html` and `public/about/index.html` exist. `public/404.html` does not. A missing page is an empty 404.
 - No typecheck, lint, unit test, or build script exists, so none was run. `node --check public/js/site.js` was not required because that file did not change.
 - An independent file check matched the config. A security review of this branch found no issue. A browser cannot show the trailing-slash rule or the empty 404 until the Worker is connected. The live site was not changed.
+
+## 2026-10-31 — Cloudflare Git connection
+
+Pull request 16.
+
+- The Worker settings showed the brochure repository, branch `main`, build command None, deploy command `npx wrangler deploy`, and root directory `/`. Preview builds were off. No build variables were set.
+- The Deployments tab still showed manual upload `e6b06886` at 100% traffic. No Cloudflare check existed on the commit already on `main`.
+- A security review of the connection found no blocking issue. The API token is not in the repo. No typecheck, lint, unit test, or build script exists, so none was run. The live pages had not changed.
