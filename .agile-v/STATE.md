@@ -3,12 +3,12 @@
 ## Resume point
 
 Cycle: `C1`
-Phase: The home frame is 4:3. From 861px up the diamond row and the caption share one line, and the frame sits just above that line. It crossfades `public/img/home-hero/hero-1.jpeg` through `hero-5.jpeg`, and each picture fades its own Bangla and English caption. `hero-2.jpeg` through `hero-5.jpeg` are 1024×768. `hero-1.jpeg` is 1024×678, so the frame still crops a little of each side. The side rules follow the current line. The office-photo caption stays. The other four are the licensed-partner, construction-support, test-report, and inside-the-home slogans. Detail pages keep 28px above and below the two buttons. The hold is 3 seconds. The next picture is decoded before it fades in. The cycle pauses on hover and while the tab is hidden. Reduced motion keeps the first picture and its caption. The projects intro is the showcase line in both languages. Concrete, interior, assessment, and fire cards use `project-1-card.jpeg`, `project-5-card.jpeg`, `project-3-card.jpeg`, and `poster-6-card.jpeg`. Design and solar cards still use their posters. Each detail page opens with a 16:9 banner, then the existing title. The facts list stays in the HTML and is hidden. Gallery pictures keep their own ratio. The design banner is `hero-1.png`. The other five banners are their posters, and those posters are not repeated in the gallery. A picture line appears only for design, concrete, and solar, and those lines no longer say “this”. Each detail page’s opening paragraph describes the category. Pull requests 11, 12, and 13 are on `main`. Pull request 14 carries the category wording into `main`. Vercel Production follows `main`. Cloudflare is still managed separately.
+Phase: The home frame is 4:3. From 861px up the diamond row and the caption share one line, and the frame sits just above that line. It crossfades `public/img/home-hero/hero-1.jpeg` through `hero-5.jpeg`, and each picture fades its own Bangla and English caption. `hero-2.jpeg` through `hero-5.jpeg` are 1024×768. `hero-1.jpeg` is 1024×678, so the frame still crops a little of each side. The side rules follow the current line. The office-photo caption stays. The other four are the licensed-partner, construction-support, test-report, and inside-the-home slogans. Detail pages keep 28px above and below the two buttons. The hold is 3 seconds. The next picture is decoded before it fades in. The cycle pauses on hover and while the tab is hidden. Reduced motion keeps the first picture and its caption. The projects intro is the showcase line in both languages. Concrete, interior, assessment, and fire cards use `project-1-card.jpeg`, `project-5-card.jpeg`, `project-3-card.jpeg`, and `poster-6-card.jpeg`. Design and solar cards still use their posters. Each detail page opens with a 16:9 banner, then the existing title. The facts list stays in the HTML and is hidden. Gallery pictures keep their own ratio. The design banner is `hero-1.png`. The other five banners are their posters, and those posters are not repeated in the gallery. A picture line appears only for design, concrete, and solar, and those lines no longer say “this”. Each detail page’s opening paragraph describes the category. Pull requests 11 through 14 are on `main`. Pull request 15 carries `wrangler.toml` and the about-page line wrap into `main`. `wrangler.toml` names Worker `divine-dream-20ba` and serves `public/`. GitHub is not connected on that Worker. Vercel Production follows `main` and stays the test site. The official address stays `https://buildsafe.com.bd`.
 Branch: `fix/footer-information` is the only feature branch. Do not open another branch. Older branches were removed after their pull requests merged.
 Remote: `https://github.com/arnobt78/Real-State-Consultancy--VanillaJS-HTML5-CSS3.git`
 Gate: `GATE-0001` was superseded. Do not wait on token `C1-HG1-7f3a`. Do not revert `public/` because that token is missing.
 
-Next exact action: after pull request 14 is on `main`, merge `main` back into `fix/footer-information` and leave that branch in place. Do not push new implementation straight to `main`. Do not open another branch. Design and solar card pictures stay until the client supplies new 4:3 files. `hero-1.jpeg` is 1024×678, so the home frame still crops a little of each side. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy uses output directory `public` with no build command.
+Next exact action: after pull request 15 is on `main`, merge `main` back into `fix/footer-information` and leave that branch. Do not click GitHub, GitLab, or Origin on Worker `divine-dream-20ba` until `wrangler.toml` is on `main`. Do not drag-upload `public/`. Do not open another branch. Do not push new implementation straight to `main`. Design and solar card pictures stay until the client supplies new 4:3 files. `hero-1.jpeg` is 1024×678, so the home frame still crops a little of each side. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy uses output directory `public` with no build command.
 
 ## What the project is
 
@@ -31,7 +31,7 @@ Public contact data in the pages (intentional, not a secret):
 ## Architecture (current)
 
 - Publish root is `public/`. Nine HTML pages, plus six project detail pages, share `public/css/site.css` and `public/js/site.js`.
-- Bangla is the default. English is in the same file and is shown when `data-lang` is `en`. The choice is stored as `bs-lang`. A head script sets that attribute before first paint when the saved value is `en`. Header links follow the visible words, in the order Home, About, Services, Projects, FAQ, Contact. The phone menu uses that same header. Footer Pages lists those same six links. The Office column lists the phone, `contact.buildsafe@gmail.com`, and the Dilara Tower address, with Facebook, LinkedIn, and YouTube under those lines. At 760px and below, the brand, Pages, and Office each take a full row. The footer address matches the other footer lines. On a phone, the copyright line and the slogan are centered. The slogan is “Partner with BUILD SAFE to turn your vision into reality”, in the same color as the rest of the line. The contact email matches the phone number and has a copy button. The copy notice sits at the bottom right. The FAQ page has 15 bilingual questions drawn from the existing pages, with about 20px of padding per item. Link previews use `public/img/meta-logo.jpg`. The structured-data logo and the header image stay `logo.png`. The home frame starts with `hero.jpg` and then cycles the four `public/img/home-hero/` pictures. Without JavaScript, only the first picture shows. Terms, Privacy, and Cookies stay public and in the sitemap, and they are not in the footer. The contact service menu is two selects so its label is already in the saved language.
+- Bangla is the default. English is in the same file and is shown when `data-lang` is `en`. The choice is stored as `bs-lang`. A head script sets that attribute before first paint when the saved value is `en`. Header links follow the visible words, in the order Home, About, Services, Projects, FAQ, Contact. The phone menu uses that same header. Footer Pages lists those same six links. The Office column lists the phone, `contact.buildsafe@gmail.com`, and the Dilara Tower address, with Facebook, LinkedIn, and YouTube under those lines. At 760px and below, the brand, Pages, and Office each take a full row. The footer address matches the other footer lines. On a phone, the copyright line and the slogan are centered. The slogan is “Partner with BUILD SAFE to turn your vision into reality”, in the same color as the rest of the line. The contact email matches the phone number and has a copy button. The copy notice sits at the bottom right. The FAQ page has 15 bilingual questions drawn from the existing pages, with about 20px of padding per item. Link previews use `public/img/meta-logo.jpg`. The structured-data logo and the header image stay `logo.png`. The home frame uses `hero-1.jpeg` through `hero-5.jpeg`. Without JavaScript, only the first picture shows. Terms, Privacy, and Cookies stay public and in the sitemap, and they are not in the footer. The contact service menu is two selects so its label is already in the saved language.
 - The contact form validates a name and a Bangladesh mobile number, then prepares a WhatsApp link. It does not post to a server.
 - Project cards link to `/projects/design-technical-support/`, `/projects/concrete-mix-design-testing/`, `/projects/detailed-engineering-assessment/`, `/projects/interior-design/`, `/projects/solar-system-design-installation/`, and `/projects/fire-safety-hvac/`. The concrete, interior, assessment, and fire card images are `project-1-card.jpeg`, `project-5-card.jpeg`, `project-3-card.jpeg`, and `poster-6-card.jpeg`. Those card files are not on the detail pages. The old `p1.jpg` through `p6.jpg` probes are gone. `hero-1.png` is the design-page banner only. The home frame uses `hero-1.jpeg` through `hero-5.jpeg`.
 - Dark colors follow the system. Fonts are files in `public/fonts/`.
@@ -50,8 +50,8 @@ Public contact data in the pages (intentional, not a secret):
 
 ## Completed this session
 
-- Each project detail page describes its category in one short paragraph, in Bangla and English.
-- The picture lines are “Pictures from ongoing work.”, “Pictures from on-site work.”, and “Pictures of proposed system.”
+- `wrangler.toml` names Worker `divine-dream-20ba` and serves `./public`.
+- The about-page line wrap goes to `main` with pull request 15. The phone, email, address, and links are unchanged.
 
 ## Active requirement IDs
 
@@ -65,12 +65,8 @@ Proposed, blocked on `GATE-0001`:
 
 ## Files changed this session
 
-- `public/projects/design-technical-support/index.html`
-- `public/projects/concrete-mix-design-testing/index.html`
-- `public/projects/detailed-engineering-assessment/index.html`
-- `public/projects/interior-design/index.html`
-- `public/projects/solar-system-design-installation/index.html`
-- `public/projects/fire-safety-hvac/index.html`
+- `wrangler.toml`
+- `public/about/index.html` line wrap, already committed as `ef94ef1`
 - `CLAUDE.md`
 - `.agile-v/STATE.md`, `CHANGELOG.md`, `VALIDATION_SUMMARY.md`, `DECISION_LOG.md`
 
@@ -83,7 +79,7 @@ No typecheck, lint, test, or build script exists. The home cycle, the project pa
 ## Blockers
 
 - `GATE-0001` was superseded. Do not halt new page work on token `C1-HG1-7f3a`.
-- Cloudflare is managed outside this repo. Canonical pages use `https://buildsafe.com.bd/`.
+- Canonical pages use `https://buildsafe.com.bd/`. `wrangler.toml` does not attach that domain. The Worker is not connected to GitHub yet.
 - `REQ-0005` now uses the six named project folders. The old `p1.jpg` through `p6.jpg` names are not requested.
 
 ## Unresolved questions
@@ -92,7 +88,7 @@ No typecheck, lint, test, or build script exists. The home cycle, the project pa
 2. Theme: follow the system, lock light, or add a toggle? Recommendation is in `REQ-0009`.
 3. Without JavaScript, is a phone fallback enough, or should every section stay visible? Recommendation is in `REQ-0008`.
 4. What is the public site URL, if any?
-5. Design and solar cards still use posters that are not 4:3. The five home pictures are not all 4:3 either. Do not replace those until the client supplies the new files.
+5. Design and solar cards still use posters that are not 4:3. `hero-1.jpeg` is 1024×678, so the home frame still crops a little of each side. Do not replace those until the client supplies the new files.
 
 ## Deferred
 

@@ -146,3 +146,11 @@ Append-only. Do not rewrite earlier entries.
 - Decision: Each project detail page describes its category in one short paragraph. The picture lines are “Pictures from ongoing work.”, “Pictures from on-site work.”, and “Pictures of proposed system.”, with the matching Bangla. The projects index, services, and FAQ stay as they were.
 - Rationale: Each page will hold more than one job. The old lines read as a single project.
 - Linked: `DEC-0017`
+
+## DEC-0019 — Cloudflare serves public/
+
+- Date: 2026-10-31
+- Agent: Cursor
+- Decision: Keep Cloudflare as the official host and `https://buildsafe.com.bd` as the only public address. Vercel stays the test site. `wrangler.toml` names the existing Worker `divine-dream-20ba` and serves `./public`. Do not drag-upload the folder. Do not connect GitHub until this file is on `main`.
+- Rationale: The domain and mail already live on that Cloudflare account. The dashboard uploader accepts only HTML, CSS, and JS. A plain static site does not need a framework host.
+- Linked: `DEC-0005`
