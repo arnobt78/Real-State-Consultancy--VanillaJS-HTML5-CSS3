@@ -3,12 +3,12 @@
 ## Resume point
 
 Cycle: `C1`
-Phase: The home frame is 4:3. From 861px up the diamond row and the caption share one line, and the frame sits just above that line. It crossfades `public/img/home-hero/hero-1.jpeg` through `hero-5.jpeg`, and each picture fades its own Bangla and English caption. `hero-2.jpeg` through `hero-5.jpeg` are 1024×768. `hero-1.jpeg` is 1024×678, so the frame still crops a little of each side. The side rules follow the current line. The office-photo caption stays. The other four are the licensed-partner, construction-support, test-report, and inside-the-home slogans. Detail pages keep 28px above and below the two buttons. The hold is 3 seconds. The next picture is decoded before it fades in. The cycle pauses on hover and while the tab is hidden. Reduced motion keeps the first picture and its caption. The projects intro is the showcase line in both languages. Concrete, interior, assessment, and fire cards use `project-1-card.jpeg`, `project-5-card.jpeg`, `project-3-card.jpeg`, and `poster-6-card.jpeg`. Design and solar cards still use their posters. Each detail page opens with a 16:9 banner, then the existing title. The facts list stays in the HTML and is hidden. Gallery pictures keep their own ratio. The design banner is `hero-1.png`. The other five banners are their posters, and those posters are not repeated in the gallery. A picture line appears only for design, concrete, and solar, and those lines no longer say “this”. Each detail page’s opening paragraph describes the category. Pull requests 11 through 14 are on `main`. Pull request 15 carries `wrangler.toml` and the about-page line wrap into `main`. `wrangler.toml` names Worker `divine-dream-20ba` and serves `public/`. GitHub is not connected on that Worker. Vercel Production follows `main` and stays the test site. The official address stays `https://buildsafe.com.bd`.
+Phase: The home frame is 4:3. From 861px up the diamond row and the caption share one line, and the frame sits just above that line. It crossfades `public/img/home-hero/hero-1.jpeg` through `hero-5.jpeg`, and each picture fades its own Bangla and English caption. `hero-2.jpeg` through `hero-5.jpeg` are 1024×768. `hero-1.jpeg` is 1024×678, so the frame still crops a little of each side. The side rules follow the current line. The office-photo caption stays. The other four are the licensed-partner, construction-support, test-report, and inside-the-home slogans. Detail pages keep 28px above and below the two buttons. The hold is 3 seconds. The next picture is decoded before it fades in. The cycle pauses on hover and while the tab is hidden. Reduced motion keeps the first picture and its caption. The projects intro is the showcase line in both languages. Concrete, interior, assessment, and fire cards use `project-1-card.jpeg`, `project-5-card.jpeg`, `project-3-card.jpeg`, and `poster-6-card.jpeg`. Design and solar cards still use their posters. Each detail page opens with a 16:9 banner, then the existing title. The facts list stays in the HTML and is hidden. Gallery pictures keep their own ratio. The design banner is `hero-1.png`. The other five banners are their posters, and those posters are not repeated in the gallery. A picture line appears only for design, concrete, and solar, and those lines no longer say “this”. Each detail page’s opening paragraph describes the category. Pull requests 11 through 14 are on `main`. Pull request 15 is on `main`. Worker `divine-dream-20ba` is connected to GitHub repository `arnobt78/Real-State-Consultancy-Brochure--VanillaJS-HTML5-CSS3-Frontend`, production branch `main`, with no build command and deploy command `npx wrangler deploy`. Preview builds are off. The GitHub app can see only that repository. The API token stays in Cloudflare and is not in this repo. The live deployment is still the manual upload `e6b06886`. Pull request 16 is the push that starts the first Git build. Vercel Production follows `main` and stays the test site. The official address stays `https://buildsafe.com.bd`.
 Branch: `fix/footer-information` is the only feature branch. Do not open another branch. Older branches were removed after their pull requests merged.
 Remote: `https://github.com/arnobt78/Real-State-Consultancy--VanillaJS-HTML5-CSS3.git`
 Gate: `GATE-0001` was superseded. Do not wait on token `C1-HG1-7f3a`. Do not revert `public/` because that token is missing.
 
-Next exact action: after pull request 15 is on `main`, merge `main` back into `fix/footer-information` and leave that branch. Do not click GitHub, GitLab, or Origin on Worker `divine-dream-20ba` until `wrangler.toml` is on `main`. Do not drag-upload `public/`. Do not open another branch. Do not push new implementation straight to `main`. Design and solar card pictures stay until the client supplies new 4:3 files. `hero-1.jpeg` is 1024×678, so the home frame still crops a little of each side. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy uses output directory `public` with no build command.
+Next exact action: after pull request 16 is on `main`, merge `main` back into `fix/footer-information` and leave that branch. Watch the Worker Deployments tab. The live pages change only after a Git deploy shows Ready. Do not click New deployment. Do not drag-upload `public/`. Do not open another branch. Do not push new implementation straight to `main`. Design and solar card pictures stay until the client supplies new 4:3 files. `hero-1.jpeg` is 1024×678, so the home frame still crops a little of each side. Do not follow `docs/VERCEL-PLAIN-JS-DEPLOY.md`. A Vercel test deploy uses output directory `public` with no build command.
 
 ## What the project is
 
@@ -50,8 +50,8 @@ Public contact data in the pages (intentional, not a secret):
 
 ## Completed this session
 
-- `wrangler.toml` names Worker `divine-dream-20ba` and serves `./public`.
-- The about-page line wrap goes to `main` with pull request 15. The phone, email, address, and links are unchanged.
+- Worker `divine-dream-20ba` is connected to the brochure repository on branch `main`.
+- The first Git build had not started. The active deployment was still manual upload `e6b06886`.
 
 ## Active requirement IDs
 
@@ -65,8 +65,6 @@ Proposed, blocked on `GATE-0001`:
 
 ## Files changed this session
 
-- `wrangler.toml`
-- `public/about/index.html` line wrap, already committed as `ef94ef1`
 - `CLAUDE.md`
 - `.agile-v/STATE.md`, `CHANGELOG.md`, `VALIDATION_SUMMARY.md`, `DECISION_LOG.md`
 
@@ -79,7 +77,7 @@ No typecheck, lint, test, or build script exists. The home cycle, the project pa
 ## Blockers
 
 - `GATE-0001` was superseded. Do not halt new page work on token `C1-HG1-7f3a`.
-- Canonical pages use `https://buildsafe.com.bd/`. `wrangler.toml` does not attach that domain. The Worker is not connected to GitHub yet.
+- Canonical pages use `https://buildsafe.com.bd/`. The Worker is connected to GitHub. The first Git deploy had not replaced manual upload `e6b06886` when this note was written.
 - `REQ-0005` now uses the six named project folders. The old `p1.jpg` through `p6.jpg` names are not requested.
 
 ## Unresolved questions
